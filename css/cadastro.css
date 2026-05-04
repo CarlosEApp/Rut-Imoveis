@@ -464,12 +464,12 @@ background-color: #f4f9ff;
 color: rgb(255, 2, 2);
 }
 .my-custom_img {
-min-width: 350px;
-max-width: 400px;
+  width: 95%;
+max-width: 800px;
 }
 .my-custom_img img {
-min-width: 350px;
-max-width: 400px;
+width: 100%;
+max-width: 800px;
 border: 5px solid #80016a;
 border-radius: 10px;
 }

@@ -1308,3 +1308,6 @@ function toggleMenu() {
     menu.style.display = "block";
   }
 }
+function pesquisar(){
+  toggleMenu()
+}
