@@ -709,7 +709,10 @@ color: #f03101;
   padding: 7px;
   border-radius: 50%;
   background-color: rgb(35, 150, 0);
+  cursor: pointer;
+  
 }
+
 #parag_{
   float: right;
   margin-right: 20px;
@@ -717,14 +720,25 @@ color: #f03101;
   padding: 7px;
   border-radius: 50%;
   background-color: rgb(0, 54, 170);
+  cursor: pointer;
 }
 #parag_V{
   float: right;
   margin-right: 20px;
   margin-top: 10px;
-  padding: 10px;
+  padding: 7px;
   border-radius: 50%;
   background-color: rgb(248, 72, 3);
+  cursor: pointer;
+}
+#vermelho{
+  float: right;
+  margin-right: 20px;
+  margin-top: 10px;
+  padding: 7px;
+  border-radius: 50%;
+  background-color: rgb(0, 0, 0);
+  cursor: pointer;
 }
 .my-custom_EX{
   width: 330px;
@@ -792,6 +806,7 @@ color: #f03101;
 #cores{
    font-size: clamp(0.800rem, 0.3vw  + 0.5rem, 0.800rem);
 }
+
 .menu-lateral {
   position: fixed;
   top: 0;

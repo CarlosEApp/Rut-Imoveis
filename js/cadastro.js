@@ -160,6 +160,13 @@ Select()
 },300)
 });
 document.getElementById('IMvCadastrados').addEventListener('click', function(){
+  sessionStorage.setItem('BLC', 'EndDiv')
+document.getElementById('btnsVoltar').style.display='none'
+document.getElementById('EndDiv').style.display='block'
+document.getElementById('fichaDiv').style.display='none'
+document.getElementById('divImagens').style.display='none'
+document.getElementById('valorDiv').style.display='none'
+document.getElementById('proximo').style.display='block'
 var seleção=document.getElementById('selectOperação')
 seleção.value='Cadastrados';
 setTimeout(function(){
@@ -167,6 +174,13 @@ Select()
 },300)
 });
 document.getElementById('IMvVendidos').addEventListener('click', function(){
+  sessionStorage.setItem('BLC', 'EndDiv')
+document.getElementById('btnsVoltar').style.display='none'
+document.getElementById('EndDiv').style.display='block'
+document.getElementById('fichaDiv').style.display='none'
+document.getElementById('divImagens').style.display='none'
+document.getElementById('valorDiv').style.display='none'
+document.getElementById('proximo').style.display='block'
 var seleção=document.getElementById('selectOperação')
 seleção.value='Pesquisar';
 setTimeout(function(){
@@ -969,14 +983,22 @@ BTN_Editar.id='editarBTN';
 BTN_Mais.id='maisBTN';
 BTN_Excluir.id="excluirBTN";
 
-if(doc.IMV_Disponivel=='ativo'){
-parag.id='parag';
-}else if(doc.IMV_Disponivel=='suspenso') {
-parag.id='parag_';
-}else if(doc.IMV_Disponivel=='vendido'){
-parag.id='parag_V';
-}else{
+if (doc.IMV_Disponivel == 'ativo') {
+  parag.id = 'parag';
+  parag.title = 'Imóvel Ativo e Disponível';
+} else if (doc.IMV_Disponivel == 'suspenso') {
+  parag.id = 'parag_';
+  parag.title = 'Imóvel Suspenso';
+} else if (doc.IMV_Disponivel == 'vendido') {
+  parag.id = 'parag_V';
+  parag.title = 'Imóvel Vendido';
+} else {
+  parag.innerText = 'Status desconhecido';
+}
 
+if(lista=='Coll_EXCLUIDOS'){
+parag.id='vermelho';
+parag.title='Imóvel Excluido'
 }
 
 IMG_Imovel.src=doc.Imagem1
@@ -1148,7 +1170,7 @@ OBS:doc.OBS,
 CPF:doc.CPF,
 Nome_Prop:doc.Nome_Prop,
 Tel_Prop:doc.Tel_Prop,
-IMV_Disponivel:'suspenso',
+IMV_Disponivel: 'ativo',
 Valor_IPTU: doc.Valor_IPTU,
 Valor_Condominio: doc.Valor_Condominio,
 Valor_Venda: doc.Valor_Venda,
@@ -1223,7 +1245,7 @@ OBS:doc.OBS,
 CPF:doc.CPF,
 Nome_Prop:doc.Nome_Prop,
 Tel_Prop:doc.Tel_Prop,
-IMV_Disponivel:'suspenso',
+IMV_Disponivel: 'ativo',
 Valor_IPTU: doc.Valor_IPTU,
 Valor_Condominio: doc.Valor_Condominio,
 Valor_Venda: doc.Valor_Venda,
