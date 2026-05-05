@@ -1313,19 +1313,16 @@ function pesquisar(){
 }
 
 //Pesquisa
-function pesquisarProduto() {
-   //document.getElementById('respPesquisasadiv').style.display='none'
-  var listy = document.getElementById('listpesqRes');
-  listy.innerHTML = ''
-  var termo = document.getElementById("pesquise").value.toLowerCase();
-  if(termo){
-   setTimeout(function(){
+
+  function Listaitens(){
+var itens= sessionStorage.getItem('itens')
+if(!itens||itens===''||itens===0){
  Swal.fire({ 
 title: ``,
-text: ``, 
+text: ``,
 html:`
 <div>
-<b id="bbdesc"> Não encontramos nada relacionado as informações digitadas</b><br> digite as primeiras letras  do que deseja encontrar e procure em uma lista a opção desejada<b id="b"></b> .
+<b id="bbdesc"> Não encontramos nada relacionado as informações digitadas</b><br><b id="b"></b> .
    </div> 
 `,
 imageUrl: ``,
@@ -1342,14 +1339,28 @@ document.body.style.paddingRight = '0px';
 }
 })
  setTimeout(function(){
-   
-Swal.close()
-    },2800)
- },1000)
+   Swal.close()
+    },5000)
+  }
+}
+
+ sessionStorage.setItem('itens','')
+function pesquisarProduto() {
+   sessionStorage.setItem('itens','')
+   //document.getElementById('respPesquisasadiv').style.display='none'
+  var listy = document.getElementById('listpesqRes');
+  listy.innerHTML = ''
+  var termo = document.getElementById("pesquise").value.toLowerCase();
+  if(termo){
+   var itens = 0
+   setTimeout(function(){
+       Listaitens()
+   },2000)
   var dbP= firebase.firestore()
   dbP.collection("GeralColl").get().then(snapshot => {
     snapshot.forEach(docSnap => {
       var data = docSnap.data();
+      itens++
       if (data.Rua && data.Rua.toLowerCase().includes(termo) || data.Bairro && data.Bairro.toLowerCase().includes(termo)  ||data.Código && data.Código.toLowerCase().includes(termo) ||data.Titulo && data.Titulo.toLowerCase().includes(termo) ||data.Cidade && data.Cidade.toLowerCase().includes(termo))  {
         var rua = data.Rua ? data.Rua.toLowerCase() : ""; var bairro = data.Bairro? data.Bairro.toLowerCase() : ""; var cod = data.Código ? data.Código.toLowerCase() : ""; var titulo = data.Titulo ? data.Titulo.toLowerCase() : ""; var cidade = data.Cidade ? data.Cidade.toLowerCase() : "";
           
@@ -1387,28 +1398,70 @@ Swal.close()
          divbase.appendChild(div);
          divbase.appendChild(div2);
          listy.appendChild(divbase)
-          //document.getElementById('respPesquisasadiv').style.display='block'
-         setTimeout(function(){
-         Swal.close()
-        },1200)
-           
-        divbase.addEventListener('click',function(){
-          //alert(data.Titulo)
-          if(data.Origem==='site'){
-         // window.open(`${data.Links}`,'_self')
+        sessionStorage.setItem('itens',itens)
           
-          } else if(data.Origem==='YouTube'){
-           // alert(data.ID)
-           
-            sessionStorage.setItem('Código_Result_PSQ', data.ID)
-            setTimeout(function(){
-            window.open(`html/result.html`,'_self')
-            },400)
-        
-          }else{
-           
-          }
-        });
+    
+           divbase.addEventListener('click',function(){
+
+document.getElementById("CódigoInput").value=data.Código;
+document.getElementById("Input_cep").value=data.CEP;
+document.getElementById("RuaInput").value=data.Rua;
+document.getElementById("BairroInput").value= data.Bairro;
+document.getElementById("CidadeInput").value=data.Cidade;
+document.getElementById("UFInput").value=data.UF;
+document.getElementById("NumeroInput").value=data.Numero;
+document.getElementById("RefInput").value=data.REF;
+///////////////////////////////////////////////////////////////////////
+document.getElementById("ListaSeleção").value=data.Coll_Lista;
+document.getElementById("destaque").value=data.Destaque;
+document.getElementById("TituloInput").value=data.Titulo;
+document.getElementById("SubToInput").value=data.SubTitulo;
+document.getElementById("QuartosInput").value=data.Quartos;
+document.getElementById("SuitesgoInput").value=data.Suites;
+document.getElementById("BanheirosInput").value=data.Banheiros;
+document.getElementById("VagasInput").value=data.Vagas_G;
+document.getElementById("PiscinaInput").value=data.Piscinas;
+document.getElementById("OBSInput").value=data.OBS;
+///////////////////////////////////////////////////////////////////////
+document.getElementById("CPFpropInput").value=data.CEP;
+document.getElementById("NomepropInput").value=data.Nome_Prop;
+document.getElementById("TelpropInput").value=data.Tel_Prop;
+document.getElementById("estadoIMV").value=data.IMV_Disponivel;
+///////////////////////////////////////////////////////////////////////
+document.getElementById("IPTUInput").value=data.Valor_IPTU;
+document.getElementById("CondominíoInput").value=data.Valor_Condominio;
+document.getElementById("vendaVInput").value=data.Valor_Venda;
+document.getElementById("LocaçãoVInput").value=data.Valor_Locação;
+///////////////////////////////////////////////////////////////////////
+document.getElementById("mymg1").src=data.Imagem1;
+document.getElementById("mymg2").src=data.Imagem2;
+document.getElementById("mymg3").src=data.Imagem3;
+document.getElementById("mymg4").src=data.Imagem4;
+document.getElementById("mymg5").src=data.Imagem5;
+document.getElementById("mymg6").src=data.Imagem6;
+document.getElementById("mymg7").src=data.Imagem7
+document.getElementById("mymg8").src=data.Imagem8;
+document.getElementById("mymg9").src=data.Imagem9;
+document.getElementById("mymg10").src=data.Imagem10;
+//////////////////////////////////////////////////////
+document.getElementById('UltimaEdição').value=data.Editado;
+/////////////////////////////////////////////////////
+sessionStorage.setItem('SessiData',data.Data);
+sessionStorage.setItem('SessiHara',data.Hora);
+////////////////////////////////////////////////////////
+document.getElementById('Cadastrar').style.display='block';
+document.getElementById('btnsVoltar').style.display='block'
+document.getElementById('proximo').style.display='block'
+document.getElementById('Cadastrados').style.display='none';
+document.getElementById('Vendidos').style.display='none';
+document.getElementById('valorDiv').style.display='none'
+document.getElementById('EndDiv').style.display='block';
+document.getElementById('divImagens').style.display='none'
+document.getElementById('fichaDiv').style.display='none'
+sessionStorage.setItem('BLC', 'EndDiv')
+document.getElementById('a_Cadastro').click()
+});
+      
        }
       
       } else{
@@ -1419,7 +1472,7 @@ Swal.close()
   Swal.fire('','Preencha o campo de pesquisa!','')
 }
 }
-//document.getElementById('lblfchardivPesq').addEventListener('click',function(){
+//dataument.getElementById('lblfchardivPesq').addEventListener('click',function(){
 //fech()
 //})
 //clic pesquisa teclado

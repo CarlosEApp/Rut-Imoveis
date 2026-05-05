@@ -813,31 +813,26 @@ color: #f03101;
   right: 0;
   height: 150vh;
   width: 400px;
-  background: #ffffff;
+  background: #eff2ff;
   color: #363636;
   overflow: auto;
   display: none; /* começa escondido */
-    font-family: 'Poppins', sans-ser;
-    z-index: 999;
-    padding-bottom: 200px;
-
-    
-
+  font-family: 'Poppins', sans-ser;
+  z-index: 999;
+  padding-bottom: 200px;
 }
 .menu-lateral button{
   border: 0cap;
   background-color: transparent;
   cursor: pointer;
-    font-family: 'Poppins', sans-ser
+  font-family: 'Poppins', sans-ser
 }
 .menu-lateral button:hover{
   color: #80016a;
-
 }
 #divMinhaPesquisa{
   margin: auto;
   width: 96%;
-
 }
 /* Responsivo: quando tela < 800px */
 @media (max-width: 720px) {
@@ -846,7 +841,6 @@ color: #f03101;
     width: 100%;
   }
 }
-
 #ListadoImóvel{
   text-align: left;
 }
@@ -855,9 +849,8 @@ color: #f03101;
 }
 #respDiv{
   max-width: 430px;
- height: 100vh;
- overflow: auto;
- padding-bottom: 300px;
+ padding-bottom: 350px;
+ background-color: #72005900;
 }
 #listpesqRes{
   width: 100%;
@@ -875,11 +868,17 @@ color: #f03101;
   width: 99%;
   max-width: 430px;
   margin-right:430px ;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border: 2px solid rgb(173, 173, 173);
 }
 #divbase{
   cursor: pointer;
   padding-bottom:30px;
-  padding-top: 20px;
+  border-bottom: 5px solid rgb(214, 214, 214);
+  margin-bottom: 20px;
+  background-color: #004daa00;
+  margin-top: 20px;
 }
  #h33{
     font-size: clamp(0.900rem, 0.3vw  + 0.5rem, 1.100rem);
@@ -891,4 +890,37 @@ color: #f03101;
   border: 1px solid rgb(160, 160, 160);
     font-size: clamp(0.700rem, 0.3vw  + 0.5rem, 0.800rem);
     font-weight: bold;
+}
+#inputpesq{
+  display: flex;
+  align-items: center;
+
+}
+ #p_pesquisa{
+   font-size: clamp(0.800rem, 0.3vw  + 0.5rem, 0.800rem);
+
+    margin-top: 10px;
+    margin-bottom: 5px;
+ }
+ #inputpesq input{
+  width: 77%;
+  max-width: 430px;
+  padding: 10px;
+    font-size: clamp(0.900rem, 0.3vw  + 0.5rem, 1.100rem);
+    margin-right: 10px;
+       border: 2px solid rgb(201, 201, 201);
+      border-radius: 5px;
+      margin-bottom: 10px;
+ }
+ #pesqI{
+    font-size: clamp(1.300rem, 0.3vw  + 0.5rem, 1.400rem);
+    border: 2px solid rgb(201, 201, 201);
+    padding: 10px;
+    border-radius: 50%;
+    background-color: rgb(255, 255, 255);
+    cursor: pointer;
+      margin-bottom: 10px;
+ }
+#btnFecharP{
+  margin-top: 10px;
 }
