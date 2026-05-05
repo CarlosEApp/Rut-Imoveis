@@ -1350,10 +1350,10 @@ Swal.close()
   dbP.collection("GeralColl").get().then(snapshot => {
     snapshot.forEach(docSnap => {
       var data = docSnap.data();
-      if (data.Rua && data.Rua.toLowerCase().includes(termo) || data.Bairro && data.Bairro.toLowerCase().includes(termo)  ||data.Código && data.Código.toLowerCase().includes(termo) ||data.Titulo && data.Titulo.toLowerCase().includes(termo))  {
-        var rua = data.Rua ? data.Rua.toLowerCase() : ""; var bairro = data.Bairro? data.Bairro.toLowerCase() : ""; var cod = data.Código ? data.Código.toLowerCase() : ""; var titulo = data.Titulo ? data.Titulo.toLowerCase() : "";
+      if (data.Rua && data.Rua.toLowerCase().includes(termo) || data.Bairro && data.Bairro.toLowerCase().includes(termo)  ||data.Código && data.Código.toLowerCase().includes(termo) ||data.Titulo && data.Titulo.toLowerCase().includes(termo) ||data.Cidade && data.Cidade.toLowerCase().includes(termo))  {
+        var rua = data.Rua ? data.Rua.toLowerCase() : ""; var bairro = data.Bairro? data.Bairro.toLowerCase() : ""; var cod = data.Código ? data.Código.toLowerCase() : ""; var titulo = data.Titulo ? data.Titulo.toLowerCase() : ""; var cidade = data.Cidade ? data.Cidade.toLowerCase() : "";
           
-       if (rua.includes(termo) || termo.includes(rua)||cod.includes(termo) || termo.includes(cod)||bairro.includes(termo) || termo.includes(bairro) || titulo.includes(termo) || termo.includes(titulo)) {
+        if (rua.includes(termo) || termo.includes(rua)||cod.includes(termo) || termo.includes(cod)||bairro.includes(termo) || termo.includes(bairro) || titulo.includes(termo) || termo.includes(titulo) || cidade.includes(termo) || termo.includes(cidade)) {
        //alert(data.Titulo)
         var divbase=document.createElement('div');
         var div=document.createElement('div');
@@ -1374,14 +1374,16 @@ Swal.close()
         h3.id='h33'
 
          imagem.src=data.Imagem1;
-         label.textContent= data.SubTitulo;
-         label2.textContent= data.Coll_Lista
+         label.textContent= data.Bairro;
+         label2.textContent= data.Código
          h3.textContent=data.Titulo
 
          div.appendChild(imagem);
          div2.appendChild(h3);
          div2.appendChild(label);
+         div2.appendChild(document.createElement('br'))
          div2.appendChild(label2);
+           div2.appendChild(document.createElement('br'))
          divbase.appendChild(div);
          divbase.appendChild(div2);
          listy.appendChild(divbase)
