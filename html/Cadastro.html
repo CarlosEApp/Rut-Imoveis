@@ -53,8 +53,16 @@
            </div>
      </header>
 <div id="menu" class="menu-lateral">
+   <div id="divMinhaPesquisa">
   <button onclick="toggleMenu()">✖ Fechar</button>
-  <p>Conteúdo do menu</p>
+  <p >Pesquise por Rua, Bairro, Titulo ou Código do Imóvel.</p>
+  <div id="divPesq"> <div id="inputpesq"><input id="pesquise" type="text" placeholder="Pesquisa.."></div><i id="pesqI" onclick="pesquisarProduto()" class="fa-solid fa-magnifying-glass"></i>
+  <div id="respDiv">
+    <h2>Resultado:</h2>
+  <div id="listpesqRes"></div>
+  </div>
+  </div>
+  </div>
 </div>
 
       <main>

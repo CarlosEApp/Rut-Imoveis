@@ -1311,3 +1311,122 @@ function toggleMenu() {
 function pesquisar(){
   toggleMenu()
 }
+
+//Pesquisa
+function pesquisarProduto() {
+   //document.getElementById('respPesquisasadiv').style.display='none'
+  var listy = document.getElementById('listpesqRes');
+  listy.innerHTML = ''
+  var termo = document.getElementById("pesquise").value.toLowerCase();
+  if(termo){
+   setTimeout(function(){
+ Swal.fire({ 
+title: ``,
+text: ``, 
+html:`
+<div>
+<b id="bbdesc"> Não encontramos nada relacionado as informações digitadas</b><br> digite as primeiras letras  do que deseja encontrar e procure em uma lista a opção desejada<b id="b"></b> .
+   </div> 
+`,
+imageUrl: ``,
+background: '#000000',
+color: '#a7a7a7', // cor do texto });
+showCloseButton: true,   // habilita o "X"
+allowOutsideClick: false,
+showConfirmButton: false,
+customClass: {
+popup: 'my-admin' // Aplica a classe CSS personalizada
+},
+didOpen: () => {
+document.body.style.paddingRight = '0px';   
+}
+})
+ setTimeout(function(){
+   
+Swal.close()
+    },2800)
+ },1000)
+  var dbP= firebase.firestore()
+  dbP.collection("GeralColl").get().then(snapshot => {
+    snapshot.forEach(docSnap => {
+      var data = docSnap.data();
+      if (data.Rua && data.Rua.toLowerCase().includes(termo) || data.Bairro && data.Bairro.toLowerCase().includes(termo)  ||data.Código && data.Código.toLowerCase().includes(termo) ||data.Titulo && data.Titulo.toLowerCase().includes(termo))  {
+        var rua = data.Rua ? data.Rua.toLowerCase() : ""; var bairro = data.Bairro? data.Bairro.toLowerCase() : ""; var cod = data.Código ? data.Código.toLowerCase() : ""; var titulo = data.Titulo ? data.Titulo.toLowerCase() : "";
+          
+       if (rua.includes(termo) || termo.includes(rua)||cod.includes(termo) || termo.includes(cod)||bairro.includes(termo) || termo.includes(bairro) || titulo.includes(termo) || termo.includes(titulo)) {
+       //alert(data.Titulo)
+        var divbase=document.createElement('div');
+        var div=document.createElement('div');
+        var h3=document.createElement('h4');
+        var div2=document.createElement('div');
+        var imagem=document.createElement('img');
+        var label=document.createElement('label');
+        var label2=document.createElement('label');
+        var label3=document.createElement('label');
+        
+        divbase.id='divbase';
+        div.id='divum';
+        div2.id='divdois';
+        imagem.id='imagemps';
+        label.id='lbl1';
+        label2.id='lbl2';
+        label3.id='lbl3';
+        h3.id='h33'
+
+         imagem.src=data.Imagem1;
+         label.textContent= data.SubTitulo;
+         label2.textContent= data.Coll_Lista
+         h3.textContent=data.Titulo
+
+         div.appendChild(imagem);
+         div2.appendChild(h3);
+         div2.appendChild(label);
+         div2.appendChild(label2);
+         divbase.appendChild(div);
+         divbase.appendChild(div2);
+         listy.appendChild(divbase)
+          //document.getElementById('respPesquisasadiv').style.display='block'
+         setTimeout(function(){
+         Swal.close()
+        },1200)
+           
+        divbase.addEventListener('click',function(){
+          //alert(data.Titulo)
+          if(data.Origem==='site'){
+         // window.open(`${data.Links}`,'_self')
+          
+          } else if(data.Origem==='YouTube'){
+           // alert(data.ID)
+           
+            sessionStorage.setItem('Código_Result_PSQ', data.ID)
+            setTimeout(function(){
+            window.open(`html/result.html`,'_self')
+            },400)
+        
+          }else{
+           
+          }
+        });
+       }
+      
+      } else{
+      }
+    });
+  });
+}else{
+  Swal.fire('','Preencha o campo de pesquisa!','')
+}
+}
+//document.getElementById('lblfchardivPesq').addEventListener('click',function(){
+//fech()
+//})
+//clic pesquisa teclado
+  var botao = document.getElementById('pesqI');
+  // Captura o evento de tecla pressionada
+  document.addEventListener('keydown', function(event) {
+    if (event.key === 'Enter') {
+      event.preventDefault(); // evita o comportamento padrão (como enviar formulário)
+      botao.click(); // aciona o clique do botão
+    }
+  });
+    

@@ -811,14 +811,16 @@ color: #f03101;
   position: fixed;
   top: 0;
   right: 0;
-  min-height: 150%;
+  height: 150vh;
   width: 400px;
   background: #ffffff;
-  color: #fff;
-  overflow-y: auto;
+  color: #363636;
+  overflow: auto;
   display: none; /* começa escondido */
     font-family: 'Poppins', sans-ser;
     z-index: 999;
+    padding-bottom: 200px;
+
     
 
 }
@@ -832,10 +834,40 @@ color: #f03101;
   color: #80016a;
 
 }
+#divMinhaPesquisa{
+  margin: auto;
+  width: 96%;
+
+}
 /* Responsivo: quando tela < 800px */
 @media (max-width: 750px) {
   .menu-lateral {
+     padding-bottom: 200px;
     width: 100%;
   }
 }
 
+#ListadoImóvel{
+  text-align: left;
+}
+#pesqI{
+  color: #000000;
+}
+#respDiv{
+ height: 100vh;
+ overflow: auto;
+}
+#listpesqRes{
+   padding-bottom: 200px;
+ height: 100vh;
+ overflow: auto;
+}
+#listpesqRes label{
+  color: #000000;
+}
+#imagemps{
+  margin: auto;
+  width: 97%;
+  max-width: 450px;
+  margin-right:450px ;
+}
