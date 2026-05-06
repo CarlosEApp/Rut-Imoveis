@@ -40,11 +40,11 @@
         <h1>📝Tela de Cadastros</h1>
         <div id="header_um">  
             <select name="Operação" onchange="Select()" id="selectOperação"  title="Escolha uma operação">
-             <option value="">Tipo de Operação</option>
+             <option value="" disabled selected>Tipo de Operação</option>
              <option value="Cadastrar">Cadastrar novo Imóvel</option>
              <option value="Cadastrados">Imóveis já Cadastrados</option>
              <option value="Pesquisar">Pesquisar por imóvel</option>
-               <option value="sair"></option>
+               <option value=""></option>
                  <option value="sair">Sair, Exit</option>
             </select>
             <button id="menuBTN" onclick="MenuButton()">Menu</button>
@@ -102,7 +102,7 @@
                   <div id="fichaDiv">
                     <h2>Ficha do Imóvel</h2><br>
                       <select name="Lista" id="ListaSeleção" title="Lista de descrição e armazenamento do imóvel">
-                         <option value=''>Lista do imóvel</option>
+                         <option value='' disabled selected>Lista do imóvel</option>
                             <option value="COLL_Temporada">Temporada</option>
                               <option value="COLL_Casas">Casas</option>
                                 <option value="COLL_Sobrados">Sobrados</option>
@@ -227,7 +227,7 @@
                 <div id="cadastrados_um">
                     <label id="lblFech2" for="" onclick="fech2()"> <i id="iFechar" class="fa-solid fa-delete-left"></i> Sair</label>
                   <select name="Lista" id="ListadoImóvel" onchange="imovelList()" title="Lista onde está armazenado o imóvel">
-                   <option value="">Lista do imóvel</option>
+                   <option value="" disabled selected>Lista do imóvel</option>
                     <option value="GeralColl">Todos os Imóveis</option>
                      <option value="COLL_Temporada">Temporada</option>
                       <option value="COLL_Casas">Casas</option>
@@ -241,9 +241,9 @@
                               <option value="COLL_Sítios">Sítios</option>
                               <option value="vendido">Vendidos</option>
                                <option value="suspenso">Suspensos</option>
-                               <option value=""></option>
+                               <option value=""disabled selected></option>
                                 <option value="Coll_EXCLUIDOS">Imóveis Excluidos</option>
-                                 <option value=""></option>
+                                 <option value=""disabled selected></option>
                                   <option value="">Sair, Exit</option>
                 </select> <button id="pesquisa" title="Pesquisar"><i id="pesq-1" onclick="pesquisar()" class="fa-solid fa-magnifying-glass"></i> </button></div>
                 <div id="divLista">
