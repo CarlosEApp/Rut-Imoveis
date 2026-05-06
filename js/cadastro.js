@@ -181,10 +181,11 @@ document.getElementById('fichaDiv').style.display='none'
 document.getElementById('divImagens').style.display='none'
 document.getElementById('valorDiv').style.display='none'
 document.getElementById('proximo').style.display='block'
+toggleMenu()
 var seleção=document.getElementById('selectOperação')
 seleção.value='Pesquisar';
 setTimeout(function(){
-  Select()
+
 },300)
 })
 // botão proxímo
@@ -1492,6 +1493,7 @@ document.getElementById('UltimaEdição').value=data.Editado;
 sessionStorage.setItem('SessiData',data.Data);
 sessionStorage.setItem('SessiHara',data.Hora);
 ////////////////////////////////////////////////////////
+document.getElementById('a_Cadastro').click()
 toggleMenu()
 document.getElementById('Cadastrar').style.display='block';
 document.getElementById('btnsVoltar').style.display='block'
@@ -1503,7 +1505,7 @@ document.getElementById('EndDiv').style.display='block';
 document.getElementById('divImagens').style.display='none'
 document.getElementById('fichaDiv').style.display='none'
 sessionStorage.setItem('BLC', 'EndDiv')
-document.getElementById('a_Cadastro').click()
+
 
 });
 
