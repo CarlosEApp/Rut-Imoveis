@@ -121,15 +121,17 @@ border-radius: 15px;
 display: flex;
 flex-direction: column;
 overflow: hidden;
-border: 3px solid rgb(255, 212, 242);
+border-bottom: 5px solid rgba(255, 255, 255, 0);
 margin-left: 5px;
 margin-right: 5px;
 text-align: center;
 margin-bottom: 20px;
 cursor: pointer;
+box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
 }
 #main_um div:hover{
-border-color: rgb(219, 0, 219);
+
+border-bottom: 5px solid rgb(141, 0, 134);
 }
 #main_um img{
 width: 100%;
@@ -159,6 +161,7 @@ border-radius: 10px;
 font-size: clamp(0.900rem, 0.3vw  + 0.5rem, 1rem);
 font-weight: bold;
 overflow: hidden;
+box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
 }
 #Cadastrar label, #valorDiv lab{
  font-size: clamp(0.800rem, 0.3vw  + 0.5rem, 0.900rem);
@@ -185,6 +188,7 @@ width: 95%;
 max-width: 640px;
 margin-top: 10px;
 padding: 10px;
+
 }
 #EndDiv input, #fichaDiv input, #valorDiv input{
 width: 97%;
