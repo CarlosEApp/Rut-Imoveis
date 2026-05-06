@@ -806,12 +806,18 @@ z-index: 999;
 padding-bottom: 200px;
 }
 .menu-lateral button{
-border: 0cap;
+border: 1px solid rgb(197, 197, 197);
 background-color: transparent;
 cursor: pointer;
+font-size: clamp(0.900rem, 0.3vw  + 0.5rem, 1.100rem);
+padding: 4px;
+background-color: rgb(255, 255, 255);
+border-radius: 3px;
+
 }
 .menu-lateral button:hover{
 color: #80016a;
+border: 1px solid  #80016a;;
 }
 #divMinhaPesquisa{
 margin: auto;
