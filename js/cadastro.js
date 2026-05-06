@@ -1338,7 +1338,7 @@ title: ``,
 text: ``,
 html:`
 <div>
-<b id="bbdesc"> Não encontramos nada relacionado as informações digitadas</b><br><b id="b"></b> .
+<b id="bbdesc"> Não encontramos nada relacionado as informações digitadas</b><br><b id="b"></b>
 </div> 
 `,
 imageUrl: ``,
