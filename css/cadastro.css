@@ -927,3 +927,17 @@ background-color: antiquewhite;
 border-top-left-radius: 20px;
 border-top-right-radius: 20px;
 }
+#OBSInput{
+  padding: 10px;
+  width: 90%;
+  max-width: 610px;
+  max-height: 300px;
+  min-height: 120px;
+  border: 3px solid rgb(150, 150, 150);
+  cursor: pointer;
+  background-color: transparent;
+  outline: none;
+  border-radius: 10px;
+  font-family: 'Poppins', sans-serif;
+  font-size: clamp(0.900rem, 0.3vw  + 0.5rem, 1.100rem);
+}
