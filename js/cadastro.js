@@ -1142,7 +1142,7 @@ document.getElementById('a_Cadastro').click()
 });
 BTN_Excluir.addEventListener('click',function(){
 Swal.fire({
-title: `Excluir`,
+title: `Excluir Imóvel`,
 html: `
 <div id='div_custonEx'>
 <p>Digite ou cole o Código do imovel</p>
@@ -1532,7 +1532,7 @@ Swal.fire(`🏡Ficha do Imóvel `,`<b>Código= </b> ${data.Código}<br><b>Titulo
 });
 BTN_Excluir.addEventListener('click',function(){
 Swal.fire({
-title: `Excluir`,
+title: `Excluir Imóvel`,
 html: `
 <div id='div_custonEx'>
 <p>Digite ou cole o Código do imovel</p>
