@@ -35,14 +35,14 @@ padding: 0%;
 #containner{
   margin: auto;
 width: 100%;     
-max-width: 1600px; 
+max-width: 1920px; 
 background-color: rgb(66, 0, 44);
 
 }
 header{
 position: fixed;
 width: 100%;
-max-width: 1600px;
+max-width: 1920px;
 background-color: rgba(66, 0, 44, 0.918);
 padding-top: 5px;
 padding-bottom: 5px;
@@ -285,20 +285,7 @@ color: black;
 color: aliceblue;
 background-color: red;
 }
-footer{
-  margin: auto;
-width: 100%;
-max-width: 1920px;
-height: 100vh;
-background-color: rgb(0, 0, 0);
-border-top: 40px solid rgb(8, 60, 129);
-background-image: url('../src/BannerRute.png');
-background-repeat: no-repeat;
-background-size: cover;
-background-color: antiquewhite;
-border-top-left-radius: 20px;
-border-top-right-radius: 20px;
-}
+
 #ListaSeleção{
 min-width: 300px;
 max-width: 330px;
@@ -925,4 +912,18 @@ margin-top: 20px;
 #excluirBTN{
 float: right;
 margin-right: 10px;
+}
+footer{
+  margin: auto;
+width: 100%;
+max-width: 1920px;
+height:70vh;
+background-color: rgb(0, 0, 0);
+border-top: 40px solid rgb(8, 60, 129);
+background-image: url('../src/Bannerjpg2.jpg');
+background-repeat: no-repeat;
+background-size: cover;
+background-color: antiquewhite;
+border-top-left-radius: 20px;
+border-top-right-radius: 20px;
 }
