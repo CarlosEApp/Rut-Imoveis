@@ -911,6 +911,8 @@ Hora:hora,
 Editado:editado,
 })
 Swal.fire('','Cadastro Salvo!','success')
+var exxz = firebase.firestore();
+exxz.collection('Coll_EXCLUIDOS').doc(input_1).delete()
 setTimeout(function(){
 window.location.reload()
 },2800)
@@ -933,6 +935,9 @@ document.getElementById('divLista').style.display='none'
 // chamar lista de imoveis 
 document.getElementById('divLista').style.display='none'
 function imovelList(){
+  //document.getElementById("menu").style.display='none';
+  var listy = document.getElementById('listpesqRes');
+  listy.innerHTML = ''
 var lista= document.getElementById('ListadoImóvel').value;
 var itens = 0
 if( lista=='suspenso'){
@@ -1054,10 +1059,14 @@ document.getElementById('trocarFoto').style.display='none'
 });
 
 BTN_Mais.addEventListener('click', function(){
-Swal.fire(`🏡Ficha do Imóvel `,`<b>Código= </b> ${doc.Código}<br><b>Titulo=</b> ${doc.Titulo}<br><b>SubTitulo=</b>  ${doc.SubTitulo}<br><b>CEP=</b> ${doc.CEP}<br><b>Rua=</b>  ${doc.Rua}<br><b>N°=</b>  ${doc.Numero}<br><b>Bairro=</b>  ${doc.Bairro}<br>
-<b>Cidade=</b> ${doc.Cidade}<br><b>UF=</b> ${doc.UF}<br><b>Referência=</b> ${doc.REF}<br><b>Lista=</b> ${doc.Coll_Lista}<br><b>Destaque=</b> ${doc.Destaque} <br><b>Quartos=</b> ${doc.Quartos}<br><b>Suíte=</b> ${doc.Suites}<br>
-<b>Banheiro=</b>  ${doc.Banheiros}<br><b>Vagas garagem=</b> ${doc.Vagas_G}<br><b>Piscinas=</b> ${doc.Piscinas}<br><b>Area Construida=</b> ${doc.Area_Const}<br><b>Obeservações=</b> ${doc.OBS}<br>
-<b>CPF PROP=</b> ${doc.CPF}<br><b>Nome PROP=</b> ${doc.Nome_Prop}<br><b>Tel PROP=</b> ${doc.Tel_Prop}<br><b>DISP_ImóveL=</b> ${doc.IMV_Disponivel}<br><b>Valor IPTU=</b> ${doc.Valor_IPTU}<br>
+Swal.fire(`🏡Ficha do Imóvel `,`<b>Código= </b> ${doc.Código}<br><b>Titulo=</b> ${doc.Titulo}<br><b>SubTitulo=</b>  ${doc.SubTitulo}<br><b>CEP=</b> ${doc.CEP}
+  <br><b>Rua=</b>  ${doc.Rua}<br><b>N°=</b>  ${doc.Numero}<br><b>Bairro=</b>  ${doc.Bairro}<br>
+<b>Cidade=</b> ${doc.Cidade}<br><b>UF=</b> ${doc.UF}<br><b>Referência=</b> ${doc.REF}<br><b>Lista=</b> ${doc.Coll_Lista}<br><b>Destaque=</b> ${doc.Destaque}
+ <br><b>Quartos=</b> ${doc.Quartos}<br><b>Suíte=</b> ${doc.Suites}<br>
+<b>Banheiro=</b>  ${doc.Banheiros}<br><b>Vagas garagem=</b> ${doc.Vagas_G}<br><b>Piscinas=</b> ${doc.Piscinas}<br><b>Area Construida=</b> ${doc.Area_Const}
+<br><b>Obeservações=</b> ${doc.OBS}<br>
+<b>CPF PROP=</b> ${doc.CPF}<br><b>Nome PROP=</b> ${doc.Nome_Prop}<br><b>Tel PROP=</b> ${doc.Tel_Prop}<br><b>DISP_ImóveL=</b> ${doc.IMV_Disponivel}
+<br><b>Valor IPTU=</b> ${doc.Valor_IPTU}<br>
 <b>Valor Condomínio=</b> ${doc.Valor_Condominio}<br><b>Valor para Venda=</b> ${doc.Valor_Venda}<br><b>Valor locação=</b> ${doc.Valor_Locação}<br>-------------------------------------<br>
 <b>Data de Cadastro=</b> ${doc.Data}<br><b>Hora=</b> ${doc.Hora}<br>--------------------------------------<br><b>${doc.Editado}</b><br><br>`,'')
 });
@@ -1109,6 +1118,7 @@ document.getElementById('UltimaEdição').value=doc.Editado;
 sessionStorage.setItem('SessiData',doc.Data);
 sessionStorage.setItem('SessiHara',doc.Hora);
 ////////////////////////////////////////////////////////
+
 document.getElementById('Cadastrar').style.display='block';
 document.getElementById('btnsVoltar').style.display='none'
 document.getElementById('proximo').style.display='block'
@@ -1121,6 +1131,7 @@ document.getElementById('fichaDiv').style.display='none'
 sessionStorage.setItem('BLC', 'EndDiv')
 document.getElementById('fichaDiv').style.display='none';
 document.getElementById('a_Cadastro').click()
+
 });
 BTN_Excluir.addEventListener('click',function(){
 Swal.fire({
@@ -1296,34 +1307,30 @@ Swal.fire('','O Código digitado não está correto!','warning')
 });
 }
 })
-
 })
-
 }
 function toggleMenu() {
-  const menu = document.getElementById("menu");
-  if (menu.style.display === "block") {
-    menu.style.display = "none";
-  } else {
-    menu.style.display = "block";
-  }
+var menu = document.getElementById("menu");
+if (menu.style.display === "block") {
+menu.style.display = "none";
+} else {
+menu.style.display = "block";
+}
 }
 function pesquisar(){
-  toggleMenu()
+toggleMenu()
 }
-
 //Pesquisa
-
-  function Listaitens(){
+function Listaitens(){
 var itens= sessionStorage.getItem('itens')
 if(!itens||itens===''||itens===0){
- Swal.fire({ 
+Swal.fire({ 
 title: ``,
 text: ``,
 html:`
 <div>
 <b id="bbdesc"> Não encontramos nada relacionado as informações digitadas</b><br><b id="b"></b> .
-   </div> 
+</div> 
 `,
 imageUrl: ``,
 background: '#000000',
@@ -1338,70 +1345,106 @@ didOpen: () => {
 document.body.style.paddingRight = '0px';   
 }
 })
- setTimeout(function(){
-   Swal.close()
-    },5000)
-  }
+setTimeout(function(){
+Swal.close()
+},5000)
 }
-
- sessionStorage.setItem('itens','')
+}
+sessionStorage.setItem('itens','')
 function pesquisarProduto() {
-   sessionStorage.setItem('itens','')
-   //document.getElementById('respPesquisasadiv').style.display='none'
-  var listy = document.getElementById('listpesqRes');
-  listy.innerHTML = ''
-  var termo = document.getElementById("pesquise").value.toLowerCase();
-  if(termo){
-   var itens = 0
-   setTimeout(function(){
-       Listaitens()
-   },2000)
-  var dbP= firebase.firestore()
-  dbP.collection("GeralColl").get().then(snapshot => {
-    snapshot.forEach(docSnap => {
-      var data = docSnap.data();
-      itens++
-      if (data.Rua && data.Rua.toLowerCase().includes(termo) || data.Bairro && data.Bairro.toLowerCase().includes(termo)  ||data.Código && data.Código.toLowerCase().includes(termo) ||data.Titulo && data.Titulo.toLowerCase().includes(termo) ||data.Cidade && data.Cidade.toLowerCase().includes(termo))  {
-        var rua = data.Rua ? data.Rua.toLowerCase() : ""; var bairro = data.Bairro? data.Bairro.toLowerCase() : ""; var cod = data.Código ? data.Código.toLowerCase() : ""; var titulo = data.Titulo ? data.Titulo.toLowerCase() : ""; var cidade = data.Cidade ? data.Cidade.toLowerCase() : "";
-          
-        if (rua.includes(termo) || termo.includes(rua)||cod.includes(termo) || termo.includes(cod)||bairro.includes(termo) || termo.includes(bairro) || titulo.includes(termo) || termo.includes(titulo) || cidade.includes(termo) || termo.includes(cidade)) {
-       //alert(data.Titulo)
-        var divbase=document.createElement('div');
-        var div=document.createElement('div');
-        var h3=document.createElement('h4');
-        var div2=document.createElement('div');
-        var imagem=document.createElement('img');
-        var label=document.createElement('label');
-        var label2=document.createElement('label');
-        var label3=document.createElement('label');
-        
-        divbase.id='divbase';
-        div.id='divum';
-        div2.id='divdois';
-        imagem.id='imagemps';
-        label.id='lbl1';
-        label2.id='lbl2';
-        label3.id='lbl3';
-        h3.id='h33'
+sessionStorage.setItem('itens','')
+//document.getElementById('respPesquisasadiv').style.display='none'
+var listy = document.getElementById('listpesqRes');
+listy.innerHTML = ''
+var termo = document.getElementById("pesquise").value.toLowerCase();
+if(termo){
+var itens = 0
+setTimeout(function(){
+Listaitens()
+},2000)
+var dbP= firebase.firestore()
+dbP.collection("GeralColl").get().then(snapshot => {
+snapshot.forEach(docSnap => {
+var data = docSnap.data();
+itens++
+if (data.Rua && data.Rua.toLowerCase().includes(termo) || data.Bairro && data.Bairro.toLowerCase().includes(termo)  ||data.Código && data.Código.toLowerCase().includes(termo) ||data.Titulo && data.Titulo.toLowerCase().includes(termo) ||data.Cidade && data.Cidade.toLowerCase().includes(termo))  {
+var rua = data.Rua ? data.Rua.toLowerCase() : ""; var bairro = data.Bairro? data.Bairro.toLowerCase() : ""; var cod = data.Código ? data.Código.toLowerCase() : ""; var titulo = data.Titulo ? data.Titulo.toLowerCase() : ""; var cidade = data.Cidade ? data.Cidade.toLowerCase() : "";
 
-         imagem.src=data.Imagem1;
-         label.textContent= data.Bairro;
-         label2.textContent= data.Código
-         h3.textContent=data.Titulo
+if (rua.includes(termo) || termo.includes(rua)||cod.includes(termo) || termo.includes(cod)||bairro.includes(termo) || termo.includes(bairro) || titulo.includes(termo) || termo.includes(titulo) || cidade.includes(termo) || termo.includes(cidade)) {
+//alert(data.Titulo)
+if(data.IMV_Disponivel=='ativo'){
 
-         div.appendChild(imagem);
-         div2.appendChild(h3);
-         div2.appendChild(label);
-         div2.appendChild(document.createElement('br'))
-         div2.appendChild(label2);
-           div2.appendChild(document.createElement('br'))
-         divbase.appendChild(div);
-         divbase.appendChild(div2);
-         listy.appendChild(divbase)
-        sessionStorage.setItem('itens',itens)
-          
-    
-           divbase.addEventListener('click',function(){
+var divbase=document.createElement('div');
+var div=document.createElement('div');
+var h3=document.createElement('h4');
+var div2=document.createElement('div');
+var imagem=document.createElement('img');
+var label=document.createElement('label');
+var label2=document.createElement('label');
+var label3=document.createElement('label');
+var BTN_Excluir= document.createElement('button');
+var BTN_Editar= document.createElement('button');
+var BTN_Mais= document.createElement('button');
+
+divbase.id='divbase';
+div.id='divum';
+div2.id='divdois';
+imagem.id='imagemps';
+label.id='lbl1';
+label2.id='lbl2';
+label3.id='lbl3';
+h3.id='h33'
+BTN_Editar.id='editarBTN';
+BTN_Mais.id='maisBTN';
+BTN_Excluir.id="excluirBTN";
+
+imagem.src=data.Imagem1;
+label.textContent= data.Bairro;
+label2.textContent= data.Código
+h3.textContent=data.Titulo
+BTN_Editar.textContent='Editar';
+BTN_Excluir.className='fa-solid fa-trash';
+BTN_Mais.className='fa-solid fa-eye';
+
+BTN_Mais.title='Ver mais informações';
+BTN_Excluir.title='Excluir este imóvel';
+BTN_Editar.title='Editar informações do cadastro'
+
+div.appendChild(imagem);
+div2.appendChild(h3);
+div2.appendChild(label);
+div2.appendChild(document.createElement('br'))
+div2.appendChild(label2);
+div2.appendChild(document.createElement('br'))
+divbase.appendChild(div);
+divbase.appendChild(div2);
+divbase.appendChild(BTN_Editar);
+divbase.appendChild(BTN_Mais);
+divbase.appendChild(BTN_Excluir);
+
+listy.appendChild(divbase)
+sessionStorage.setItem('itens',itens)
+
+imagem.addEventListener('click', function(){
+Swal.fire({
+title: ``,
+html: `
+<img id='imimg' src="${data.Imagem1}" alt="" width="280"> 
+<br><label id='trocarFoto' style="cursor:pointer">PRONTO!!</label>
+`,
+background: 'hsla(0, 0%, 100%, 0.00)',
+color: '#0e0e0e',
+showCloseButton: true,
+showConfirmButton: false,
+customClass: { popup: 'my-custom_img' },
+didOpen: () => { document.body.style.paddingRight = '0px'; }
+});
+// Quando clicar em "Trocar de foto"
+document.getElementById('trocarFoto').style.display='none'
+//swal('Pronto', 'imagem Carregada',url_imagem)    
+});
+
+BTN_Editar.addEventListener('click',function(){
 
 document.getElementById("CódigoInput").value=data.Código;
 document.getElementById("Input_cep").value=data.CEP;
@@ -1449,6 +1492,7 @@ document.getElementById('UltimaEdição').value=data.Editado;
 sessionStorage.setItem('SessiData',data.Data);
 sessionStorage.setItem('SessiHara',data.Hora);
 ////////////////////////////////////////////////////////
+toggleMenu()
 document.getElementById('Cadastrar').style.display='block';
 document.getElementById('btnsVoltar').style.display='block'
 document.getElementById('proximo').style.display='block'
@@ -1460,28 +1504,213 @@ document.getElementById('divImagens').style.display='none'
 document.getElementById('fichaDiv').style.display='none'
 sessionStorage.setItem('BLC', 'EndDiv')
 document.getElementById('a_Cadastro').click()
+
 });
-      
-       }
-      
-      } else{
-      }
-    });
-  });
+
+BTN_Mais.addEventListener('click', function(){
+Swal.fire(`🏡Ficha do Imóvel `,`<b>Código= </b> ${data.Código}<br><b>Titulo=</b> ${data.Titulo}<br><b>SubTitulo=</b>  ${data.SubTitulo}<br><b>CEP=</b> ${data.CEP}
+  <br><b>Rua=</b>  ${data.Rua}<br><b>N°=</b>  ${data.Numero}<br><b>Bairro=</b>  ${data.Bairro}<br>
+<b>Cidade=</b> ${data.Cidade}<br><b>UF=</b> ${data.UF}<br><b>Referência=</b> ${data.REF}<br><b>Lista=</b> ${data.Coll_Lista}<br><b>Destaque=</b> ${data.Destaque}
+ <br><b>Quartos=</b> ${data.Quartos}<br><b>Suíte=</b> ${data.Suites}<br>
+<b>Banheiro=</b>  ${data.Banheiros}<br><b>Vagas garagem=</b> ${data.Vagas_G}<br><b>Piscinas=</b> ${data.Piscinas}<br><b>Area Construida=</b> ${data.Area_Const}
+<br><b>Obeservações=</b> ${data.OBS}<br>
+<b>CPF PROP=</b> ${data.CPF}<br><b>Nome PROP=</b> ${data.Nome_Prop}<br><b>Tel PROP=</b> ${data.Tel_Prop}<br><b>DISP_ImóveL=</b> ${data.IMV_Disponivel}
+<br><b>Valor IPTU=</b> ${data.Valor_IPTU}<br>
+<b>Valor Condomínio=</b> ${data.Valor_Condominio}<br><b>Valor para Venda=</b> ${data.Valor_Venda}<br><b>Valor locação=</b> ${data.Valor_Locação}<br>-------------------------------------<br>
+<b>Data de Cadastro=</b> ${data.Data}<br><b>Hora=</b> ${data.Hora}<br>--------------------------------------<br><b>${data.Editado}</b><br><br>`,'')
+});
+BTN_Excluir.addEventListener('click',function(){
+Swal.fire({
+title: `Excluir`,
+html: `
+<div id='div_custonEx'>
+<p>Digite ou cole o Código do imovel</p>
+<input id='inputEX'  type='text' placeholder='Código 0000000000'>
+<br><button id='lblEx'>Excluir</button> <br><br>
+</div>
+`,
+background: 'hsl(0, 0%, 100%)',
+color: '#0e0e0e',
+showCloseButton: true,
+showConfirmButton: false,
+customClass: { popup: 'my-custom_EX' },
+didOpen: () => { document.body.style.paddingRight = '0px'; }
+});
+document.getElementById('inputEX').addEventListener('input', function() {
+var horaex = sessionStorage.getItem('hora');
+var dataex= sessionStorage.getItem('data');
+var exData=`Excluido em: ${dataex} ás ${horaex}`
+var resp = this.value;
+if (resp.length === 10) {
+if (resp === data.Código) {
+var dbEX= firebase.firestore();
+dbEX.collection('Coll_EXCLUIDOS').doc(data.Código).set({
+Código:data.Código,
+CEP:data.CEP,
+Rua:data.Rua,
+Bairro:data.Bairro,
+Cidade:data.Cidade,
+UF:data.UF,
+Numero:data.Numero,
+REF:data.REF,
+Coll_Lista:data.Coll_Lista,
+Destaque:data.Destaque,
+Titulo:data.Titulo,
+SubTitulo:data.SubTitulo,
+Quartos:data.Quartos,
+Suites:data.Suites,
+Banheiros:data.Banheiros,
+Vagas_G:data.Vagas_G,
+Piscinas:data.Piscinas,
+Area_Const:data.Area_Const,
+OBS:data.OBS,
+CPF:data.CPF,
+Nome_Prop:data.Nome_Prop,
+Tel_Prop:data.Tel_Prop,
+IMV_Disponivel: 'ativo',
+Valor_IPTU:data.Valor_IPTU,
+Valor_Condominio:data.Valor_Condominio,
+Valor_Venda:data.Valor_Venda,
+Valor_Locação:data.Valor_Locação,
+Imagem1:data.Imagem1,
+Imagem2:data.Imagem2,
+Imagem3:data.Imagem3,
+Imagem4:data.Imagem4,
+Imagem5:data.Imagem5,
+Imagem6:data.Imagem6,
+Imagem7:data.Imagem7,
+Imagem8:data.Imagem8,
+Imagem9:data.Imagem9,
+Imagem10:data.Imagem10,
+Data:data.Data,
+Hora:data.Hora,
+Editado:data.Editado,
+EXCLUIDO:exData ,
+})
+var ex = firebase.firestore();
+ex.collection(data.Coll_Lista).doc(data.Código).delete()
+.then(() => {
+console.log("Documento excluído com sucesso!");
+// alert("Imóvel excluído!");
+})
+.catch((error) => {
+console.error("Erro ao excluir: ", error);
+// alert("Erro ao excluir o imóvel!");
+});
+var exx = firebase.firestore();
+exx.collection('GeralColl').doc(data.Código).delete()
+.then(() => {
+console.log("Documento excluído com sucesso!");
+Swal.fire('','Imóvel excluído!','success');
+setTimeout(function(){
+imovelList()
+},1000);
+})
+.catch((error) => {
+console.error("Erro ao excluir: ", error);
+//alert("Erro ao excluir o imóvel!");
+});
+} else {
+Swal.fire('','O Código digitado não está correto!','warning')
+}
+}
+});
+document.getElementById('lblEx').addEventListener('click', function() {
+var resp = document.getElementById('inputEX').value;
+if (resp.length === 10 && resp === data.Código) {
+var dbEX= firebase.firestore();
+dbEX.collection('Coll_EXCLUIDOS').doc(data.Código).set({
+Código:data.Código,
+CEP:data.CEP,
+Rua:data.Rua,
+Bairro:data.Bairro,
+Cidade:data.Cidade,
+UF:data.UF,
+Numero:data.Numero,
+REF:data.REF,
+Coll_Lista:data.Coll_Lista,
+Destaque:data.Destaque,
+Titulo:data.Titulo,
+SubTitulo:data.SubTitulo,
+Quartos:data.Quartos,
+Suites:data.Suites,
+Banheiros:data.Banheiros,
+Vagas_G:data.Vagas_G,
+Piscinas:data.Piscinas,
+Area_Const:data.Area_Const,
+OBS:data.OBS,
+CPF:data.CPF,
+Nome_Prop:data.Nome_Prop,
+Tel_Prop:data.Tel_Prop,
+IMV_Disponivel: 'ativo',
+Valor_IPTU: data.Valor_IPTU,
+Valor_Condominio: data.Valor_Condominio,
+Valor_Venda: data.Valor_Venda,
+Valor_Locação: data.Valor_Locação,
+Imagem1:data.Imagem1,
+Imagem2:data.Imagem2,
+Imagem3:data.Imagem3,
+Imagem4:data.Imagem4,
+Imagem5:data.Imagem5,
+Imagem6:data.Imagem6,
+Imagem7:data.Imagem7,
+Imagem8:data.Imagem8,
+Imagem9:data.Imagem9,
+Imagem10:data.Imagem10,
+Data:data.Data,
+Hora:data.Hora,
+Editado:data.Editado,
+EXCLUIDO:exData ,
+})
+setInterval(function(){
+  window.location.reload()
+},3000)
+var ex1 = firebase.firestore();
+ex1.collection(data.Coll_Lista).doc(data.Código).delete()
+.then(() => {
+console.log("Documento excluído com sucesso!");
+// alert("Imóvel excluído!");
+
+})
+.catch((error) => {
+console.error("Erro ao excluir: ", error);
+//alert("Erro ao excluir o imóvel!");
+});
+var exx_ = firebase.firestore();
+exx_.collection('GeralColl').doc(data.Código).delete()
+.then(() => {
+console.log("Documento excluído com sucesso!");
+Swal.fire('','Imóvel excluído!','success');
+
+})
+
+} else {
+Swal.fire('','O Código digitado não está correto!','warning')
+}
+});
+});
+}
+}
+
+} else{
+}
+});
+});
+
 }else{
-  Swal.fire('','Preencha o campo de pesquisa!','')
+Swal.fire('','Preencha o campo de pesquisa!','')
 }
 }
 //dataument.getElementById('lblfchardivPesq').addEventListener('click',function(){
 //fech()
 //})
 //clic pesquisa teclado
-  var botao = document.getElementById('pesqI');
-  // Captura o evento de tecla pressionada
-  document.addEventListener('keydown', function(event) {
-    if (event.key === 'Enter') {
-      event.preventDefault(); // evita o comportamento padrão (como enviar formulário)
-      botao.click(); // aciona o clique do botão
-    }
-  });
-    
+var botao = document.getElementById('pesqI');
+// Captura o evento de tecla pressionada
+document.addEventListener('keydown', function(event) {
+if (event.key === 'Enter') {
+event.preventDefault(); // evita o comportamento padrão (como enviar formulário)
+botao.click(); // aciona o clique do botão
+}
+});
+
