@@ -1077,7 +1077,7 @@ Swal.fire(`🏡Ficha do Imóvel `,`<b>Código= </b> ${doc.Código}<br><b>Titulo=
 <b>Data de Cadastro=</b> ${doc.Data}<br><b>Hora=</b> ${doc.Hora}<br>--------------------------------------<br><b>${doc.Editado}</b><br><br>`,'')
 });
 BTN_Editar.addEventListener('click',function(){
-
+document.getElementById('a_Cadastro').click()
 document.getElementById("CódigoInput").value=doc.Código;
 document.getElementById("Input_cep").value=doc.CEP;
 document.getElementById("RuaInput").value=doc.Rua;
@@ -1454,7 +1454,7 @@ document.getElementById('trocarFoto').style.display='none'
 });
 
 BTN_Editar.addEventListener('click',function(){
-
+document.getElementById('a_Cadastro').click()
 document.getElementById("CódigoInput").value=data.Código;
 document.getElementById("Input_cep").value=data.CEP;
 document.getElementById("RuaInput").value=data.Rua;
