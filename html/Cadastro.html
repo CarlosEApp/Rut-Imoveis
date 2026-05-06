@@ -115,9 +115,16 @@
                                               <option value="COLL_Sítios">Sítios</option>
                       </select><br><br>
                       <select name="destaque" id="destaque"  title="Colocar em destaque?">
-                        <option value="">Colocar em Destaque?</option>
+                        <option value=""disabled selected>Colocar em Destaque?</option>
                         <option value="destaque">Em Destaque</option>
                         <option value="">Não destacado</option>
+                      </select><br><br>
+                      <p>Tipo de Tranzação?</p>
+                        <select name="destaque" id="tranzação"  title="Tipo de tranzação?">
+                        <option value=""disabled selected>Tipo de tranzação?</option>
+                        <option value="Venda">Imóvel para Venda</option>
+                        <option value="Locação">Imóvel para Locação</option>
+                        <option value="Lançamento">Lançamento</option>
                       </select><br>
                       <br>
                      <label for=""> Código (Automático)<br>
@@ -129,7 +136,7 @@
                       <label for=""> SubTitulo <br>
                         <input type="text" id="SubToInput" placeholder="SubTitulo">
                     </label><br>
-                     <p>Quantidade de:</p>
+                     <p>Comodos e Descrição</p>
                       <label id="lbl_quarto" for=""> Quartos <br>
                         <input class="inp" type="number" id="QuartosInput" placeholder="0">
                     </label><br>
@@ -142,7 +149,7 @@
                       <label for=""> Vagas Garagem <br>
                         <input class="inp" type="number" id="VagasInput" placeholder="0">
                     </label><br>
-                      <label for=""> Piscinas m² <br>
+                      <label for=""> Piscina m² <br>
                         <input class="inp" type="number" id="PiscinaInput" placeholder="0 m²">
                     </label><br>
                       <label for=""> Área construida m² <br>

@@ -234,12 +234,13 @@ var input_9= document.getElementById("ListaSeleção").value;
 var input_11= document.getElementById("TituloInput").value;
 var input_13= document.getElementById("QuartosInput").value;
 var input_15= document.getElementById("BanheirosInput").value;
-if(!input_9|| input_9==''||!input_11|| input_11==''||!input_13|| input_13==''||!input_15|| input_15==''){
+var input_38=document.getElementById("tranzação").value;
+if(!input_9|| input_9==''||!input_11|| input_11==''||!input_13|| input_13==''||!input_15|| input_15==''||!input_38|| input_38==''){
 Swal.fire({
 title: `Preencha!`,
 html: `
 <div id='custonAtenção'>
-<p><b id='BBold'> Lista do Imovel, Titulo, Quartos e Banheiros </b><br> <b id='B_red'> Campos Obrigatórios</b> </p>
+<p><b id='BBold'> Lista do Imovel, Titulo, Quartos , Banheiros e Tranzação</b><br> <b id='B_red'> Campos Obrigatórios</b> </p>
 </div>
 `,
 background: 'hsl(207, 100%, 98%)', // Cor de fundo
@@ -388,6 +389,7 @@ document.getElementById("VagasInput").value='';
 document.getElementById("PiscinaInput").value='';
 document.getElementById("AreaCInput").value='';
 document.getElementById("OBSInput").value='';
+document.getElementById("tranzação").value='';
 ///////////////////////////////////////////////////////////////////////
 document.getElementById("CPFpropInput").value='';
 document.getElementById("NomepropInput").value='';
@@ -782,6 +784,7 @@ var input_34= document.getElementById("mymg7").src;
 var input_35= document.getElementById("mymg8").src;
 var input_36= document.getElementById("mymg9").src;
 var input_37= document.getElementById("mymg10").src;
+var input_38=document.getElementById("tranzação").value;
 //////////////////////////////////////////////////////
 var hora_ = sessionStorage.getItem('hora');
 var data_= sessionStorage.getItem('data');
@@ -850,6 +853,7 @@ Valor_IPTU: input_24,
 Valor_Condominio: input_25,
 Valor_Venda: input_26,
 Valor_Locação: input_27,
+Tranzação:input_38,
 
 Imagem1:input_28,
 Imagem2:input_29,
@@ -896,6 +900,7 @@ Valor_IPTU: input_24,
 Valor_Condominio: input_25,
 Valor_Venda: input_26,
 Valor_Locação: input_27,
+Tranzação:input_38,
 
 Imagem1:input_28,
 Imagem2:input_29,
@@ -1067,7 +1072,7 @@ Swal.fire(`🏡Ficha do Imóvel `,`<b>Código= </b> ${doc.Código}<br><b>Titulo=
 <b>Banheiro=</b>  ${doc.Banheiros}<br><b>Vagas garagem=</b> ${doc.Vagas_G}<br><b>Piscinas=</b> ${doc.Piscinas}<br><b>Area Construida=</b> ${doc.Area_Const}
 <br><b>Obeservações=</b> ${doc.OBS}<br>
 <b>CPF PROP=</b> ${doc.CPF}<br><b>Nome PROP=</b> ${doc.Nome_Prop}<br><b>Tel PROP=</b> ${doc.Tel_Prop}<br><b>DISP_ImóveL=</b> ${doc.IMV_Disponivel}
-<br><b>Valor IPTU=</b> ${doc.Valor_IPTU}<br>
+<br><b>Valor IPTU=</b> ${doc.Valor_IPTU}<br><b> Tranzação:</b> ${doc.Tranzação}<br>
 <b>Valor Condomínio=</b> ${doc.Valor_Condominio}<br><b>Valor para Venda=</b> ${doc.Valor_Venda}<br><b>Valor locação=</b> ${doc.Valor_Locação}<br>-------------------------------------<br>
 <b>Data de Cadastro=</b> ${doc.Data}<br><b>Hora=</b> ${doc.Hora}<br>--------------------------------------<br><b>${doc.Editado}</b><br><br>`,'')
 });
@@ -1102,6 +1107,7 @@ document.getElementById("IPTUInput").value=doc.Valor_IPTU;
 document.getElementById("CondominíoInput").value=doc.Valor_Condominio;
 document.getElementById("vendaVInput").value=doc.Valor_Venda;
 document.getElementById("LocaçãoVInput").value=doc.Valor_Locação;
+document.getElementById("tranzação").value= doc.Tranzação;
 ///////////////////////////////////////////////////////////////////////
 document.getElementById("mymg1").src=doc.Imagem1;
 document.getElementById("mymg2").src=doc.Imagem2;
@@ -1187,6 +1193,7 @@ Valor_IPTU: doc.Valor_IPTU,
 Valor_Condominio: doc.Valor_Condominio,
 Valor_Venda: doc.Valor_Venda,
 Valor_Locação: doc.Valor_Locação,
+Tranzação:doc.Tranzação,
 Imagem1:doc.Imagem1,
 Imagem2:doc.Imagem2,
 Imagem3:doc.Imagem3,
@@ -1262,6 +1269,7 @@ Valor_IPTU: doc.Valor_IPTU,
 Valor_Condominio: doc.Valor_Condominio,
 Valor_Venda: doc.Valor_Venda,
 Valor_Locação: doc.Valor_Locação,
+Tranzação:doc.Tranzação,
 Imagem1:doc.Imagem1,
 Imagem2:doc.Imagem2,
 Imagem3:doc.Imagem3,
@@ -1476,6 +1484,7 @@ document.getElementById("IPTUInput").value=data.Valor_IPTU;
 document.getElementById("CondominíoInput").value=data.Valor_Condominio;
 document.getElementById("vendaVInput").value=data.Valor_Venda;
 document.getElementById("LocaçãoVInput").value=data.Valor_Locação;
+document.getElementById("tranzação").value= data.Tranzação;
 ///////////////////////////////////////////////////////////////////////
 document.getElementById("mymg1").src=data.Imagem1;
 document.getElementById("mymg2").src=data.Imagem2;
@@ -1517,7 +1526,7 @@ Swal.fire(`🏡Ficha do Imóvel `,`<b>Código= </b> ${data.Código}<br><b>Titulo
 <b>Banheiro=</b>  ${data.Banheiros}<br><b>Vagas garagem=</b> ${data.Vagas_G}<br><b>Piscinas=</b> ${data.Piscinas}<br><b>Area Construida=</b> ${data.Area_Const}
 <br><b>Obeservações=</b> ${data.OBS}<br>
 <b>CPF PROP=</b> ${data.CPF}<br><b>Nome PROP=</b> ${data.Nome_Prop}<br><b>Tel PROP=</b> ${data.Tel_Prop}<br><b>DISP_ImóveL=</b> ${data.IMV_Disponivel}
-<br><b>Valor IPTU=</b> ${data.Valor_IPTU}<br>
+<br><b>Valor IPTU=</b> ${data.Valor_IPTU}<br><b> Tranzação:</b> ${data.Tranzação}<br>
 <b>Valor Condomínio=</b> ${data.Valor_Condominio}<br><b>Valor para Venda=</b> ${data.Valor_Venda}<br><b>Valor locação=</b> ${data.Valor_Locação}<br>-------------------------------------<br>
 <b>Data de Cadastro=</b> ${data.Data}<br><b>Hora=</b> ${data.Hora}<br>--------------------------------------<br><b>${data.Editado}</b><br><br>`,'')
 });
@@ -1574,6 +1583,7 @@ Valor_IPTU:data.Valor_IPTU,
 Valor_Condominio:data.Valor_Condominio,
 Valor_Venda:data.Valor_Venda,
 Valor_Locação:data.Valor_Locação,
+Tranzação:data.Tranzação,
 Imagem1:data.Imagem1,
 Imagem2:data.Imagem2,
 Imagem3:data.Imagem3,
@@ -1649,6 +1659,7 @@ Valor_IPTU: data.Valor_IPTU,
 Valor_Condominio: data.Valor_Condominio,
 Valor_Venda: data.Valor_Venda,
 Valor_Locação: data.Valor_Locação,
+Tranzação:data.Tranzação,
 Imagem1:data.Imagem1,
 Imagem2:data.Imagem2,
 Imagem3:data.Imagem3,

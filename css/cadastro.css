@@ -313,13 +313,13 @@ font-family: 'Poppins', sans-serif;
 padding: 10px;
 border-radius: 5px;
 }
-#destaque, #estadoIMV{
+#destaque, #estadoIMV, #tranzação{
 min-width: 200px;
 max-width: 330px;
 cursor: pointer;
 outline: none;
 border: 0cap;
-background-color: rgb(1, 122, 158);
+background-color: rgb(13, 106, 143);
 color: rgb(255, 255, 255);
 padding: 3px;
 font-size: clamp(0.900rem, 0.3vw  + 0.5rem, 1rem);
