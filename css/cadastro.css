@@ -919,13 +919,12 @@ width: 100%;
 max-width: 1920px;
 height:55vh;
 background-color: rgb(0, 0, 0);
-border-top: 40px solid rgb(8, 60, 129);
+border-top: 10px solid rgb(243, 248, 255);
 background-color: rgb(255, 255, 255);
   background-image: url('../src/Bannerjpg2.jpg');
   background-repeat: no-repeat;
   background-size: cover;
-border-top-left-radius: 20px;
-border-top-right-radius: 20px;
+
 }
 #OBSInput{
   padding: 10px;
