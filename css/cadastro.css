@@ -50,7 +50,7 @@ padding-bottom: 5px;
 header h1{
 text-align: center;
 color: aliceblue;
-margin-top: 3px;
+margin-top: 5px;
 font-size: clamp(1.600rem, 0.3vw  + 0.5rem, 1.700rem);
 }
 #header_um{
@@ -61,12 +61,12 @@ display: flex;
 justify-content: space-around;
 align-items: center;
 margin-top: 5px;
-padding-bottom: 5px;
+padding-bottom: 7px;
 }
 #selectOperação{
 width: 97%;
 max-width: 400px;
-font-size: clamp(1.20rem, 0.3vw  + 0.5rem, 1.300rem);
+font-size: clamp(1.100rem, 0.3vw  + 0.5rem, 1.100rem);
 padding: 7px;
 border: 0cap;
 outline: none;
@@ -556,13 +556,14 @@ cursor: pointer;
 max-width: 230px;
 border: 0cap;
 background-color: rgb(255, 255, 255);
-color: rgb(71, 71, 71);
+color: rgb(27, 27, 27);
 font-size: clamp(1rem, 0.3vw  + 0.5rem, 1.100rem);
-padding: 10px;
+padding: 4px;
 border-radius: 5px;
 text-align: center;
 outline: none;
 font-family: 'Poppins', sans-serif;
+font-weight: bold;
 }
 #divLista{
 margin: auto;
@@ -899,18 +900,25 @@ max-width: 430px;
 padding: 10px;
 font-size: clamp(0.900rem, 0.3vw  + 0.5rem, 1.100rem);
 margin-right: 10px;
-border: 2px solid rgb(201, 201, 201);
+border: 2px solid rgba(255, 254, 254, 0);
 border-radius: 5px;
 margin-bottom: 10px;
 }
+#inputpesq input:hover{
+  border: 2px solid rgb(97, 1, 57);
+}
 #pesqI{
 font-size: clamp(1.300rem, 0.3vw  + 0.5rem, 1.400rem);
-border: 2px solid rgb(201, 201, 201);
+border: 2px solid rgba(201, 201, 201, 0);
 padding: 10px;
 border-radius: 50%;
 background-color: rgb(255, 255, 255);
 cursor: pointer;
 margin-bottom: 10px;
+}
+#pesqI:hover{
+  background-color: #7c0057;
+  color: aliceblue;
 }
 #btnFecharP{
 margin-top: 10px;
