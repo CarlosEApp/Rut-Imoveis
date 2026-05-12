@@ -860,6 +860,7 @@ margin: 12px 3px; /* espaço externo em relação às margens */
 }
 #label_dois{
 margin: auto;
+width: 99%;
 font-family: 'Poppins', sans-serif;
 font-size: clamp(0.800rem, 0.3vw  + 0.5rem, 0.900rem);
 color: #252525;
@@ -967,8 +968,9 @@ font-size: clamp(1rem, 0.3vw  + 0.5rem, 1rem);
 color: #252525;
 text-shadow: 0px 0px 1px rgb(0, 0, 0);
 display: block;
-align-items: center;
 margin: 5px 5px; 
+display: flex;
+align-items: center;
 flex-wrap: wrap;
 }
 #spamm{
@@ -1069,7 +1071,7 @@ font-size: clamp(1.100rem, 0.3vw  + 0.5rem, 1.100rem);
 color: #383838;
 text-shadow: 0px 1px 1px rgb(65, 64, 64);
 display: block;
-margin: 15px 7px; /* espaço externo em relação às margens */
+margin: 15px 5px; /* espaço externo em relação às margens */
 }
 #label_dois{
 margin: auto;
@@ -1078,8 +1080,8 @@ font-size: clamp(1rem, 0.3vw  + 0.5rem, 1rem);
 color: #252525;
 text-shadow: 0px 0px 1px rgb(0, 0, 0);
 display: block;
-margin: 10px 7px; 
-display: block;
+margin: 10px 5px; 
+display: flex;
 align-items: center;
 flex-wrap: wrap;
 }
@@ -1102,7 +1104,18 @@ z-index: 999;
 }
 }
 
-
+#label_dois_{
+margin: auto;
+width: 99%;
+font-family: 'Poppins', sans-serif;
+font-size: clamp(0.800rem, 0.3vw  + 0.5rem, 0.900rem);
+color: #252525;
+text-shadow: 0px 0px 1px rgb(0, 0, 0);
+display: block;
+align-items: center;
+flex-wrap: wrap;
+margin: 15px 5px; 
+}
 
 footer{
 width: 100%;
