@@ -165,7 +165,7 @@ if(data.Tranzação==='Venda'||data.Tranzação==='Lançamento'){
 }else if(data.Tranzação==='Locação'|| data.Tranzação==='Temporada'){
    label_dois.innerHTML = `✅ ${data.Tranzação}:<b id='spamm'>${data.Valor_Locação}</b>` ;
 
-}else if(data.Tranzação==='Locação&Venda'){
+}else if(data.Tranzação==='Locação e Venda'){
  label_dois.innerHTML = `✅ ${data.Tranzação}:<b id='spamm'>${data.Valor_Venda} <br> ${data.Valor_Locação}</b>` ;
  }else{
 
