@@ -97,8 +97,11 @@ snapshot.forEach(docSnap => {
 var data = docSnap.data();
 
 if (data.IMV_Disponivel == 'ativo') {
-Itens++
 
+if(!data.Destaque|| data.Destaque==''){
+
+}else{
+  Itens++
 if (Itens <= 7){
 
 var conntainer = document.createElement('div');
@@ -247,6 +250,9 @@ conntainer.appendChild(div_label);
 conntainer.appendChild(div_cvc);
 conntainer.appendChild(div_cvic);
 li.appendChild(conntainer);
+
+
+}
 }
 }
 });
