@@ -865,7 +865,6 @@ font-size: clamp(0.800rem, 0.3vw  + 0.5rem, 0.900rem);
 color: #252525;
 text-shadow: 0px 0px 1px rgb(0, 0, 0);
 display: block;
-
 display: flex;
 align-items: center;
 flex-wrap: wrap;
@@ -968,9 +967,8 @@ font-size: clamp(1rem, 0.3vw  + 0.5rem, 1rem);
 color: #252525;
 text-shadow: 0px 0px 1px rgb(0, 0, 0);
 display: block;
-margin: 5px 5px; 
-display: flex;
 align-items: center;
+margin: 5px 5px; 
 flex-wrap: wrap;
 }
 #spamm{
@@ -1081,7 +1079,7 @@ color: #252525;
 text-shadow: 0px 0px 1px rgb(0, 0, 0);
 display: block;
 margin: 10px 7px; 
-display: flex;
+display: block;
 align-items: center;
 flex-wrap: wrap;
 }
