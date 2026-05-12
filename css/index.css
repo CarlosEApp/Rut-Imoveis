@@ -729,7 +729,7 @@ margin-left: 10px;
 margin-right: 10px;
 width: 90%;
 max-width: 450px;
-height: 450px;
+height: 480px;
 background-color: #ffffff;
 border-bottom: 7px solid rgb(83, 83, 83);
 box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.445);
@@ -758,7 +758,7 @@ margin-left: 10px;
 margin-right: 10px;
 width: 90%;
 max-width: 400px;
-height: 400px;
+height: 470px;
 background-color: #ffffff;
 border-bottom: 7px solid rgb(83, 83, 83);
 box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.445);
@@ -905,12 +905,18 @@ margin: 5px 20px ;
     box-shadow: 0px 1px 2px rgba(43, 43, 43, 0.726);
     cursor: pointer;
     background-color: rgba(240, 248, 255, 0);
-
-    
+ 
 }
 
 @media (max-width: 700px) {
-
+#divBotao{
+    margin: auto;
+    width: 100%;
+    text-align: center;
+    margin-top: 25px;
+    background-color: transparent;
+  
+}
 #ConntDiv #img_icom {
 width: 30px;
 margin-right: 10px;
@@ -924,7 +930,7 @@ width: 100%;
 display: flex;
 justify-content: space-around;
 align-items: center;
-margin-top: 30px;
+margin-top: 35px;
 }
 #cvic{
 margin: auto;
@@ -932,7 +938,7 @@ width: 100%;
 display: flex;
 justify-content: space-between;
 align-items: center;
-margin-top: 10px;
+margin-top: 7px;
 margin-left: 30px;
 }
 #paraG{
@@ -978,7 +984,7 @@ margin: 3px 20px;
 }
 #divLabel {
 position: absolute;
-bottom: 130px;
+bottom: 160px;
 height: 300px;
 left: 0;
 width: 100%;
@@ -997,6 +1003,14 @@ z-index: 999;
 
 
 @media (max-width: 600px) {
+    #divBotao{
+    margin: auto;
+    width: 100%;
+    text-align: center;
+    margin-top: 25px;
+    background-color: transparent;
+  
+}
 #ImagemIMV{
 width: 100%;
 height: 300px;
@@ -1009,7 +1023,7 @@ margin-left: 10px;
 margin-right: 10px;
 width: 90%;
 max-width: 400px;
-height: 420px;
+height: 470px;
 background-color: #ffffff;
 border-bottom: 7px solid rgb(83, 83, 83);
 box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.445);
@@ -1073,7 +1087,7 @@ flex-wrap: wrap;
 }
 #divLabel {
 position: absolute;
-bottom: 100px;
+bottom: 155px;
 height: 300px;
 left: 0;
 width: 100%;
