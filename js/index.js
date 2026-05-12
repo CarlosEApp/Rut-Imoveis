@@ -115,7 +115,7 @@ var label_um = document.createElement('label');
 var label_dois = document.createElement('label');
 var label_tres = document.createElement('label');
 var label_quatro = document.createElement('label');
-var BTN_Editar = document.createElement('button');
+var BTN_Compart = document.createElement('button');
 var BTN_Mais = document.createElement('button');
 var IMG_Imovel = document.createElement('img');
 var parag = document.createElement('p');
@@ -140,9 +140,9 @@ IMG_Imovel.id = 'ImagemIMV';
 label_um.id = 'label_um';
 label_dois.id = 'label_dois';
 label_tres.id = 'label_tres';
-label_tres.id = 'label_quatro';
+label_quatro.id = 'label_quatro';
 divFlex.id = 'flexDiv';
-BTN_Editar.id = 'editarBTN';
+BTN_Compart.id= 'CompartBTN';
 BTN_Mais.id = 'maisBTN';
 img1.id='img_icom';
 img2.id='img_icom';
@@ -173,54 +173,57 @@ if(data.Tranzação==='Venda'||data.Tranzação==='Lançamento'){
  }else{
 
   }
-BTN_Editar.textContent = '';
 
-BTN_Mais.className = 'fa-solid fa-car';
-
+BTN_Mais.className = 'fa-solid fa-eye';
 BTN_Mais.title = 'Ver mais informações';
-
-BTN_Editar.title = 'Editar informações do cadastro';
 IMG_Imovel.title = 'imagem do Imóvel';
+BTN_Compart.className='fa-solid fa-share-nodes';
+BTN_Compart.title='Compartilhar'
 parag.textContent = '';
+
 
 
 img1.src='src/regua.png';
 img2.src='src/cama-de-solteiro.png';
 img3.src='src/chuveiro.png';
 img4.src='src/carro.png';
-img1.title='Area Construida'
+
 
 if(!data.Area_Const || data.Area_Const==''){
   parag2.textContent='00 m²?';
-  parag2.className='smai'
-
+  parag2.className='smai';
+  img1.title='Area Construida, sem informação!'
 }else{
   parag2.textContent=`${data.Area_Const} m²`
-  
+   img1.title=`Area Construida: ${data.Area_Const} m²`
 };
 
-if(!data.Quartos || data.Quartos==''){
+if(!data.Quartos || data.Quartos==''|| data.Quartos=='0'){
   parag3.textContent=' quartos?';
-  parag3.className='smai'
-
+  parag3.className='smai';
+  img2.title='Sem Quartos!'
 }else{
   parag3.textContent=`${data.Quartos} quartos`
+   img2.title=`${data.Quartos} Quartos`
 };
 
-if(!data.Banheiros || data.Banheiros==''){
+if(!data.Banheiros || data.Banheiros==''|| data.Banheiros=='0'){
   parag4.textContent='banh ?';
-  parag4.className='smai'
-
+  parag4.className='smai';
+  img3.title='Sem Banheiros!'
 }else{
   parag4.textContent=`${data.Banheiros} banh.`
+   img3.title=`${data.Banheiros} Banheiros`
 };
 
-if(!data.Vagas_G || data.Vagas_G==''){
+if(!data.Vagas_G || data.Vagas_G==''|| data.Vagas_G=='0'){
   parag5.textContent='vaga ?';
-  parag5.className='smai'
+  parag5.className='smai';
+  img4.title='Sem vaga de garagem!'
 
 }else{
   parag5.textContent=`${data.Vagas_G} Vagas`
+  img4.title=`${data.Vagas_G} Vagas de garagem `
 };
 
 //img5.src='';
@@ -231,7 +234,8 @@ div_imagem.appendChild(IMG_Imovel);
 div_label.appendChild(label_um);
 div_label.appendChild(label_dois);
 div_label.appendChild(label_tres);
-div_botao.appendChild(BTN_Editar);
+
+div_botao.appendChild(BTN_Compart);
 div_botao.appendChild(BTN_Mais);
 div_cvc.appendChild(img1);
 div_cvc.appendChild(img2);
@@ -243,12 +247,13 @@ div_cvic.appendChild(parag3)
 div_cvic.appendChild(parag4)
 div_cvic.appendChild(parag5)
 div_cvic.appendChild(parag6)             
-
-div_label.appendChild(div_botao)
+conntainer.appendChild(div_botao)
 conntainer.appendChild(div_imagem);
 conntainer.appendChild(div_label);
 conntainer.appendChild(div_cvc);
 conntainer.appendChild(div_cvic);
+conntainer.appendChild(div_botao)
+
 li.appendChild(conntainer);
 
 
