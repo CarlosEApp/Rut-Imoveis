@@ -43,7 +43,7 @@
              <option value="" disabled selected>Tipo de Operação</option>
              <option value="Cadastrar">Cadastrar novo Imóvel</option>
              <option value="Cadastrados">Imóveis já Cadastrados</option>
-             <option value="Pesquisar">Pesquisar por imóvel</option>
+             <option value="Pesquisar">Pesquisar por imóveis</option>
                <option value=""></option>
                  <option value="sair">Sair, Exit</option>
             </select>
@@ -102,9 +102,8 @@
                   <div id="fichaDiv">
                     <h2>Ficha do Imóvel</h2><br>
                       <select name="Lista" id="ListaSeleção" title="Lista de descrição e armazenamento do imóvel">
-                         <option value='' disabled selected>Lista do imóvel</option>
-                            <option value="COLL_Temporada">Temporada</option>
-                              <option value="COLL_Casas">Casas</option>
+                         <option value=''disabled selected>Lista do imóvel</option>
+                              <option value="COLL_Casas">Casas Térrea</option>
                                 <option value="COLL_Sobrados">Sobrados</option>
                                   <option value="COLL_Apartamentos">Apartamentos</option>
                                     <option value="COLL_Terrenos">Terrenos</option>
@@ -124,7 +123,8 @@
                         <option value=""disabled selected>Tipo de tranzação?</option>
                         <option value="Venda">Imóvel para Venda</option>
                         <option value="Locação">Imóvel para Locação</option>
-                          <option value="Locação">Venda e Locação</option>
+                        <option value="Locação e Venda">Venda e Locação</option>
+                        <option value="Temporada">Temporada</option>
                         <option value="Lançamento">Lançamento</option>
                       </select><br>
                       <br>
@@ -237,8 +237,7 @@
                   <select name="Lista" id="ListadoImóvel" onchange="imovelList()" title="Lista onde está armazenado o imóvel">
                    <option value="" disabled selected>Lista do imóvel</option>
                     <option value="GeralColl">Todos os Imóveis</option>
-                     <option value="COLL_Temporada">Temporada</option>
-                      <option value="COLL_Casas">Casas</option>
+                      <option value="COLL_Casas">Casas Térrea</option>
                        <option value="COLL_Sobrados">Sobrados</option>
                         <option value="COLL_Apartamentos">Apartamentos</option>
                          <option value="COLL_Terrenos">Terrenos</option>
@@ -251,7 +250,6 @@
                                <option value="suspenso">Suspensos</option>
                                <option value=""disabled selected></option>
                                 <option value="Coll_EXCLUIDOS">Imóveis Excluidos</option>
-                                 <option value=""disabled selected></option>
                                   <option value="">Sair, Exit</option>
                 </select> <button id="pesquisa" title="Pesquisar"><i id="pesq-1" onclick="pesquisar()" class="fa-solid fa-magnifying-glass"></i> </button></div>
                 <div id="divLista">

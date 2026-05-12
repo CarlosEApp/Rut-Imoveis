@@ -1097,6 +1097,7 @@ document.getElementById("BanheirosInput").value=doc.Banheiros;
 document.getElementById("VagasInput").value=doc.Vagas_G;
 document.getElementById("PiscinaInput").value=doc.Piscinas;
 document.getElementById("OBSInput").value=doc.OBS;
+document.getElementById("AreaCInput").value=doc.Area_Const;
 ///////////////////////////////////////////////////////////////////////
 document.getElementById("CPFpropInput").value=doc.CEP;
 document.getElementById("NomepropInput").value=doc.Nome_Prop;
@@ -1207,7 +1208,7 @@ Imagem10:doc.Imagem10,
 Data:doc.Data,
 Hora:doc.Hora,
 Editado:doc.Editado,
-EXCLUIDO:exData ,
+EXCLUIDO:exData,
 })
 var ex = firebase.firestore();
 ex.collection(doc.Coll_Lista).doc(doc.Código).delete()
@@ -1238,6 +1239,9 @@ Swal.fire('','O Código digitado não está correto!','warning')
 }
 });
 document.getElementById('lblEx').addEventListener('click', function() {
+  var horaex = sessionStorage.getItem('hora');
+var dataex= sessionStorage.getItem('data');
+var exData=`Excluido em: ${dataex} ás ${horaex}`
 var resp = document.getElementById('inputEX').value;
 if (resp.length === 10 && resp === doc.Código) {
 var dbEX= firebase.firestore();
@@ -1283,7 +1287,7 @@ Imagem10:doc.Imagem10,
 Data:doc.Data,
 Hora:doc.Hora,
 Editado:doc.Editado,
-EXCLUIDO:exData ,
+EXCLUIDO:exData,
 })
 var ex = firebase.firestore();
 ex.collection(doc.Coll_Lista).doc(doc.Código).delete()
@@ -1628,6 +1632,9 @@ Swal.fire('','O Código digitado não está correto!','warning')
 }
 });
 document.getElementById('lblEx').addEventListener('click', function() {
+  var horaex = sessionStorage.getItem('hora');
+var dataex= sessionStorage.getItem('data');
+var exData=`Excluido em: ${dataex} ás ${horaex}`
 var resp = document.getElementById('inputEX').value;
 if (resp.length === 10 && resp === data.Código) {
 var dbEX= firebase.firestore();

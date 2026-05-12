@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RUTIMÓVEIS</title>
-       <link rel="shortcut icon" href="src/lg01.png" type="image/x-icon">  
+    <title id="TITULO"> Rut-Imóveis</title>
+       <link rel="shortcut icon" href="src/Rute_avatar_.png" type="image/x-icon">  
     <meta property="og:title" content="Rutimóveis soluções residenciais">
     <meta property="og:description" content="Encontre imóveis incríveis em Itanhaém e região com preços que cabem no seu bolso. Casas, sobrados, apartamentos e muito mais. A Rutimóveis ajuda você a conquistar o sonho da casa própria com facilidade e confiança.">
     <meta property="og:image" content="https://rutimoveis.netlify.app/assets/Rutimoveis-img.png">
@@ -24,7 +24,6 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
-    <link rel="stylesheet" href="css/index.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
     <meta name="google-site-verification" content="I5QDbpWaGPHDZCWZITuNbd94oKGkibaclmduJlckKqU" />
@@ -32,6 +31,124 @@
     <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
+<div id="conteudoGeral">
+    <header>
+     <div id="headerUm">
+       <div id="headerFlex">     
+        <div id="bannerUm"> <img id="imgHeader"  src="src/Bannerjpg2.png" width="100%" alt=""> <img id="imgDoisHeader" src="src/bannerMenor.png" width="100%"  alt=""></div>
+         </div>
+           <div id="headerMenu">
+             <div id="divMenuHeader">
+               <div id="HM1"> <i id="I_Casa" class="fa-solid fa-house"></i> <select name="" id="selectImóveisMenu" title="Imóveis">
+                 <option value="" disabled selected>Rut - Imóveis</option>
+                    <option value="COLL_Casas">Casas Térrea</option>
+                      <option value="COLL_Sobrados">Sobrados</option>
+                        <option value="COLL_Apartamentos">Apartamentos</option>
+                          <option value="COLL_Terrenos">Terrenos</option>
+                            <option value="COLL_Lojas">Lojas</option>
+                              <option value="COLL_Galpões">Galpões</option>
+                                <option value="COLL_Armazens">Armazens</option>
+                                  <option value="COLL_Chacaras">Chácaras</option>
+                                    <option value="COLL_Sítios">Sítios</option>
+                                      <option value="Sair"></option>
+                                        <option value="Sair">Sair, Exit</option>
+                    </select> 
+                    <button id="btnCad" onclick="funçaocad()">Cadastro</button></div> <div id="HM2"> <button onclick=" initList()">MENU</button></div>
+                   
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div id="mainUm">
+            <div id="MaiflaxUm">
+                
+                <div id="DivPesquisador">
+                    <h2 class="h2P">Encontre Imóveis</h2>
+                    <div id="divPesquisa"> 
+                     <p><i id="pesq" class="fa-solid fa-magnifying-glass"></i> Código </p>
+                      <div id="divP1">
+                        <input id="CodigoInput" type="text" title="Código do Imóvel" placeholder="Digite ou cole o código... "> <button id="BTNBuscar" onclick="pesquiCod()" ><i id="pesq" class="fa-solid fa-magnifying-glass"></i> Buscar</button>
+                      </div>
+                      <br>
+                      <p id="P_division"></p>
+                         <p><i id="pesq" class="fa-solid fa-magnifying-glass"></i> Buscar </p>
+                             <select name="" id="tranzação"  title="Tipo de tranzação?">
+                             <option value=""disabled selected>Tranzação?</option>
+                             <option value="Venda">Imóveis para Venda</option>
+                             <option value="Locação">Imóveis para Locação</option>
+                             <option value="Temporada">Temporada</option>
+                             <option value="Lançamento">Lançamento</option>
+                      </select><br>
+                      <div id="divP2">
+                        <input id="PesquInput" type="text" title="Pesquise por Imóvel" placeholder="Digite rua, bairro ou cidade..."> <button id="BTNPSQ" onclick="pesquisar()" ><i id="pesq" class="fa-solid fa-magnifying-glass"></i> Buscar</button>
+                      </div>
+                      <br>
+                        <p id="P_division"></p>
+                         <p><i id="pesq" class="fa-solid fa-magnifying-glass"></i> Melhor preço R$ + / -  </p>
+                         <div id="divP1" class="diValores">
+                       <Label>Max R$: </Label> <input id="ValorMaxInput" type="text" title="Valor maxímo do Imóvel" placeholder="Digite o valor maxímo... ">
+                      </div>
+                       <div id="divP1" class="diValores">
+                         <Label>MIn R$: </Label> <input id="ValorMinInput" type="text" title="Valor minimo do Imóvel" placeholder="Digite o valor minimo... ">
+                        </div><div id="divP1" class="ClassPValor"><button id="btnBuscaValor"><i id="pesq" class="fa-solid fa-magnifying-glass"></i>  Busca por valor</button></div>
+                      <br>
+
+                    </div>
+                    
+                    
+                </div>
+                <br><br>
+                <div id="divCarrocel">
+                    <h2>✨Rut imóveis - economia, segurança e qualidade!</h2>
+                    <div id="divApresntação">
+                       <div id="imgApresent"> <img  src="src/BannerRute.png" id="IMGAP" alt=""> <br>  <h3  id="LBLAP"></h3> <p id="ALBAP2"></Label> </p>
+                    </div>
+                </div>      
+            </div>
+
+
+        </div>
+        <div id="divMainDois">
+          <div id="flexdiv2"> 
+              <div id="div_"></div>
+             <div id="CorretoresDiv">
+               <h2>Fale Conosco </h2>
+               <div id="div_Corretor">
+                
+                <div id="Corr_um">
+                   <h2>Corretores</h2>
+                </div>
+                 <div id="Corr_dois">
+                  <h2>Contatos</h2>
+                </div>
+               </div>
+             </div>
+             <div id="lista_imoveis_destaque">
+              <h2 id="Div_IMV_DestaqueH2">✨Imóvens em Destaque</h2>
+               <div id="list"></div>
+                 <h2 id="Div_IMV_DestaqueH2_" onclick="verMaisIMV()">Ver mais imóveis <b id="Bred">>>>></b></h2>
+       
+             </div>
+          </div>
+
+        </div>
+            
+    </main>
+    <footer>
+
+    </footer>
+
+
+
+
+
+</div>
+
+
+
+
+
     <script src="js/index.js"></script>
 </body>
 </html>
