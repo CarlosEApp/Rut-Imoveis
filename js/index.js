@@ -156,17 +156,17 @@ parag6.id='paraG';
 
 
 IMG_Imovel.src = data.Imagem1;
-label_um.textContent = `🌟 ${data.Titulo}`;
+label_um.textContent = ` ${data.Titulo}`;
 label_tres.textContent = `${data.Código}`;
 
 if(data.Tranzação==='Venda'||data.Tranzação==='Lançamento'){
-  label_dois.innerHTML = `✅ ${data.Tranzação}:<b id='spamm'>${data.Valor_Venda}</b>` ;
+  label_dois.innerHTML = ` ${data.Tranzação}:<b id='spamm'>${data.Valor_Venda}</b>` ;
 
 }else if(data.Tranzação==='Locação'|| data.Tranzação==='Temporada'){
-   label_dois.innerHTML = `✅ ${data.Tranzação}:<b id='spamm'>${data.Valor_Locação}</b>` ;
+   label_dois.innerHTML = ` ${data.Tranzação}:<b id='spamm'>${data.Valor_Locação}</b>` ;
 
 }else if(data.Tranzação==='Locação e Venda'){
- label_dois.innerHTML = `✅ ${data.Tranzação}:<b id='spamm'>${data.Valor_Venda} <br> ${data.Valor_Locação}</b>` ;
+ label_dois.innerHTML = ` ${data.Tranzação}:<b id='spamm'>${data.Valor_Venda} <br> ${data.Valor_Locação}</b>` ;
  }else{
 
   }
