@@ -850,7 +850,7 @@ font-size: clamp(1rem, 0.3vw  + 0.5rem, 1rem);
 color: #383838;
 text-shadow: 0px 1px 1px rgb(65, 64, 64);
 display: block;
-margin: 15px 3px; /* espaço externo em relação às margens */
+margin: 12px 3px; /* espaço externo em relação às margens */
 }
 #label_dois{
 margin: auto;
@@ -958,6 +958,22 @@ color: #383838;
 text-shadow: 0px 0px 1px rgb(65, 64, 64);
 display: block;
 margin: 15px 3px; 
+}
+#divLabel {
+position: absolute;
+bottom: 0;
+left: 0;
+width: 100%;
+background-color: aliceblue;
+padding: 5px;
+padding-top: 10px;
+padding-bottom: 25px;
+/* estado inicial escondido */
+transform: translateY(100%);
+opacity: 0;
+transition: transform 0.3s ease, opacity 0.3s ease;
+font-family: 'Poppins', sans-serif;
+z-index: 999;
 }
 }
 
