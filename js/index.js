@@ -187,7 +187,7 @@ img3.src='src/chuveiro.png';
 img4.src='src/carro.png';
 
 if(!data.Area_Const || data.Area_Const==''){
-  parag2.textContent='00 m² ?';
+  parag2.textContent='00 m²?';
   parag2.className='smai'
 
 }else{
