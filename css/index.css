@@ -927,7 +927,7 @@ font-size: clamp(1.100rem, 0.3vw  + 0.5rem, 1.100rem);
 color: #383838;
 text-shadow: 0px 1px 1px rgb(65, 64, 64);
 display: block;
-margin: 15px 3px; /* espaço externo em relação às margens */
+margin: 15px 5px; /* espaço externo em relação às margens */
 }
 #label_dois{
 margin: auto;
@@ -1015,6 +1015,27 @@ color: rgb(255, 251, 251);
 }
 #divPesquisa .diValores input{
 font-family: 'Figtree', sans-serif;
+}
+#label_um{
+margin: auto;
+font-family: 'Poppins', sans-serif;
+font-size: clamp(1.100rem, 0.3vw  + 0.5rem, 1.100rem);
+color: #383838;
+text-shadow: 0px 1px 1px rgb(65, 64, 64);
+display: block;
+margin: 15px 7px; /* espaço externo em relação às margens */
+}
+#label_dois{
+margin: auto;
+font-family: 'Poppins', sans-serif;
+font-size: clamp(1rem, 0.3vw  + 0.5rem, 1rem);
+color: #252525;
+text-shadow: 0px 0px 1px rgb(0, 0, 0);
+display: block;
+margin: 10px 7px; 
+display: flex;
+align-items: center;
+flex-wrap: wrap;
 }
 }
 
