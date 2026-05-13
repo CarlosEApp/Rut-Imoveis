@@ -174,14 +174,15 @@ setInterval(() => {
   }
 
   // aplica saída lateral
-  IMG_Imovel.classList.remove('slide-in');
-  IMG_Imovel.classList.add('slide-out');
-  IMG_Imovel.src = imagens[index]; // troca imagem
+
   setTimeout(() => {
   
     IMG_Imovel.classList.remove('slide-out');
     IMG_Imovel.classList.add('slide-in'); // entra de lado
-  },700); // tempo da animação de saída
+  },900); // tempo da animação de saída
+    //IMG_Imovel.classList.remove('slide-in');
+  IMG_Imovel.classList.add('slide-out');
+  IMG_Imovel.src = imagens[index]; // troca imagem
 }, 9000);// 5 segundos
 
 label_um.textContent = `🏡 ${data.Titulo}`;
