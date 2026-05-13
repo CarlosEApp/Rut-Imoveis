@@ -856,6 +856,7 @@ color: #383838;
 text-shadow: 0px 1px 1px rgb(65, 64, 64);
 display: block;
 margin: 12px 3px; /* espaço externo em relação às margens */
+margin-right: 10px;
 }
 #label_dois{
 margin: auto;
@@ -869,6 +870,7 @@ display: flex;
 align-items: center;
 flex-wrap: wrap;
 margin: 15px 5px; 
+margin-right: 10px;
 }
 #spamm{
 margin: auto;
@@ -877,7 +879,7 @@ font-size: clamp(1rem, 0.3vw  + 0.5rem, 1.100rem);
 color: #535353;
 text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.836);
 display: block;
-margin: 3px 10px;
+margin: 5px 15px;
 }
 #label_tres{
 margin: auto;
@@ -886,7 +888,7 @@ font-size: clamp(0.800rem, 0.3vw  + 0.5rem, 0.800rem);
 color: #000000;
 text-shadow: 0px 0px 1px rgb(10, 10, 10);
 display: block;
-margin: 5px 20px ; 
+margin: 15px 10px ; 
 }
 #divBotao{
 margin: auto;
@@ -954,7 +956,7 @@ font-size: clamp(1.100rem, 0.3vw  + 0.5rem, 1.100rem);
 color: #383838;
 text-shadow: 0px 1px 1px rgb(65, 64, 64);
 display: block;
-margin: 15px 5px; /* espaço externo em relação às margens */
+margin: 15px 7px; /* espaço externo em relação às margens */
 margin-right: 10px;
 }
 #label_dois{
@@ -964,7 +966,7 @@ font-size: clamp(1rem, 0.3vw  + 0.5rem, 1rem);
 color: #252525;
 text-shadow: 0px 0px 1px rgb(0, 0, 0);
 display: block;
-margin: 5px 5px; 
+margin: 5px 8px; 
 margin-right: 10px;
 display: flex;
 align-items: center;
@@ -1065,7 +1067,7 @@ font-size: clamp(1.100rem, 0.3vw  + 0.5rem, 1.100rem);
 color: #383838;
 text-shadow: 0px 1px 1px rgb(65, 64, 64);
 display: block;
-margin: 15px 5px; /* espaço externo em relação às margens */
+margin: 15px 7px; /* espaço externo em relação às margens */
 margin-right: 10px;
 }
 #label_dois{
@@ -1075,7 +1077,7 @@ font-size: clamp(1rem, 0.3vw  + 0.5rem, 1rem);
 color: #252525;
 text-shadow: 0px 0px 1px rgb(0, 0, 0);
 display: block;
-margin: 10px 5px; 
+margin: 10px 7px; 
 margin-right: 10px;
 display: flex;
 align-items: center;
@@ -1109,7 +1111,7 @@ text-shadow: 0px 0px 1px rgb(0, 0, 0);
 display: block;
 align-items: center;
 flex-wrap: wrap;
-margin: 15px 5px; 
+margin: 15px 10px; 
 }
 footer{
 width: 100%;
