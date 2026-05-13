@@ -955,6 +955,7 @@ color: #383838;
 text-shadow: 0px 1px 1px rgb(65, 64, 64);
 display: block;
 margin: 15px 5px; /* espaço externo em relação às margens */
+margin-right: 10px;
 }
 #label_dois{
 margin: auto;
@@ -964,6 +965,7 @@ color: #252525;
 text-shadow: 0px 0px 1px rgb(0, 0, 0);
 display: block;
 margin: 5px 5px; 
+margin-right: 10px;
 display: flex;
 align-items: center;
 flex-wrap: wrap;
@@ -1064,6 +1066,7 @@ color: #383838;
 text-shadow: 0px 1px 1px rgb(65, 64, 64);
 display: block;
 margin: 15px 5px; /* espaço externo em relação às margens */
+margin-right: 10px;
 }
 #label_dois{
 margin: auto;
@@ -1073,6 +1076,7 @@ color: #252525;
 text-shadow: 0px 0px 1px rgb(0, 0, 0);
 display: block;
 margin: 10px 5px; 
+margin-right: 10px;
 display: flex;
 align-items: center;
 flex-wrap: wrap;
