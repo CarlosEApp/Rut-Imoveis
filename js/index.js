@@ -63,7 +63,8 @@ var db = firebase.firestore();
 var itens = [];
 var index = 0;
 // 🔹 Carrega todos os documentos da coleção
-db.collection("GeralColl").get().then(snapshot => {
+db.collection("GeralColl").where("IMV_Disponivel", "==", "ativo").get()
+.then(snapshot => {
 snapshot.forEach(doc => {
 itens.push(doc.data());
 });
@@ -89,14 +90,15 @@ index = (index + 1) % itens.length; // avança e reinicia no final
 function initList(){
 var Itens=1
 var dtb = firebase.firestore();
-dtb.collection("GeralColl").get().then(snapshot => {
+dtb.collection("GeralColl").where("IMV_Disponivel", "==", "ativo").get()
+.then(snapshot => {
 var li = document.getElementById('list');
 //li.innerHTML = ''; // limpa a lista uma única vez
 
 snapshot.forEach(docSnap => {
 var data = docSnap.data();
 
-if (data.IMV_Disponivel == 'ativo') {
+
 
 if(!data.Destaque|| data.Destaque==''){
 
@@ -260,7 +262,7 @@ li.appendChild(conntainer);
 
 }
 }
-}
+
 });
 })
 };
@@ -268,40 +270,31 @@ initList()
 // Pesquisar
 sessionStorage.setItem('itens','')
 function pesquisar() {
-sessionStorage.setItem('itens','')
-//document.getElementById('respPesquisasadiv',).style.display='none'
-//var listy = document.getElementById('listpesqRes');
-//listy.innerHTML = ''
-var termo = document.getElementById("PesquInput").value.toLowerCase();
-if(termo){
-var itens = 0
-setTimeout(function(){
-//Listaitens()
-},2000)
-var dbP= firebase.firestore()
-dbP.collection("GeralColl").get().then(snapshot => {
-snapshot.forEach(docSnap => {
-var data = docSnap.data();
-itens++
-if (data.Rua && data.Rua.toLowerCase().includes(termo) || data.Bairro && data.Bairro.toLowerCase().includes(termo)  ||data.Código && data.Código.toLowerCase().includes(termo) ||data.Titulo && data.Titulo.toLowerCase().includes(termo) ||data.Cidade && data.Cidade.toLowerCase().includes(termo))  {
-var rua = data.Rua ? data.Rua.toLowerCase() : ""; var bairro = data.Bairro? data.Bairro.toLowerCase() : ""; var cod = data.Código ? data.Código.toLowerCase() : ""; var titulo = data.Titulo ? data.Titulo.toLowerCase() : ""; var cidade = data.Cidade ? data.Cidade.toLowerCase() : "";
+  sessionStorage.setItem('itens','')
+  var termo = document.getElementById("PesquInput").value.toLowerCase();
 
-if (rua.includes(termo) || termo.includes(rua)||cod.includes(termo) || termo.includes(cod)||bairro.includes(termo) || termo.includes(bairro) || titulo.includes(termo) || termo.includes(titulo) || cidade.includes(termo) || termo.includes(cidade)) {
-//alert(data.Titulo)
-if(data.IMV_Disponivel=='ativo'){
-alert(data.Titulo)
+  if (!termo) {
+    Swal.fire('', 'Preencha o campo de pesquisa!', '')
+    return;
+  }
 
-sessionStorage.setItem('itens',iten)
-} else{
+  var dbP = firebase.firestore();
+  dbP.collection("GeralColl").get().then(snapshot => {
+    snapshot.forEach(docSnap => {
+      var data = docSnap.data();
+
+      // Verifica se algum campo contém o termo
+      let campos = [data.Rua, data.Bairro, data.Código, data.Titulo, data.Cidade];
+      if (campos.some(c => c && c.toLowerCase().includes(termo))) {
+        if (data.IMV_Disponivel?.toLowerCase() === 'ativo') {
+          alert(data.Titulo);
+          sessionStorage.setItem('itens', JSON.stringify(data));
+        }
+      }
+    });
+  });
 }
-}
-}
-})
-})
-}else{
-Swal.fire('','Preencha o campo de pesquisa!','')
-}
-}
+
 
 //document.getElementById('DivPesquisador').style.display='none'
 //fucção pesquisa
