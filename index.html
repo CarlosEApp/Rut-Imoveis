@@ -62,40 +62,40 @@
     <main>
         <div id="mainUm">
             <div id="MaiflaxUm">
-                
                 <div id="DivPesquisador">
                     <h2 class="h2P">Encontre Imóveis</h2>
                     <div id="divPesquisa"> 
-                     <p><i id="pesq" class="fa-solid fa-magnifying-glass"></i> Código </p>
-                      <div id="divP1">
-                        <input id="CodigoInput" type="text" title="Código do Imóvel" placeholder="Digite ou cole o código... "> <button id="BTNBuscar" onclick="pesquiCod()" ><i id="pesq" class="fa-solid fa-magnifying-glass"></i> Buscar</button>
-                      </div>
-                      <br>
-                      <p id="P_division"></p>
-                         <p><i id="pesq" class="fa-solid fa-magnifying-glass"></i> Buscar </p>
-                             <select name="" id="tranzação"  title="Tipo de tranzação?">
-                             <option value=""disabled selected>Tranzação?</option>
-                             <option value="Venda">Imóveis para Venda</option>
-                             <option value="Locação">Imóveis para Locação</option>
-                             <option value="Temporada">Temporada</option>
-                             <option value="Lançamento">Lançamento</option>
-                      </select><br>
-                      <div id="divP2">
-                        <input id="PesquInput" type="text" title="Pesquise por Imóvel" placeholder="Digite rua, bairro ou cidade..."> <button id="BTNPSQ" onclick="pesquisar()" ><i id="pesq" class="fa-solid fa-magnifying-glass"></i> Buscar</button>
-                      </div>
-                      <br>
-                        <p id="P_division"></p>
-                         <p><i id="pesq" class="fa-solid fa-magnifying-glass"></i> Melhor preço R$ + / -  </p>
-                         <div id="divP1" class="diValores">
-                       <Label>Max R$: </Label> <input id="ValorMaxInput" type="text" title="Valor maxímo do Imóvel" placeholder="Digite o valor maxímo... ">
-                      </div>
-                       <div id="divP1" class="diValores">
-                         <Label>MIn R$: </Label> <input id="ValorMinInput" type="text" title="Valor minimo do Imóvel" placeholder="Digite o valor minimo... ">
-                        </div><div id="divP1" class="ClassPValor"><button id="btnBuscaValor"><i id="pesq" class="fa-solid fa-magnifying-glass"></i>  Busca por valor</button></div>
-                      <br>
+                         <p><i id="i_pequisa_imovel" class="fa-solid fa-magnifying-glass"></i> Pesquisar... </p>
+                          <select name="" id="tranzação"  title="Tipo de tranzação ">
+                            <option value=""disabled selected>Tranzação ?</option>
+                             <option value="Venda">Venda</option>
+                              <option value="Locação">Locação</option>
+                               <option value="Temporada">Temporada</option>
+                                <option value="Lançamento">Lançamento</option>
+                          </select><br>
+                       <div id="divP2">
+                           <input id="PesquInput" type="text" title="Pesquise por Imóvel" placeholder="Digite rua, bairro ou cidade..."> <button id="BTNPSQ" onclick="pesquisar()" ><i id="pesq" class="fa-solid fa-magnifying-glass"></i> Buscar</button>
+                       </div><br>
+                           <p id="P_division"></p>
 
+                      <p onclick="ICodigo()" > Busque pelo Código <i id="i_codigo_imovel" class="fa-solid fa-eye"></i></p>
+                        <div id="divP1" class="classeCodigo">
+                           <input id="CodigoInput" type="text" title="Código do Imóvel" placeholder="Digite ou cole o código... "> <button id="BTNBuscar" onclick="pesquiCod()" ><i id="pesq" class="fa-solid fa-magnifying-glass"></i> Buscar</button>
+                       </div><br>
+                         <p id="P_division"></p>
+
+                     <p  onclick="IValaor()" ></i> R$ ajuste valor do imóvel <i id="i_valor_imovel" class="fa-solid fa-eye"></i> </p>
+                      <div  class="diValores">
+                         <div id="divP1">
+                           <Label>Max R$: </Label> <input id="ValorMaxInput" type="text" title="Valor maxímo do Imóvel" placeholder="Digite o valor maxímo... ">
+                        </div>
+                          <div id="divP1" >
+                            <Label>MIn R$: </Label> <input id="ValorMinInput" type="text" title="Valor minimo do Imóvel" placeholder="Digite o valor minimo... ">
+                          </div>
+                             <div id="divP1" ><button id="btnBuscaValor"><i id="pesq" class="fa-solid fa-magnifying-glass"></i>  Busca por valor</button></div> 
                     </div>
-                    
+                    <br>
+                    </div>
                     
                 </div>
                 <br><br>

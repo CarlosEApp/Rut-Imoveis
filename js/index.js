@@ -258,3 +258,33 @@ sessionStorage.setItem('itens', JSON.stringify(data));
 function funçaoPesquisa(){
 document.getElementById('DivPesquisador').style.display='block'
 }
+
+
+
+//Cadastro de pesquisa codigo e valor
+function ICodigo(){
+    var I_resp=document.getElementById('i_codigo_imovel');
+    var resp= document.querySelector('.classeCodigo');
+    if(resp.style.display=='block'){
+        resp.style.display='none';
+        I_resp.className='fa-solid fa-eye';
+    }else{
+        resp.style.display='block';
+        I_resp.className='fa-solid fa-eye-slash';
+    }
+
+
+};
+function IValaor(){
+    var I_resp_=document.getElementById('i_valor_imovel');
+    var resp_= document.querySelector('.diValores');
+    if(resp_.style.display=='block'){
+        resp_.style.display='none';
+        I_resp_.className='fa-solid fa-eye';
+    }else{
+        resp_.style.display='block';
+        I_resp_.className='fa-solid fa-eye-slash';
+    }
+
+
+}

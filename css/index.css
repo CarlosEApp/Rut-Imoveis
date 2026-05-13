@@ -171,7 +171,7 @@ padding-bottom: 15px;
 z-index: 999;
 }
 .diValores label{
-color: #646464c0;
+color: #808080c0;
 }
 #divCarrocel{
 margin:0 auto;
@@ -348,6 +348,7 @@ text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.582);
 font-family: 'Poppins', sans-serif;
 border-radius: 5px;
 font-weight: bold;
+
 }
 #LBLAP{
 margin:auto ;
@@ -363,66 +364,7 @@ border-radius: 10px;
 text-shadow: 0px 5px 5px rgb(0, 0, 0);
 font-family: 'Poppins', sans-serif;
 }
-@media (max-width: 700px) {
-#imgApresent p{
-margin: auto;
-width:80%;
-position: relative;
-bottom: 70px;
-font-size: clamp(0.900rem, 0.3vw  + 0.5rem, 1rem);
-margin-bottom: 10px;
-color: #ffffff;
-background-color: rgba(0, 0, 0, 0.774);
-text-shadow: 0px 10px 20px rgb(0, 0, 0);
-font-family: 'Poppins', sans-serif;
-}
-#LBLAP{
-margin:auto ;
-width: 100%;
-max-width: 95%;
-text-align: center;
-color: aliceblue;
-position: relative;
-bottom: 160px;
-font-size: clamp(1.400rem, 0.3vw  + 0.5rem, 1.500rem);
-padding-left: 20px;
-padding-right: 20px;
-border-radius: 10px;
-text-shadow: 0px 3px 3px rgba(32, 32, 32, 0.753);
-font-family: 'Poppins', sans-serif;
-}
-#MaiflaxUm{
-margin: auto;
-display: block;
-width: 100%;
-height: 95vh;
-align-items: baseline;
-}
-#divApresntação{
-margin:0 auto;
-width: 100%;
-min-height: 30vh;
-background-color: rgba(17, 0, 173, 0);
-display: none;
-}
-#divCarrocel h2{
-margin: auto;
-width: 100%;
-background-color: rgb(0, 0, 0);
-padding-top: 12px;
-padding-bottom: 12px;
-text-align: center;
-color: rgb(218, 203, 0);
-font-family: 'Poppins', sans-serif;
-font-size: 1.500rem;
-text-shadow: 1px 1px 2px rgba(94, 94, 94, 0.192);
-border-radius: 1px;
-margin-top: 20px;
-text-shadow: 1px 2px 3px rgb(0, 0, 0);
-margin-top: 40px;
-display: none;
-}
-}
+
 #DivPesquisador h2{
 color: rgb(99, 99, 99);
 font-size: clamp(1.100rem, 0.3vw  + 0.5rem, 1.200rem);
@@ -433,18 +375,20 @@ margin-bottom: 7px;
 #divPesquisa div{
 margin: auto;
 width: 91%;
-background-color: rgba(246, 251, 255, 0);
-min-height: 10px;
-border: 1px solid rgba(199, 198, 198, 0.664);
-box-shadow: 0px 2px 1px rgba(138, 138, 138, 0.616);
+background-color: rgba(87, 87, 87, 0);
+box-shadow: 0px 0px 1px rgba(138, 138, 138, 0.616);
 }
 #divPesquisa p{
 margin: auto;
 width: 90%;
-color: #5a5a5ab7;
-font-size: clamp(0.900rem, 0.3vw  + 0.5rem, 0.900rem);
+color: #353535d2;
+font-size: clamp(1rem, 0.3vw  + 0.5rem, 1rem);
 font-family: 'Poppins', sans-serif;
 margin-bottom: 3px;
+cursor: pointer;
+}
+#divPesquisa p:hover{
+color: rgb(0, 0, 0);
 }
 #divP1, #divP2{
 margin: auto;
@@ -455,7 +399,7 @@ align-items: center;
 border-radius: 4px;
 padding: 5px;
 border: 0cap;
-text-shadow: 0px 1px 1px rgba(95, 95, 95, 0.425);
+text-shadow: 0px 1px 1px rgba(54, 54, 54, 0.76);
 }
 #divP1 input, #divP2 input{
 width: 70%;
@@ -472,7 +416,6 @@ font-family: 'Poppins', sans-serif;
 background-color: rgb(18, 76, 109);
 color: rgb(255, 255, 255);
 cursor: pointer;
-box-shadow: 0px 1px 1px rgba(177, 177, 177, 0.836);
 border-radius: 2px;
 box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.877);
 }
@@ -483,17 +426,19 @@ border: 0cap;
 outline: none;
 cursor: pointer;
 font-size: clamp(0.900rem, 0.3vw  + 0.5rem, 1rem);
-color: #444444b9;
+color: #ffffff;
 margin-bottom: 10px;
 padding: 5px;
-background-color: rgb(255, 255, 255);
-box-shadow: 0px 1px 2px rgba(129, 129, 129, 0.459);
+background-color: rgb(18, 76, 109);
+box-shadow: 0px 1px 2px  rgb(18, 76, 109);
 border-radius: 2px;
 font-family: 'Poppins', sans-serif;
+margin-top: 10px;
 }
 #tranzação option{
-color: #fbff00;
-background-color: #000000;
+color: #ffffff;
+background-color: rgb(18, 76, 109);
+cursor: pointer;
 }
 #divPesquisa  #P_division{
 width: 100%;
@@ -636,7 +581,6 @@ margin: auto;
 min-width: 100%;
 min-height: 60vh;
 background-color: transparent;
-
 background-color: #fbff0000;
 }
 #Corr_um{
@@ -716,54 +660,8 @@ z-index: 999;
 transform: translateY(0); /* sobe suavemente */
 opacity: 1;              /* aparece gradualmente */
 }
-@media (max-width: 700px) {
-#ImagemIMV{
-width: 100%;
-height: 300px;
-}
-#ConntDiv {
-position: relative;
-overflow: hidden;
-margin-bottom: 30px;
-margin-left: 10px;
-margin-right: 10px;
-width: 90%;
-max-width: 450px;
-height: 480px;
-background-color: #ffffff;
-border-bottom: 7px solid rgb(83, 83, 83);
-box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.445);
-border-radius: 35px;
-}
-#divIMG{
-height: 300px;
-background-color: #898b0d00;
-overflow: hidden;
-}
-#CorretoresDiv{
-display: none;
-}
-}
-@media (max-width: 600px) {
-#ImagemIMV{
-width: 100%;
-height: 300px;
-}
-#ConntDiv {
-position: relative;
-overflow: hidden;
-margin-bottom: 30px;
-margin-left: 10px;
-margin-right: 10px;
-width: 90%;
-max-width: 400px;
-height: 470px;
-background-color: #ffffff;
-border-bottom: 7px solid rgb(83, 83, 83);
-box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.445);
-border-radius: 35px;
-}
-}
+
+
 #flexdiv2 #Div_IMV_DestaqueH2{
 margin: auto;
 width: 95%;
@@ -907,6 +805,89 @@ cursor: pointer;
 background-color: rgba(240, 248, 255, 0);
 }
 @media (max-width: 700px) {
+    #imgApresent p{
+margin: auto;
+width:80%;
+position: relative;
+bottom: 70px;
+font-size: clamp(0.900rem, 0.3vw  + 0.5rem, 1rem);
+margin-bottom: 10px;
+color: #ffffff;
+background-color: rgba(0, 0, 0, 0.774);
+text-shadow: 0px 10px 20px rgb(0, 0, 0);
+font-family: 'Poppins', sans-serif;
+
+}
+#LBLAP{
+margin:auto ;
+width: 100%;
+max-width: 95%;
+text-align: center;
+color: aliceblue;
+position: relative;
+bottom: 160px;
+font-size: clamp(1.400rem, 0.3vw  + 0.5rem, 1.500rem);
+padding-left: 20px;
+padding-right: 20px;
+border-radius: 10px;
+text-shadow: 0px 3px 3px rgba(32, 32, 32, 0.753);
+font-family: 'Poppins', sans-serif;
+}
+#MaiflaxUm{
+margin: auto;
+display: block;
+width: 100%;
+height: auto;
+align-items: baseline;
+}
+#divApresntação{
+margin:0 auto;
+width: 100%;
+height: auto;
+background-color: rgba(17, 0, 173, 0);
+display: none;
+}
+#divCarrocel h2{
+margin: auto;
+width: 100%;
+background-color: rgb(0, 0, 0);
+padding-top: 12px;
+padding-bottom: 12px;
+text-align: center;
+color: rgb(218, 203, 0);
+text-shadow: 1px 1px 2px rgba(94, 94, 94, 0.192);
+border-radius: 1px;
+margin-top: 20px;
+text-shadow: 1px 2px 3px rgb(0, 0, 0);
+margin-top: 40px;
+font-size: clamp(1.100rem, 0.3vw  + 0.5rem, 1.200rem);
+display: none;
+
+}
+    #ImagemIMV{
+width: 100%;
+height: 300px;
+}
+#ConntDiv {
+position: relative;
+overflow: hidden;
+margin-bottom: 30px;
+margin-left: 10px;
+margin-right: 10px;
+width: 90%;
+max-width: 450px;
+height: 480px;
+background-color: #ffffff;
+border-bottom: 7px solid rgb(83, 83, 83);
+box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.445);
+border-radius: 35px;
+}
+#divIMG{
+height: 300px;
+background-color: #898b0d00;
+overflow: hidden;
+}
+
 #divBotao{
 margin: auto;
 width: 100%;
@@ -998,8 +979,58 @@ transition: transform 0.3s ease, opacity 0.3s ease;
 font-family: 'Poppins', sans-serif;
 z-index: 999;
 }
+#MaiflaxUm{
+margin: auto;
+display: flex;
+width: 100%;
+height: auto;
+align-items: baseline;
+flex-wrap: wrap;
+}
+
 }
 @media (max-width: 600px) {
+    #divCarrocel h2{
+margin: auto;
+width: 100%;
+background-color: rgb(0, 0, 0);
+padding-top: 12px;
+padding-bottom: 12px;
+text-align: center;
+color: rgb(218, 203, 0);
+text-shadow: 1px 1px 2px rgba(94, 94, 94, 0.192);
+border-radius: 1px;
+margin-top: 20px;
+text-shadow: 1px 2px 3px rgb(0, 0, 0);
+margin-top: 40px;
+font-size: clamp(1rem, 0.3vw  + 0.5rem, 1.100rem);
+height: auto;
+
+}
+    #ImagemIMV{
+width: 100%;
+height: 300px;
+}
+#ConntDiv {
+position: relative;
+overflow: hidden;
+margin-bottom: 30px;
+margin-left: 10px;
+margin-right: 10px;
+width: 90%;
+max-width: 450px;
+height: 480px;
+background-color: #ffffff;
+border-bottom: 7px solid rgb(83, 83, 83);
+box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.445);
+border-radius: 35px;
+}
+#divIMG{
+height: 300px;
+background-color: #898b0d00;
+overflow: hidden;
+}
+
 #divBotao{
 margin: auto;
 width: 100%;
@@ -1113,6 +1144,29 @@ align-items: center;
 flex-wrap: wrap;
 margin: 15px 10px; 
 }
+
+#DivPesquisador #i_valor_imovel, #DivPesquisador #i_codigo_imovel, #DivPesquisador #i_pequisa_imovel{
+    font-size: clamp(0.900rem, 0.3vw  + 0.5rem, 1rem);
+    text-shadow: 0px 0px 0px rgba(15, 15, 15, 0.76);
+    color: rgb(126, 126, 126);
+      cursor: pointer;
+}
+#DivPesquisador #i_codigo_imovel{
+    margin-bottom: 15px;
+}
+#DivPesquisador .diValores, #DivPesquisador .classeCodigo{
+   display: none;
+    margin-bottom: 10px;
+  
+}
+
+
+
+
+
+
+
+
 footer{
 width: 100%;
 height: 70vh;
