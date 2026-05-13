@@ -169,6 +169,7 @@ margin-right: 20px;
 border-radius: 5px;
 padding-bottom: 15px;
 z-index: 999;
+outline: none;
 }
 .diValores label{
 color: #808080c0;
@@ -178,6 +179,7 @@ margin:0 auto;
 width: 100%;
 max-width: 70%;
 background-color: rgba(150, 131, 131, 0);
+outline: none;
 }
 #DivPesquisador .h2P{
 text-align: center;
@@ -186,6 +188,7 @@ padding-top: 5px;
 padding-bottom: 10px;
 color: #4d4d4d;
 font-size: 1.700rem;
+outline: none;
 }
 #divCarrocel h2{
 margin: auto;
@@ -202,6 +205,7 @@ border-radius: 1px;
 margin-top: 20px;
 text-shadow: 1px 2px 3px rgb(0, 0, 0);
 margin-top: 40px;
+outline: none;
 }
 #divApresntação{
 position: relative;
@@ -210,6 +214,7 @@ width: 100%;
 height: 77vh;
 background-color: rgba(253, 253, 253, 0);
 margin-bottom: 20px;
+outline: none;
 }
 @media (max-width: 1400px) {
 #divCarrocel{
@@ -328,12 +333,14 @@ max-width: 100%;
 height: 80vh;
 text-align: center;
 cursor: pointer;
+outline: none;
 }
 #IMGAP{
 width: 100%;
 max-height: 70vh;
 margin-top: 10px;
 border-radius: 3px;
+outline: none;
 }
 #imgApresent p{
 margin: auto;
@@ -348,7 +355,7 @@ text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.582);
 font-family: 'Poppins', sans-serif;
 border-radius: 5px;
 font-weight: bold;
-
+outline: none;
 }
 #LBLAP{
 margin:auto ;
@@ -363,6 +370,7 @@ padding-right: 20px;
 border-radius: 10px;
 text-shadow: 0px 5px 5px rgb(0, 0, 0);
 font-family: 'Poppins', sans-serif;
+outline: none;
 }
 
 #DivPesquisador h2{
@@ -371,12 +379,14 @@ font-size: clamp(1.100rem, 0.3vw  + 0.5rem, 1.200rem);
 font-weight: normal;
 margin-top: 5px;
 margin-bottom: 7px;
+outline: none;
 }
 #divPesquisa div{
 margin: auto;
 width: 91%;
 background-color: rgba(87, 87, 87, 0);
 box-shadow: 0px 0px 1px rgba(138, 138, 138, 0.616);
+outline: none;
 }
 #divPesquisa p{
 margin: auto;
@@ -386,6 +396,7 @@ font-size: clamp(1rem, 0.3vw  + 0.5rem, 1rem);
 font-family: 'Poppins', sans-serif;
 margin-bottom: 3px;
 cursor: pointer;
+outline: none;
 }
 #divPesquisa p:hover{
 color: rgb(0, 0, 0);
@@ -418,6 +429,7 @@ color: rgb(255, 255, 255);
 cursor: pointer;
 border-radius: 2px;
 box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.877);
+outline: none;
 }
 #tranzação{
 margin: auto;
@@ -434,6 +446,7 @@ box-shadow: 0px 1px 2px  rgb(18, 76, 109);
 border-radius: 2px;
 font-family: 'Poppins', sans-serif;
 margin-top: 10px;
+outline: none;
 }
 #tranzação option{
 color: #ffffff;
@@ -447,6 +460,7 @@ padding-bottom: 5px;
 background-color: #dfdfdf7c;
 margin: 0px;
 margin-bottom: 20px;
+outline: none;
 }
 #divPesquisa  #btnBuscaValor{
 width: 100%;
@@ -459,6 +473,7 @@ color: #ffffff;
 margin-top: 20px;
 font-family: 'Poppins', sans-serif;
 box-shadow: 0px 1px 3px black;
+outline: none;
 }
 #divPesquisa .ClassPValor{
 border: 0cap;
@@ -1130,6 +1145,7 @@ opacity: 0;
 transition: transform 0.2s ease, opacity 0.2s ease;
 font-family: 'Poppins', sans-serif;
 z-index: 999;
+outline: none;
 }
 }
 #label_dois_{
@@ -1143,6 +1159,7 @@ display: block;
 align-items: center;
 flex-wrap: wrap;
 margin: 15px 10px; 
+outline: none;
 }
 
 #DivPesquisador #i_valor_imovel, #DivPesquisador #i_codigo_imovel, #DivPesquisador #i_pequisa_imovel{
@@ -1150,16 +1167,31 @@ margin: 15px 10px;
     text-shadow: 0px 0px 0px rgba(15, 15, 15, 0.76);
     color: rgb(126, 126, 126);
       cursor: pointer;
+      outline: none;
 }
 #DivPesquisador #i_codigo_imovel{
-    margin-bottom: 15px;
+    margin-bottom: 20px;
+    outline: none;
 }
 #DivPesquisador .diValores, #DivPesquisador .classeCodigo{
    display: none;
     margin-bottom: 10px;
+    outline: none;
   
 }
-
+#DivPesquisador #divP2{
+    margin-top: 12px;
+}
+#DivPesquisador #divP2 input{
+    font-size: clamp(1rem, 0.3vw  + 0.5rem, 1.100rem);
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    outline: none;
+    font-family: 'Poppins', sans-serif;
+    margin-left: 5px;
+      text-shadow: 0px 0px 0px rgba(15, 15, 15, 0.76);
+    
+}
 
 
 
