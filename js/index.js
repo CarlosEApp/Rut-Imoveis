@@ -93,6 +93,7 @@ snapshot.forEach(docSnap => {
 var data = docSnap.data();
 if(!data.Destaque|| data.Destaque==''){
 }else{
+    
 Itens++
 if (Itens <= 7){
 var conntainer = document.createElement('div');
@@ -144,7 +145,42 @@ parag3.id='paraG';
 parag4.id='paraG';
 parag5.id='paraG';
 parag6.id='paraG';
-IMG_Imovel.src = data.Imagem1;
+// cria o elemento da imagem principal
+var IMG_Imovel = document.createElement('img');
+IMG_Imovel.id = 'ImagemIMV';
+IMG_Imovel.className = 'fade'; // classe para transição suave
+IMG_Imovel.title = 'imagem do Imóvel';
+
+// monta array com todas as imagens disponíveis
+var imagens = [];
+for (let i = 1; i <= 3; i++) {
+  const key = `Imagem${i}`;
+  if (data[key]) {
+    imagens.push(data[key]);
+  }
+}
+
+// inicializa com a primeira imagem
+let index = 0;
+IMG_Imovel.src = imagens[index];
+IMG_Imovel.classList.add('show');
+
+// troca automática a cada 5 segundos
+setInterval(() => {
+  index++;
+  if (index >= imagens.length) {
+    index = 0; // reinicia
+  }
+
+  // fade-out
+  IMG_Imovel.classList.remove('show');
+
+  setTimeout(() => {
+    IMG_Imovel.src = imagens[index]; // troca imagem
+    IMG_Imovel.classList.add('show'); // fade-in
+  }, 500); // tempo do fade-out
+}, 5000); // 5 segundos
+
 label_um.textContent = `🏡 ${data.Titulo}`;
 label_tres.textContent = `${data.Código}`;
 if(data.Tranzação==='Venda'||data.Tranzação==='Lançamento'){
