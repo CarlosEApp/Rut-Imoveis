@@ -1,9 +1,7 @@
 
-
 function funçaocad(){
 window.open('html/Cadastro.html','_self')
 }
-
 // Iniciar Firebase
 var firebaseConfig = {
 apiKey: "AIzaSyDZXtGGNJwRYxy8EKAj85JFGLHfLD3DMbk",
@@ -16,7 +14,6 @@ measurementId: "G-K330CH24NV"
 };
 firebase.initializeApp(firebaseConfig);
 /////////////////////////////////////////////////////////////////
-
 // Tela Cheia
 function toggleFullScreen() {
 if ((document.fullScreenElement && document.fullScreenElement !== null) ||
@@ -58,7 +55,6 @@ sessionStorage.setItem('data', data)
 }, 1000)
 
 //iniciar apresentação de imóveis
-
 var db = firebase.firestore();
 var itens = [];
 var index = 0;
@@ -93,19 +89,12 @@ var dtb = firebase.firestore();
 dtb.collection("GeralColl").where("IMV_Disponivel", "==", "ativo").get()
 .then(snapshot => {
 var li = document.getElementById('list');
-//li.innerHTML = ''; // limpa a lista uma única vez
-
 snapshot.forEach(docSnap => {
 var data = docSnap.data();
-
-
-
 if(!data.Destaque|| data.Destaque==''){
-
 }else{
-  Itens++
+Itens++
 if (Itens <= 7){
-
 var conntainer = document.createElement('div');
 var divFlex = document.createElement('div');
 var div_label = document.createElement('div');
@@ -127,13 +116,10 @@ var img3=document.createElement('img');
 var img4=document.createElement('img');
 var img5=document.createElement('img');
 var parag2 = document.createElement('p');
- var parag3 = document.createElement('p');
-    var parag4 = document.createElement('p');
-       var parag5 = document.createElement('p');
-          var parag6 = document.createElement('p');
-
-
-
+var parag3 = document.createElement('p');
+var parag4 = document.createElement('p');
+var parag5 = document.createElement('p');
+var parag6 = document.createElement('p');
 conntainer.id = 'ConntDiv';
 div_label.id = 'divLabel';
 div_imagem.id = 'divIMG';
@@ -158,93 +144,71 @@ parag3.id='paraG';
 parag4.id='paraG';
 parag5.id='paraG';
 parag6.id='paraG';
-
-
 IMG_Imovel.src = data.Imagem1;
 label_um.textContent = `🏡 ${data.Titulo}`;
 label_tres.textContent = `${data.Código}`;
-
 if(data.Tranzação==='Venda'||data.Tranzação==='Lançamento'){
-  label_dois.innerHTML = `✅ ${data.Tranzação}:<b id='spamm'>${data.Valor_Venda}</b>` ;
-
+label_dois.innerHTML = `✅ ${data.Tranzação}:<b id='spamm'>${data.Valor_Venda}</b>` ;
 }else if(data.Tranzação==='Locação'|| data.Tranzação==='Temporada'){
-   label_dois.innerHTML = `✅ ${data.Tranzação}:<b id='spamm'>${data.Valor_Locação}</b>` ;
-
+label_dois.innerHTML = `✅ ${data.Tranzação}:<b id='spamm'>${data.Valor_Locação}</b>` ;
 }else if(data.Tranzação==='Locação e Venda'){
- label_dois.innerHTML = `✅ ${data.Tranzação}: <b id='spamm'>${data.Valor_Venda} <br> ${data.Valor_Locação}</b>` ;
- label_dois.id = 'label_dois_';
- }else{
-
-  }
-
+label_dois.innerHTML = `✅ ${data.Tranzação}: <b id='spamm'>${data.Valor_Venda} <br> ${data.Valor_Locação}</b>` ;
+label_dois.id = 'label_dois_';
+}else{
+}
 BTN_Mais.className = 'fa-solid fa-eye';
 BTN_Mais.title = 'Ver mais informações';
 IMG_Imovel.title = 'imagem do Imóvel';
 BTN_Compart.className='fa-solid fa-share-nodes';
 BTN_Compart.title='Compartilhar'
 parag.textContent = '';
-
-
-
 img1.src='src/regua.png';
 img2.src='src/cama-de-solteiro.png';
 img3.src='src/chuveiro.png';
 img4.src='src/carro.png';
-
-
 if(!data.Area_Const || data.Area_Const==''){
-  parag2.textContent='00 m²?';
-  parag2.className='smai';
-  img1.title='Area Construida, sem informação!'
+parag2.textContent='00 m²?';
+parag2.className='smai';
+img1.title='Area Construida, sem informação!'
 }else{
-  parag2.textContent=`${data.Area_Const} m²`
-   img1.title=`Area Construida: ${data.Area_Const} m²`
+parag2.textContent=`${data.Area_Const} m²`
+img1.title=`Area Construida: ${data.Area_Const} m²`
 };
-
 if(!data.Quartos || data.Quartos==''|| data.Quartos=='0'){
-  parag3.textContent=' quartos?';
-  parag3.className='smai';
-  img2.title='Sem Quartos!'
+parag3.textContent=' quartos?';
+parag3.className='smai';
+img2.title='Sem Quartos!'
 }else{
-  parag3.textContent=`${data.Quartos} quartos`
-   img2.title=`${data.Quartos} Quartos`
+parag3.textContent=`${data.Quartos} quartos`
+img2.title=`${data.Quartos} Quartos`
 };
-
 if(!data.Banheiros || data.Banheiros==''|| data.Banheiros=='0'){
-  parag4.textContent='banh ?';
-  parag4.className='smai';
-  img3.title='Sem Banheiros!'
+parag4.textContent='banh ?';
+parag4.className='smai';
+img3.title='Sem Banheiros!'
 }else{
-  parag4.textContent=`${data.Banheiros} banh.`
-   img3.title=`${data.Banheiros} Banheiros`
+parag4.textContent=`${data.Banheiros} banh.`
+img3.title=`${data.Banheiros} Banheiros`
 };
-
 if(!data.Vagas_G || data.Vagas_G==''|| data.Vagas_G=='0'){
-  parag5.textContent='vaga ?';
-  parag5.className='smai';
-  img4.title='Sem vaga de garagem!'
-
+parag5.textContent='vaga ?';
+parag5.className='smai';
+img4.title='Sem vaga de garagem!'
 }else{
-  parag5.textContent=`${data.Vagas_G} Vagas`
-  img4.title=`${data.Vagas_G} Vagas de garagem `
+parag5.textContent=`${data.Vagas_G} Vagas`
+img4.title=`${data.Vagas_G} Vagas de garagem `
 };
-
-//img5.src='';
-
-
 conntainer.appendChild(parag);
 div_imagem.appendChild(IMG_Imovel);
 div_label.appendChild(label_um);
 div_label.appendChild(label_dois);
 div_label.appendChild(label_tres);
-
 div_botao.appendChild(BTN_Compart);
 div_botao.appendChild(BTN_Mais);
 div_cvc.appendChild(img1);
 div_cvc.appendChild(img2);
 div_cvc.appendChild(img3);
 div_cvc.appendChild(img4);
-//div_cvc.appendChild(img5);
 div_cvic.appendChild(parag2)   
 div_cvic.appendChild(parag3)
 div_cvic.appendChild(parag4)
@@ -256,13 +220,9 @@ conntainer.appendChild(div_label);
 conntainer.appendChild(div_cvc);
 conntainer.appendChild(div_cvic);
 conntainer.appendChild(div_botao)
-
 li.appendChild(conntainer);
-
-
 }
 }
-
 });
 })
 };
@@ -270,31 +230,28 @@ initList()
 // Pesquisar
 sessionStorage.setItem('itens','')
 function pesquisar() {
-  sessionStorage.setItem('itens','')
-  var termo = document.getElementById("PesquInput").value.toLowerCase();
+sessionStorage.setItem('itens','')
+var termo = document.getElementById("PesquInput").value.toLowerCase();
 
-  if (!termo) {
-    Swal.fire('', 'Preencha o campo de pesquisa!', '')
-    return;
-  }
-
-  var dbP = firebase.firestore();
-  dbP.collection("GeralColl").get().then(snapshot => {
-    snapshot.forEach(docSnap => {
-      var data = docSnap.data();
-
-      // Verifica se algum campo contém o termo
-      let campos = [data.Rua, data.Bairro, data.Código, data.Titulo, data.Cidade];
-      if (campos.some(c => c && c.toLowerCase().includes(termo))) {
-        if (data.IMV_Disponivel?.toLowerCase() === 'ativo') {
-          alert(data.Titulo);
-          sessionStorage.setItem('itens', JSON.stringify(data));
-        }
-      }
-    });
-  });
+if (!termo) {
+Swal.fire('', 'Preencha o campo de pesquisa!', '')
+return;
 }
-
+var dbP = firebase.firestore();
+dbP.collection("GeralColl").get().then(snapshot => {
+snapshot.forEach(docSnap => {
+var data = docSnap.data();
+// Verifica se algum campo contém o termo
+let campos = [data.Rua, data.Bairro, data.Código, data.Titulo, data.Cidade];
+if (campos.some(c => c && c.toLowerCase().includes(termo))) {
+if (data.IMV_Disponivel?.toLowerCase() === 'ativo') {
+alert(data.Titulo);
+sessionStorage.setItem('itens', JSON.stringify(data));
+}
+}
+});
+});
+}
 
 //document.getElementById('DivPesquisador').style.display='none'
 //fucção pesquisa
