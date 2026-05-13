@@ -1194,6 +1194,20 @@ outline: none;
 }
 
 
+#ImagemIMV {
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  position: relative;
+}
+
+.slide-in {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.slide-out {
+  transform: translateX(-100%); /* sai para a esquerda */
+  opacity: 0;
+}
 
 
 

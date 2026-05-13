@@ -161,25 +161,28 @@ for (let i = 1; i <= 3; i++) {
 }
 
 // inicializa com a primeira imagem
+// inicializa com a primeira imagem
 let index = 0;
 IMG_Imovel.src = imagens[index];
-IMG_Imovel.classList.add('show');
+IMG_Imovel.classList.add('slide-in');
 
 // troca automática a cada 5 segundos
 setInterval(() => {
   index++;
   if (index >= imagens.length) {
-    index = 0; // reinicia
+    index = 0;
   }
 
-  // fade-out
-  IMG_Imovel.classList.remove('show');
+  // aplica saída lateral
+  IMG_Imovel.classList.remove('slide-in');
+  IMG_Imovel.classList.add('slide-out');
 
   setTimeout(() => {
     IMG_Imovel.src = imagens[index]; // troca imagem
-    IMG_Imovel.classList.add('show'); // fade-in
-  }, 500); // tempo do fade-out
-}, 5000); // 5 segundos
+    IMG_Imovel.classList.remove('slide-out');
+    IMG_Imovel.classList.add('slide-in'); // entra de lado
+  }, 700); // tempo da animação de saída
+}, 5000);// 5 segundos
 
 label_um.textContent = `🏡 ${data.Titulo}`;
 label_tres.textContent = `${data.Código}`;
