@@ -181,7 +181,7 @@ setInterval(() => {
   
     IMG_Imovel.classList.remove('slide-out');
     IMG_Imovel.classList.add('slide-in'); // entra de lado
-  },900); // tempo da animação de saída
+  },700); // tempo da animação de saída
 }, 9000);// 5 segundos
 
 label_um.textContent = `🏡 ${data.Titulo}`;
