@@ -237,7 +237,7 @@ setInterval(() => {
    IMG_Imovel.src = imagens[index]; // troca imagem
   IMG_Imovel.classList.remove('slide-out');
     IMG_Imovel.classList.add('slide-in'); // entra de lado
-  },1000); // tempo da animação de saída
+  },900); // tempo da animação de saída
     IMG_Imovel.classList.remove('slide-in');
   IMG_Imovel.classList.add('slide-out');
   IMG_Imovel.src = imagens[index]; // troca imagem
