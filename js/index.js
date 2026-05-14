@@ -105,8 +105,6 @@ index2 = (index2 + 1) % banner2.length; // avança e reinicia no final
 };
 
 
-
-
 //iniciar apresentação de imóveis
 var db = firebase.firestore();
 var itens = [];
