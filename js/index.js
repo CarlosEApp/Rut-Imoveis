@@ -120,7 +120,7 @@ itens.push(doc.data());
 // Inicia o ciclo de exibição
 if (itens.length > 0) {
 mostrarItem();
-setInterval(mostrarItem, 5000); // muda a cada 7 segundos
+setInterval(mostrarItem, 7000); // muda a cada 7 segundos
 }
 }).catch(err => console.error("Erro ao carregar dados:", err));
 // 🔹 Função que atualiza a imagem e os textos
@@ -237,8 +237,8 @@ setInterval(() => {
   
     IMG_Imovel.classList.remove('slide-out');
     IMG_Imovel.classList.add('slide-in'); // entra de lado
-  },900); // tempo da animação de saída
-    //IMG_Imovel.classList.remove('slide-in');
+  },1200); // tempo da animação de saída
+    IMG_Imovel.classList.remove('slide-in');
   IMG_Imovel.classList.add('slide-out');
   IMG_Imovel.src = imagens[index]; // troca imagem
 }, 9000);// 5 segundos
