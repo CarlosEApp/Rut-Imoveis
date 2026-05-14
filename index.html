@@ -1,153 +1,142 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title id="TITULO"> Rut-Imóveis</title>
-       <link rel="shortcut icon" href="src/Rute_avatar_.png" type="image/x-icon">  
-    <meta property="og:title" content="Rutimóveis soluções residenciais">
-    <meta property="og:description" content="Encontre imóveis incríveis em Itanhaém e região com preços que cabem no seu bolso. Casas, sobrados, apartamentos e muito mais. A Rutimóveis ajuda você a conquistar o sonho da casa própria com facilidade e confiança.">
-    <meta property="og:image" content="https://rutimoveis.netlify.app/assets/Rutimoveis-img.png">
-    <meta property="og:url" content="https://rutimoveis.netlify.app/">
-    <meta property="og:type" content="website">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script src="https://kit.fontawesome.com/60de48ee9a.js" crossorigin="anonymous"></script>
-    <script src="https://www.gstatic.com/firebasejs/10.9.0/firebase-app-compat.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/10.9.0/firebase-auth-compat.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/10.9.0/firebase-firestore-compat.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/10.9.0/firebase-database-compat.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/10.9.0/firebase-storage-compat.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/10.9.0/firebase-messaging-compat.js"></script>
-    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
-    <meta name="google-site-verification" content="I5QDbpWaGPHDZCWZITuNbd94oKGkibaclmduJlckKqU" />
-    <meta name="msvalidate.01" content="91A47097945E8CDB896C9CA2D3B40518" />
-    <link rel="stylesheet" href="css/index.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title id="TITULO"> Rutimóveis</title>
+<link rel="shortcut icon" href="src/Rute_avatar_.png" type="image/x-icon">  
+<meta property="og:title" content="Rutimóveis soluções residenciais">
+<meta property="og:description" content="Encontre imóveis incríveis em Itanhaém e região com preços que cabem no seu bolso. Casas, sobrados, apartamentos e muito mais. A Rutimóveis ajuda você a conquistar o sonho da casa própria com facilidade e confiança.">
+<meta property="og:image" content="https://rutimoveis.netlify.app/assets/Rutimoveis-img.png">
+<meta property="og:url" content="https://rutimoveis.netlify.app/">
+<meta property="og:type" content="website">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="https://kit.fontawesome.com/60de48ee9a.js" crossorigin="anonymous"></script>
+<script src="https://www.gstatic.com/firebasejs/10.9.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.9.0/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.9.0/firebase-firestore-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.9.0/firebase-database-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.9.0/firebase-storage-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.9.0/firebase-messaging-compat.js"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+<meta name="google-site-verification" content="I5QDbpWaGPHDZCWZITuNbd94oKGkibaclmduJlckKqU" />
+<meta name="msvalidate.01" content="91A47097945E8CDB896C9CA2D3B40518" />
+<link rel="stylesheet" href="css/index.css">
 </head>
 <body>
 <div id="conteudoGeral">
-    <header>
-     <div id="headerUm">
-       <div id="headerFlex">     
-        <div id="bannerUm"> <img id="imgHeader"  src="src/Bannerjpg2.png" width="100%" alt=""> <img id="imgDoisHeader" src="src/bannerMenor.png" width="100%"  alt=""></div>
-         </div>
-           <div id="headerMenu">
-             <div id="divMenuHeader">
-               <div id="HM1"> <i id="I_Casa" class="fa-solid fa-house"></i> <select name="" id="selectImóveisMenu" title="Imóveis">
-                 <option value="" disabled selected>Rut - Imóveis</option>
-                    <option value="COLL_Casas">Casas Térrea</option>
-                      <option value="COLL_Sobrados">Sobrados</option>
-                        <option value="COLL_Apartamentos">Apartamentos</option>
-                          <option value="COLL_Terrenos">Terrenos</option>
-                            <option value="COLL_Lojas">Lojas</option>
-                              <option value="COLL_Galpões">Galpões</option>
-                                <option value="COLL_Armazens">Armazens</option>
-                                  <option value="COLL_Chacaras">Chácaras</option>
-                                    <option value="COLL_Sítios">Sítios</option>
-                                      <option value="Sair"></option>
-                                        <option value="Sair">Sair, Exit</option>
-                    </select> 
-                    <button id="btnCad" onclick="funçaocad()">Cadastro</button></div> <div id="HM2"> <button onclick=" initList()">MENU</button></div>
-                   
-                </div>
-            </div>
-        </div>
-    </header>
-    <main>
-        <div id="mainUm">
-            <div id="MaiflaxUm">
-                <div id="DivPesquisador">
-                    <h2 class="h2P">Encontre Imóveis</h2>
-                    <div id="divPesquisa"> 
-                          <select name="" id="tranzação"  title="Tipo de tranzação ">
-                            <option value=""disabled selected>Tranzação ?</option>
-                             <option value="Venda">Venda</option>
-                              <option value="Locação">Locação</option>
-                               <option value="Temporada">Temporada</option>
-                                <option value="Lançamento">Lançamento</option>
-                          </select><br>
-                       <div id="divP2">
-                          <i id="i_pequisa_imovel" class="fa-solid fa-magnifying-glass"></i>  <input id="PesquInput" type="text" title="Pesquise por Imóvel" placeholder="Rua, bairro ou cidade..."> <button id="BTNPSQ" onclick="pesquisar()" ><i id="pesq" class="fa-solid fa-magnifying-glass"></i> Buscar</button>
-                       </div><br>
-                           <p id="P_division"></p>
+<header>
+<div id="headerUm">
+<div id="headerFlex">     
+<div id="bannerUm"><img class="logo" src="src/RuuteAvatar.png" width="" alt=""> <img id="imgHeader"  src="src/Bannerjpg2.png" width="100%" alt=""> <img id="imgDoisHeader" src="src/bannerGif.gif" width="100%"  alt=""></div>
+</div>
+<div id="headerMenu">
+<div id="divMenuHeader">
+<div id="HM1"> <i id="I_Casa" class="fa-solid fa-house"></i> <select name="" id="selectImóveisMenu" title="Imóveis">
+<option value="" disabled selected>Rut - Imóveis</option>
+<option value="COLL_Casas">Casas Térrea</option>
+<option value="COLL_Sobrados">Sobrados</option>
+<option value="COLL_Apartamentos">Apartamentos</option>
+<option value="COLL_Terrenos">Terrenos</option>
+<option value="COLL_Lojas">Lojas</option>
+<option value="COLL_Galpões">Galpões</option>
+<option value="COLL_Armazens">Armazens</option>
+<option value="COLL_Chacaras">Chácaras</option>
+<option value="COLL_Sítios">Sítios</option>
+<option value="Sair"></option>
+<option value="Sair">Sair, Exit</option>
+</select> 
+<button id="btnCad" onclick="funçaocad()">Cadastro</button></div> <div id="HM2"> <button onclick=" initList()">MENU</button></div>
 
-                      <p onclick="ICodigo()" > Busque pelo Código <i id="i_codigo_imovel" class="fa-solid fa-eye"></i></p>
-                        <div id="divP1" class="classeCodigo">
-                           <input id="CodigoInput" type="text" title="Código do Imóvel" placeholder="Digite ou cole o código... "> <button id="BTNBuscar" onclick="pesquiCod()" ><i id="pesq" class="fa-solid fa-magnifying-glass"></i> Buscar</button>
-                       </div><br>
-                         <p id="P_division"></p>
+</div>
+</div>
+</div>
+</header>
+<main>
+<div id="mainUm">
+<div id="MaiflaxUm">
+<div id="DivPesquisador">
+<h2 class="h2P">Encontre Imóveis</h2>
+<div id="divPesquisa"> 
+<select name="" id="tranzação"  title="Tipo de tranzação ">
+<option value=""disabled selected>Tranzação ?</option>
+<option value="Venda">Venda</option>
+<option value="Locação">Locação</option>
+<option value="Temporada">Temporada</option>
+<option value="Lançamento">Lançamento</option>
+</select><br>
+<div id="divP2">
+<i id="i_pequisa_imovel" class="fa-solid fa-magnifying-glass"></i>  <input id="PesquInput" type="text" title="Pesquise por Imóvel" placeholder="Rua, bairro ou cidade..."> <button id="BTNPSQ" onclick="pesquisar()" ><i id="pesq" class="fa-solid fa-magnifying-glass"></i> Buscar</button>
+</div><br>
+<p id="P_division"></p>
 
-                     <p  onclick="IValaor()" ></i> R$ ajuste valor do imóvel <i id="i_valor_imovel" class="fa-solid fa-eye"></i> </p>
-                      <div  class="diValores">
-                         <div id="divP1">
-                           <Label>Max R$: </Label> <input id="ValorMaxInput" type="text" title="Valor maxímo do Imóvel" placeholder="Digite o valor maxímo... ">
-                        </div>
-                          <div id="divP1" >
-                            <Label>MIn R$: </Label> <input id="ValorMinInput" type="text" title="Valor minimo do Imóvel" placeholder="Digite o valor minimo... ">
-                          </div>
-                             <div id="divP1" ><button id="btnBuscaValor"><i id="pesq" class="fa-solid fa-magnifying-glass"></i>  Busca por valor</button></div> 
-                    </div>
-                    <br>
-                    </div>
-                    
-                </div>
-                <br><br>
-                <div id="divCarrocel">
-                    <h2>✨Rut imóveis - economia, segurança e qualidade!</h2>
-                    <div id="divApresntação">
-                       <div id="imgApresent"> <img  src="src/BannerRute.png" id="IMGAP" alt=""> <br>  <h3  id="LBLAP"></h3> <p id="ALBAP2"></Label> </p>
-                    </div>
-                </div>      
-            </div>
+<p onclick="ICodigo()" > Busque pelo Código <i id="i_codigo_imovel" class="fa-solid fa-eye"></i></p>
+<div id="divP1" class="classeCodigo">
+<input id="CodigoInput" type="text" title="Código do Imóvel" placeholder="Digite ou cole o código... "> <button id="BTNBuscar" onclick="pesquiCod()" ><i id="pesq" class="fa-solid fa-magnifying-glass"></i> Buscar</button>
+</div><br>
+<p id="P_division"></p>
 
+<p  onclick="IValaor()" ></i> R$ ajuste valor do imóvel <i id="i_valor_imovel" class="fa-solid fa-eye"></i> </p>
+<div  class="diValores">
+<div id="divP1">
+<Label>Max R$: </Label> <input id="ValorMaxInput" type="text" title="Valor maxímo do Imóvel" placeholder="Digite o valor maxímo... ">
+</div>
+<div id="divP1" >
+<Label>MIn R$: </Label> <input id="ValorMinInput" type="text" title="Valor minimo do Imóvel" placeholder="Digite o valor minimo... ">
+</div>
+<div id="divP1" ><button id="btnBuscaValor"><i id="pesq" class="fa-solid fa-magnifying-glass"></i>  Busca por valor</button></div> 
+</div>
+<br>
+</div>
 
-        </div>
-        <div id="divMainDois">
-          <div id="flexdiv2"> 
-              <div id="div_"></div>
-             <div id="CorretoresDiv">
-               <h2>Fale Conosco </h2>
-               <div id="div_Corretor">
-                
-                <div id="Corr_um">
-                   <h2>Corretores</h2>
-                </div>
-                 <div id="Corr_dois">
-                  <h2>Contatos</h2>
-                </div>
-               </div>
-             </div>
-             <div id="lista_imoveis_destaque">
-              <h2 id="Div_IMV_DestaqueH2">✨Imóvens em Destaque</h2>
-               <div id="list"></div>
-                 <h2 id="Div_IMV_DestaqueH2_" onclick="verMaisIMV()">Ver mais imóveis <b id="Bred">>>>></b></h2>
-       
-             </div>
-          </div>
+</div>
+<br><br>
+<div id="divCarrocel">
+<h2>✨Rutimóveis - economia, segurança e qualidade!</h2>
+<div id="divApresntação">
+<div id="imgApresent"> <img  src="src/BannerRute.png" id="IMGAP" alt=""> <br>  <h3  id="LBLAP"></h3> <p id="ALBAP2"></Label> </p>
+</div>
+</div>      
+</div>
 
-        </div>
-            
-    </main>
-    <footer>
+</div>
+<div id="divMainDois">
+<div id="flexdiv2"> 
+<div id="div_"></div>
+<div id="CorretoresDiv">
+<h2>Fale Conosco </h2>
+<div id="div_Corretor">
 
-    </footer>
+<div id="Corr_um">
+<h2>Corretores</h2>
+</div>
+<div id="Corr_dois">
+<h2>Contatos</h2>
+</div>
+</div>
+</div>
+<div id="lista_imoveis_destaque">
+<h2 id="Div_IMV_DestaqueH2">✨Imóvens em Destaque</h2>
+<div id="list"></div>
+<h2 id="Div_IMV_DestaqueH2_" onclick="verMaisIMV()">Ver mais imóveis <b id="Bred">>>>></b></h2>
 
-
-
-
+</div>
+</div>
 
 </div>
 
+</main>
+<footer>
 
-
-
-
-    <script src="js/index.js"></script>
+</footer>
+</div>
+<script src="js/index.js"></script>
 </body>
 </html>

@@ -76,6 +76,7 @@ box-shadow: 0px 40px 40px rgb(20, 20, 20);
 }
 .logo{
 width: 20%;
+display: block;
 }
 #bannerUm img{
 height: 100%;
