@@ -54,6 +54,59 @@ sessionStorage.setItem('hora', timeString)
 sessionStorage.setItem('data', data)
 }, 1000)
 
+document.getElementById("imgHeader").src ='src/Bannerjpg2.png';
+document.getElementById("imgDoisHeader").src ='src/bannerMenor.png';
+// iniciar banners Gif
+var banner = [];
+var index3 = 0;
+var dbnn = firebase.firestore();
+dbnn.collection("CoLL_Banners").get().then(snapshot => {
+snapshot.forEach(doc => {
+banner.push(doc.data());
+});
+// Inicia o ciclo de exibição
+if (banner.length > 0) {
+mostrarbanner();
+setInterval(mostrarbanner, 12000); // muda a cada 7 segundos
+}
+}).catch(err => console.error("Erro ao carregar dados:", err));
+// 🔹 Função que atualiza a imagem e os textos
+function mostrarbanner() {
+var bann = banner[index3];
+var img = document.getElementById("imgHeader")
+
+document.getElementById("imgHeader").src = bann.Imagem; // campo da imagem no Firestore
+
+index3 = (index3 + 1) % banner.length; // avança e reinicia no final
+};
+
+//Menor
+var banner2 = [];
+var index2 = 0;
+var dbnnM = firebase.firestore();
+dbnnM.collection("CoLL_BannersMenores").get().then(snapshot => {
+snapshot.forEach(doc => {
+banner2.push(doc.data());
+});
+// Inicia o ciclo de exibição
+if (banner2.length > 0) {
+mostrarbanner_2();
+setInterval(mostrarbanner_2, 10000); // muda a cada 7 segundos
+}
+}).catch(err => console.error("Erro ao carregar dados:", err));
+// 🔹 Função que atualiza a imagem e os textos
+function mostrarbanner_2() {
+var banne = banner2[index2];
+var img = document.getElementById("imgDoisHeader")
+
+document.getElementById("imgDoisHeader").src = banne.Imagem; // campo da imagem no Firestore
+
+index2 = (index2 + 1) % banner2.length; // avança e reinicia no final
+};
+
+
+
+
 //iniciar apresentação de imóveis
 var db = firebase.firestore();
 var itens = [];
@@ -72,14 +125,18 @@ setInterval(mostrarItem, 5000); // muda a cada 7 segundos
 }).catch(err => console.error("Erro ao carregar dados:", err));
 // 🔹 Função que atualiza a imagem e os textos
 function mostrarItem() {
-const item = itens[index];
+var item = itens[index];
+var img = document.getElementById("IMGAP")
+
 document.getElementById("IMGAP").src = item.Imagem1; // campo da imagem no Firestore
 document.getElementById("ALBAP2").innerHTML = ``;
+
 //document.getElementById("LBLAP").textContent = ` ${ item.Cidad} ${item.UF}`// campo do título
 setTimeout(function(){
 document.getElementById("ALBAP2").innerHTML = 
 `📌 Bairro: ${item.Bairro}<br> ${item.Cidade} - ${item.UF}`;
 // campo da descrição
+
 },1000)
 index = (index + 1) % itens.length; // avança e reinicia no final
 };
@@ -162,6 +219,7 @@ for (let i = 1; i <= 3; i++) {
 
 // inicializa com a primeira imagem
 // inicializa com a primeira imagem
+
 let index = 0;
 IMG_Imovel.src = imagens[index];
 IMG_Imovel.classList.add('slide-in');
@@ -292,39 +350,36 @@ sessionStorage.setItem('itens', JSON.stringify(data));
 });
 });
 }
-
 //document.getElementById('DivPesquisador').style.display='none'
 //fucção pesquisa
 function funçaoPesquisa(){
 document.getElementById('DivPesquisador').style.display='block'
 }
-
-
-
+//document.querySelector('.diValores').style.display='block'
+//document.querySelector('.classeCodigo').style.display='block'
 //Cadastro de pesquisa codigo e valor
 function ICodigo(){
-    var I_resp=document.getElementById('i_codigo_imovel');
-    var resp= document.querySelector('.classeCodigo');
-    if(resp.style.display=='block'){
-        resp.style.display='none';
-        I_resp.className='fa-solid fa-eye';
-    }else{
-        resp.style.display='block';
-        I_resp.className='fa-solid fa-eye-slash';
-    }
-
+var I_resp=document.getElementById('i_codigo_imovel');
+var resp= document.querySelector('.classeCodigo');
+if(resp.style.display=='block'){
+resp.style.display='none';
+I_resp.className='fa-solid fa-eye';
+}else{
+resp.style.display='block';
+I_resp.className='fa-solid fa-eye-slash';
+}
 
 };
 function IValaor(){
-    var I_resp_=document.getElementById('i_valor_imovel');
-    var resp_= document.querySelector('.diValores');
-    if(resp_.style.display=='block'){
-        resp_.style.display='none';
-        I_resp_.className='fa-solid fa-eye';
-    }else{
-        resp_.style.display='block';
-        I_resp_.className='fa-solid fa-eye-slash';
-    }
+var I_resp_=document.getElementById('i_valor_imovel');
+var resp_= document.querySelector('.diValores');
+if(resp_.style.display=='block'){
+resp_.style.display='none';
+I_resp_.className='fa-solid fa-eye';
+}else{
+resp_.style.display='block';
+I_resp_.className='fa-solid fa-eye-slash';
+}
 
 
 }
