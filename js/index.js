@@ -209,10 +209,10 @@ IMG_Imovel.title = 'imagem do Imóvel';
 // monta array com todas as imagens disponíveis
 var imagens = [];
 for (let i = 1; i <= 3; i++) {
-  const key = `Imagem${i}`;
-  if (data[key]) {
-    imagens.push(data[key]);
-  }
+const key = `Imagem${i}`;
+if (data[key]) {
+imagens.push(data[key]);
+}
 }
 
 // inicializa com a primeira imagem
@@ -224,23 +224,23 @@ IMG_Imovel.src = imagens[index];
 
 // troca automática a cada 5 segundos
 setInterval(() => {
-  index++;
-  if (index >= imagens.length) {
-    index = 0;
-  }
- IMG_Imovel.src = imagens[index]; // troca imagem
-  // aplica saída lateral
+index++;
+if (index >= imagens.length) {
+index = 0;
+}
+IMG_Imovel.src = imagens[index]; // troca imagem
+// aplica saída lateral
 
-  setTimeout(() => {
-  
-  
-   IMG_Imovel.src = imagens[index]; // troca imagem
-  IMG_Imovel.classList.remove('slide-out');
-    IMG_Imovel.classList.add('slide-in'); // entra de lado
-  },900); // tempo da animação de saída
-    IMG_Imovel.classList.remove('slide-in');
-  IMG_Imovel.classList.add('slide-out');
-  IMG_Imovel.src = imagens[index]; // troca imagem
+setTimeout(() => {
+
+
+IMG_Imovel.src = imagens[index]; // troca imagem
+IMG_Imovel.classList.remove('slide-out');
+IMG_Imovel.classList.add('slide-in'); // entra de lado
+},900); // tempo da animação de saída
+IMG_Imovel.classList.remove('slide-in');
+IMG_Imovel.classList.add('slide-out');
+IMG_Imovel.src = imagens[index]; // troca imagem
 }, 9000);// 5 segundos
 
 label_um.textContent = `🏡 ${data.Titulo}`;

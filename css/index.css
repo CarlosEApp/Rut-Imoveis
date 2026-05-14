@@ -1253,6 +1253,9 @@ position: relative;
   opacity: 0;
 }
 
+#divIMG{
+  background-color: rgb(53, 53, 53);
+}
 
 footer{
 width: 100%;
