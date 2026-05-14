@@ -267,10 +267,10 @@ img4.src='src/carro.png';
 if(!data.Area_Const || data.Area_Const==''){
 parag2.textContent='00 m²?';
 parag2.className='smai';
-img1.title='Area Construida, sem informação!'
+img1.title='Área construída, sem informação!'
 }else{
 parag2.textContent=`${data.Area_Const} m²`
-img1.title=`Area Construida: ${data.Area_Const} m²`
+img1.title=`Área construída: ${data.Area_Const} m²`
 };
 if(!data.Quartos || data.Quartos==''|| data.Quartos=='0'){
 parag3.textContent=' quartos?';
