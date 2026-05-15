@@ -28,7 +28,7 @@ cursor: pointer;
 }
 body{
 font-family: 'Poppins', sans-serif;
-background-color: rgb(239, 240, 241);
+background-color: rgb(255, 255, 255);
 position: relative;
 margin: auto;
 width: 100%;
@@ -38,14 +38,14 @@ width: 100%;
 margin: auto;
 width: 100%;
 max-width: 1920px;
-background-color: rgba(238, 247, 255, 0);
+background-color: rgba(255, 255, 255, 0);
 }
 body::before {
 content: "";
 position: absolute;
 inset: 0;
-background: rgba(0,0,0,0.1); /* sombra/overlay */
-box-shadow: inset 0 20px 40px rgba(0,0,0,0.3);
+background: #7777772a; /* sombra/overlay */
+box-shadow: inset 0 10px 20px rgba(0, 0, 0, 0.63);
 }
 #headerFlex{
 margin: auto;
@@ -107,7 +107,7 @@ justify-content: space-between;
 align-items: center;
 border-radius: 40px;
 border: 3px solid rgba(219, 219, 219, 0.856);
-background-color: rgba(0, 0, 0, 0.836);
+background-color: rgba(0, 0, 0, 0.815);
 box-shadow: 0px 10px 20px rgba(121, 121, 121, 0.836);
 color: aliceblue;
 text-shadow: 0px 1px 1px black;
@@ -238,26 +238,24 @@ background-color: rgb(0, 0, 0);
 padding-top: 12px;
 padding-bottom: 12px;
 text-align: center;
-color: rgb(255, 255, 255);
+color: rgb(251, 255, 0);
 font-family: 'Poppins', sans-serif;
 font-size: 1.700rem;
 border-radius: 1px;
 margin-top: 20px;
 text-shadow: 0px 1px 1px rgb(0, 0, 0);
 margin-top: 40px;
-box-shadow: 0px 3px 5px rgba(121, 121, 121, 0.836);
+box-shadow: 0px 4px 4px rgba(121, 121, 121, 0.836);
 outline: none;
 }
 #divApresntação{
-
 margin:0 auto;
 width: 100%;
 height: 77vh;
 background-color: rgba(253, 253, 253, 0);
-margin-bottom: 20px;
+margin-bottom: 5px;
 outline: none;
 }
-
 #imgApresent{
 margin: auto;
 max-width: 100%;
@@ -266,6 +264,7 @@ text-align: center;
 cursor: pointer;
 outline: none;
 }
+
 #IMGAP{
 width: 100%;
 height: 73vh;
@@ -275,36 +274,32 @@ outline: none;
 }
 #imgApresent p{
 margin: auto;
-width: 70%;
+width: 100%;
 position: relative;
-bottom: 90px;
-font-size: clamp(1.300rem, 0.3vw  + 0.5rem, 1.400rem);
+bottom: 120px;
+font-size: clamp(1rem, 0.3vw  + 0.5rem, 1.100rem);
 margin-bottom: 10px;
-color: #ffffff;
+color: rgb(247, 247, 247);
 background-color: rgba(0, 0, 0, 0.589);
-text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.582);
+text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.877);
 font-family: 'Poppins', sans-serif;
-border-radius: 5px;
 font-weight: bold;
 outline: none;
+padding-top: 3px;
+padding-bottom: 3px;
 }
 #LBLAP{
 margin:auto ;
-max-width: 95%;
-text-align: center;
-color: rgb(255, 255, 255);
 position: relative;
-bottom: 250px;
-font-size: clamp(1.500rem, 0.3vw  + 0.5rem, 1.700rem);
-padding-left: 20px;
-padding-right: 20px;
-border-radius: 10px;
-text-shadow: 0px 5px 5px rgb(0, 0, 0);
+max-width: 97%;
+text-align: center;
+color: #ffffff;
+bottom: 140px;
+font-size: clamp(1.600rem, 0.3vw  + 0.5rem, 1.600rem);
 font-family: 'Poppins', sans-serif;
 outline: none;
+text-shadow: 4px 7px 6px rgb(0, 0, 0)
 }
-
-
 #DivPesquisador h2{
 color: rgb(99, 99, 99);
 font-size: clamp(1.100rem, 0.3vw  + 0.5rem, 1.200rem);
@@ -511,6 +506,7 @@ padding-bottom: 14px;
   .h2Header{
 font-size:3.600rem;
 }}
+
 @media (max-width: 1400px) {
   .h2Header{
 font-size:3.500rem;
@@ -529,31 +525,28 @@ max-width: 68%;
 background-color: rgba(172, 2, 115, 0);
 border-radius: 10px;
 }
-
-
 }
-@media (max-width: 1300px) {
-    #divMenuHeader {
 
+@media (max-width: 1300px) {
+#divMenuHeader {
 padding-top: 13px;
 padding-bottom: 13px;
 
 }
-    .h2Header{
+.h2Header{
 font-size:3.400rem;
 }
-  #IMGAP{
+#IMGAP{
 width: 100%;
 height: 70vh;
 margin-top: 10px;
 border-radius: 3px;
 outline: none;
 }
-  #imgHeader{
+#imgHeader{
 width: 100%;
 border-radius: 0%;
 box-shadow: 0px 30px 40px rgba(0, 0, 0, 0.884);
-
 }
 .logo{
 display: none;
@@ -565,13 +558,13 @@ max-width: 63%;
 background-color: rgba(172, 2, 115, 0);
 border-radius: 10px;
 }
-
 }
+
 @media (max-width: 1200px) {
-    .h2Header{
+.h2Header{
 font-size:3rem;
 }
-    #IMGAP{
+#IMGAP{
 width: 100%;
 height: 62vh;
 margin-top: 10px;
@@ -594,13 +587,11 @@ width: 100%;
 }
 
 @media (max-width: 1050px) {
-    #divMenuHeader {
-
+#divMenuHeader {
 padding-top: 12px;
 padding-bottom: 12px;
-
 }
-    .h2Header{
+.h2Header{
 font-size:2.700rem;
 }
 #imgHeader{
@@ -639,15 +630,15 @@ margin: auto;
 min-width: 98%;
 font-family: 'Poppins', sans-serif;
 font-size: 1.500rem;
-
 }
 #divApresntação{
 margin:0 auto;
 width: 100%;
 min-height: 30vh;
-background-color: rgba(17, 0, 173, 0);
+
 }
 }
+
 @media (max-width: 1050px) {
 #divMainDois{
 margin: auto;
@@ -660,7 +651,6 @@ background-color: #fbff0000;
 margin: auto;
 max-width: 450px;
 text-align: center;
-
 }
 #div_Corretor h2{
 text-align: center;
@@ -753,7 +743,6 @@ z-index: 999;
 transform: translateY(0); /* sobe suavemente */
 opacity: 1;              /* aparece gradualmente */
 }
-
 
 #flexdiv2 #Div_IMV_DestaqueH2{
 margin: auto;
@@ -925,37 +914,35 @@ margin-left: 5px;
 text-shadow: 0px 0px 0px rgba(15, 15, 15, 0.76);
 }
 #p_IMG_I{
-  width: 35px;
-  height: 35px;
-  text-align: center;
-  color: rgb(255, 255, 255);
-  font-size: clamp(1.400rem, 0.3vw  + 0.5rem, 1.500rem);
-  position: relative;
-  bottom: 95%;
-  margin-left: 10px;
-  background-color: rgba(0, 53, 158, 0.644);
-  border-radius: 50%;
-  text-shadow: 0px 4px 4px rgba(0, 1, 14, 0.87);
+width: 35px;
+height: 35px;
+text-align: center;
+color: rgb(255, 255, 255);
+font-size: clamp(1.400rem, 0.3vw  + 0.5rem, 1.500rem);
+position: relative;
+bottom: 95%;
+margin-left: 10px;
+background-color: rgba(0, 53, 158, 0.644);
+border-radius: 50%;
+text-shadow: 0px 4px 4px rgba(0, 1, 14, 0.87);
 }
-
 
 @media (max-width: 700px) {
-  #p_IMG_I{
+#p_IMG_I{
   font-size: clamp(1.500rem, 0.3vw  + 0.5rem, 1.500rem);
 }
-  #divMenuHeader {
+#divMenuHeader {
 padding-top: 10px;
 padding-bottom: 10px;
-
 }
-    .h2Header{
+.h2Header{
 font-size:2.200rem;
 }
-  #DivPesquisador .diValores, #DivPesquisador .classeCodigo{
+#DivPesquisador .diValores, #DivPesquisador .classeCodigo{
 margin-bottom: 10px;
 display: none;
 }
-    #imgApresent p{
+#imgApresent p{
 margin: auto;
 width:80%;
 position: relative;
@@ -966,7 +953,6 @@ color: #ffffff;
 background-color: rgba(0, 0, 0, 0.774);
 text-shadow: 0px 10px 20px rgb(0, 0, 0);
 font-family: 'Poppins', sans-serif;
-
 }
 #LBLAP{
 margin:auto ;
@@ -1312,7 +1298,7 @@ position: relative;
 
 footer{
 width: 100%;
-height: 100vh;
+height: 50vhh;
 background-color: #dfe8ff;
 padding-bottom: 70px;
 }

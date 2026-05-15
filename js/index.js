@@ -78,12 +78,10 @@ setInterval(mostrarbanner, 12000); // muda a cada 7 segundos
 function mostrarbanner() {
 var bann = banner[index3];
 var img = document.getElementById("imgHeader")
-
 document.getElementById("imgHeader").src = bann.Imagem; // campo da imagem no Firestore
 
 index3 = (index3 + 1) % banner.length; // avança e reinicia no final
 };
-
 //Menor
 var banner2 = [];
 var index2 = 0;
@@ -102,12 +100,9 @@ setInterval(mostrarbanner_2, 10000); // muda a cada 7 segundos
 function mostrarbanner_2() {
 var banne = banner2[index2];
 var img = document.getElementById("imgDoisHeader")
-
 document.getElementById("imgDoisHeader").src = banne.Imagem; // campo da imagem no Firestore
-
 index2 = (index2 + 1) % banner2.length; // avança e reinicia no final
 };
-
 
 //iniciar apresentação de imóveis
 var db = firebase.firestore();
@@ -122,7 +117,7 @@ itens.push(doc.data());
 // Inicia o ciclo de exibição
 if (itens.length > 0) {
 mostrarItem();
-setInterval(mostrarItem, 7000); // muda a cada 7 segundos
+setInterval(mostrarItem, 10000); // muda a cada 7 segundos
 }
 }).catch(err => console.error("Erro ao carregar dados:", err));
 // 🔹 Função que atualiza a imagem e os textos
@@ -132,13 +127,16 @@ var img = document.getElementById("IMGAP")
 
 document.getElementById("IMGAP").src = item.Imagem1; // campo da imagem no Firestore
 document.getElementById("ALBAP2").innerHTML = ``;
-document.getElementById('LBLAP').innerHTML=''
+document.getElementById('LBLAP').innerHTML='';
+document.getElementById("ALBAP2").style.display='none';
+document.getElementById("LBLAP").style.display='none';
 
 //document.getElementById("LBLAP").textContent = ` ${ item.Cidad} ${item.UF}`// campo do título
 setTimeout(function(){
-
-document.getElementById('LBLAP').innerHTML=`${item.Cidade} - ${item.UF}`
-document.getElementById("ALBAP2").innerHTML = `${item.Titulo}<br>📌 Bairro: ${item.Bairro} `;
+document.getElementById("ALBAP2").style.display='block';
+document.getElementById("LBLAP").style.display='block';
+document.getElementById('LBLAP').innerHTML=`${item.Titulo} `
+document.getElementById("ALBAP2").innerHTML = `${item.SubTitulo}<br> 📌 Em ${item.Cidade} - ${item.UF}`;
 // campo da descrição
 
 },1000)
