@@ -97,7 +97,7 @@ max-width: 1400px;
 position: absolute;
 width: 96%;
 max-width: 1400px;
-top: 250px;
+top: 300px;
 left: 50%;
 transform: translateX(-50%);
 display: flex;
@@ -112,6 +112,7 @@ text-shadow: 0px 1px 1px black;
 padding-top: 15px;
 padding-bottom: 15px;
 z-index: 999;
+
 }
 .h2Header{
 position: absolute;
@@ -187,6 +188,9 @@ background-color: rgba(121, 5, 5, 0);
 bottom: 20px;
 }
 }
+#mainUm{
+  margin-top: 10px;
+}
 #MaiflaxUm{
 margin: auto;
 display: flex;
@@ -194,7 +198,9 @@ width: 100%;
 min-height: 40vh;
 align-items: baseline;
 flex-wrap: wrap;
+
 }
+
 #DivPesquisador{
 width: 25%;
 min-width: 350px;
@@ -206,8 +212,9 @@ box-shadow: 0px 3px 3px rgba(70, 70, 70, 0.404);
 margin-right: 20px;
 border-radius: 5px;
 padding-bottom: 15px;
-z-index: 999;
+z-index: 99;
 outline: none;
+
 }
 .diValores label{
 color: #808080c0;
@@ -587,6 +594,9 @@ width: 100%;
 }
 
 @media (max-width: 1050px) {
+#mainUm{
+  margin-top: 20px;
+}
 #divMenuHeader {
 padding-top: 12px;
 padding-bottom: 12px;
@@ -926,8 +936,15 @@ background-color: rgba(0, 53, 158, 0.644);
 border-radius: 50%;
 text-shadow: 0px 4px 4px rgba(0, 1, 14, 0.87);
 }
-
+@media (max-width: 800px) {
+  #mainUm{
+  margin-top: 40px;
+}
+}
 @media (max-width: 700px) {
+  #mainUm{
+  margin-top: 30px;
+}
 #p_IMG_I{
   font-size: clamp(1.500rem, 0.3vw  + 0.5rem, 1.500rem);
 }
