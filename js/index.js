@@ -237,11 +237,11 @@ IMG_Imovel.src = imagens[index]; // troca imagem
 
 setTimeout(function(){
     
-p_Imovel.textContent=index+1;
+p_Imovel.textContent=`${index+1}`;
 //alert(p_Imovel.textContent)
 },1000)
-
-}, 7000);// 5 segundos
+p_Imovel.textContent=``;
+}, 5000);// 5 segundos
 
 label_um.textContent = `🏡 ${data.Titulo}`;
 label_tres.textContent = `${data.Código}`;

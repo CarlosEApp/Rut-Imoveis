@@ -924,10 +924,26 @@ font-family: 'Poppins', sans-serif;
 margin-left: 5px;
 text-shadow: 0px 0px 0px rgba(15, 15, 15, 0.76);
 }
+#p_IMG_I{
+  width: 35px;
+  height: 35px;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  font-size: clamp(1.400rem, 0.3vw  + 0.5rem, 1.500rem);
+  position: relative;
+  bottom: 95%;
+  margin-left: 10px;
+  background-color: rgba(0, 53, 158, 0.644);
+  border-radius: 50%;
+  text-shadow: 0px 4px 4px rgba(0, 1, 14, 0.87);
+}
+
 
 @media (max-width: 700px) {
+  #p_IMG_I{
+  font-size: clamp(1.500rem, 0.3vw  + 0.5rem, 1.500rem);
+}
   #divMenuHeader {
-
 padding-top: 10px;
 padding-bottom: 10px;
 
@@ -1293,20 +1309,6 @@ position: relative;
   background-color: rgb(53, 53, 53);
 }
 
-#p_IMG_I{
-  width: 35px;
-  height: 35px;
-  text-align: center;
-  color: rgb(255, 255, 255);
-  font-size: clamp(1.400rem, 0.3vw  + 0.5rem, 1.500rem);
-  position: relative;
-  bottom: 95%;
-  margin-left: 10px;
-  background-color: rgba(2, 42, 128, 0.226);
-  border-radius: 50%;
-  text-shadow: 0px 2px 2px black;
-
-}
 
 footer{
 width: 100%;
