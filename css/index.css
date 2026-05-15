@@ -117,11 +117,11 @@ z-index: 999;
 }
 .h2Header{
 position: absolute;
-top: 10px;
+top: 20px;
 margin-left: 2%;
 color: rgba(0, 47, 255, 0.925);
 font-weight: bolder;
-text-shadow: 0px 2px 0px rgb(1, 0, 22);
+text-shadow: 0px 1px 1px rgb(1, 0, 22);
 font-size:4rem;
 font-family: 'Urbanist', sans-serif;
 }
@@ -592,7 +592,7 @@ padding-top: 12px;
 padding-bottom: 12px;
 }
 .h2Header{
-font-size:2.700rem;
+font-size:2.800rem;
 }
 #imgHeader{
 width: 100%;
@@ -936,7 +936,7 @@ padding-top: 10px;
 padding-bottom: 10px;
 }
 .h2Header{
-font-size:2.200rem;
+font-size:2.500rem;
 }
 #DivPesquisador .diValores, #DivPesquisador .classeCodigo{
 margin-bottom: 10px;
@@ -1131,7 +1131,7 @@ padding-top: 8px;
 padding-bottom: 8px;
 }
     .h2Header{
-font-size:2rem;
+font-size:2.300rem;
 }
     #divCarrocel h2{
 margin: auto;
