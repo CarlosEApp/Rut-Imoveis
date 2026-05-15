@@ -58,24 +58,20 @@ max-width: 1920px;
 display: flex;
 justify-content: center;
 align-items: center;
-height: 320px;
-
+height: 350px;
 }
 #imgHeader{
-  margin: auto;
+margin: auto;
 width: 100%;
 box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.884);
-
-
 }
 .logo{
-  position: static;
-  width: 300px;
+position: static;
+width: 300px;
 display: block;
 z-index: 999;
 left: 500px;
 display: none;
-
 }
 #bannerUm img{
 height: 100%;
@@ -96,27 +92,43 @@ display: block;
 }
 #headerMenu{
 margin: auto;
-width: 96%;
-max-width: 1920px;
+width: 100%;
+max-width: 1400px;
 }
-#divMenuHeader{
-position: relative;
-margin: auto;
+#divMenuHeader {
+position: absolute;
 width: 96%;
+max-width: 1400px;
+top: 230px;
+left: 50%;
+transform: translateX(-50%);
 display: flex;
 justify-content: space-between;
 align-items: center;
-max-width: 1400px;
-bottom: 20px;
 border-radius: 40px;
-border: 2px solid rgba(219, 219, 219, 0.856);
-background-color: rgb(248, 248, 248);
-box-shadow: 0px 7px 15px rgba(121, 121, 121, 0.836);
-padding: 10px;
+border: 3px solid rgba(219, 219, 219, 0.856);
+background-color: rgba(0, 0, 0, 0.836);
+box-shadow: 0px 10px 20px rgba(121, 121, 121, 0.836);
+color: aliceblue;
+text-shadow: 0px 1px 1px black;
 padding-top: 15px;
 padding-bottom: 15px;
 z-index: 999;
 }
+.h2Header{
+position: absolute;
+top: 10px;
+margin-left: 2%;
+color: rgba(0, 47, 255, 0.925);
+font-weight: bolder;
+text-shadow: 0px 2px 0px rgb(1, 0, 22);
+font-size:4rem;
+font-family: 'Urbanist', sans-serif;
+}
+.h2Header b{
+  color: rgba(255, 0, 0, 0.925);
+}
+
 #divMenuHeader button{
 border: 0cap;
 background-color: transparent;
@@ -126,10 +138,15 @@ margin-left: 10px;
 margin-right: 10px;
 border-radius: 5px;
 background-color: rgba(226, 226, 226, 0);
+color: aliceblue;
+text-shadow: 0px 1px 1px black;
+cursor: pointer;
+font-family: 'Poppins', sans-serif;
 }
 #selectImóveisMenu{
 background-color: transparent;
-color: rgb(56, 56, 56);
+color: aliceblue;
+text-shadow: 0px 1px 1px black;
 cursor: pointer;
 outline: none;
 border: 0cap;
@@ -140,6 +157,7 @@ font-family: 'Poppins', sans-serif;
 #selectImóveisMenu option{
 color: #fbff00;
 background-color: #000000;
+font-family: 'Poppins', sans-serif;
 }
 #I_Casa{
 font-size: clamp(1.200rem, 0.3vw  + 0.5rem, 1.200rem);
@@ -215,22 +233,23 @@ outline: none;
 #divCarrocel h2{
 margin: auto;
 width: 100%;
+border: 3px solid rgb(0, 0, 0);
 background-color: rgb(0, 0, 0);
 padding-top: 12px;
 padding-bottom: 12px;
 text-align: center;
-color: rgb(218, 203, 0);
+color: rgb(255, 255, 255);
 font-family: 'Poppins', sans-serif;
 font-size: 1.700rem;
-text-shadow: 1px 1px 2px rgba(94, 94, 94, 0.192);
 border-radius: 1px;
 margin-top: 20px;
-text-shadow: 1px 2px 3px rgb(0, 0, 0);
+text-shadow: 0px 1px 1px rgb(0, 0, 0);
 margin-top: 40px;
+box-shadow: 0px 3px 5px rgba(121, 121, 121, 0.836);
 outline: none;
 }
 #divApresntação{
-position: relative;
+
 margin:0 auto;
 width: 100%;
 height: 77vh;
@@ -238,147 +257,7 @@ background-color: rgba(253, 253, 253, 0);
 margin-bottom: 20px;
 outline: none;
 }
-@media (max-width: 1400px) {
-#divCarrocel{
-margin:0 auto;
-width: 100%;
-max-width: 68%;
-background-color: rgba(172, 2, 115, 0);
-border-radius: 10px;
-}
-#divCarrocel h2{
-margin: auto;
-width: 100%;
-background-color: rgb(0, 0, 0);
-padding-top: 12px;
-padding-bottom: 12px;
-text-align: center;
-color: rgb(218, 203, 0);
-font-family: 'Poppins', sans-serif;
-font-size: 1.700rem;
-text-shadow: 1px 1px 2px rgba(94, 94, 94, 0.192);
-border-radius: 1px;
-margin-top: 20px;
-text-shadow: 1px 2px 3px rgb(0, 0, 0);
-margin-top: 40px;
-}
 
-}
-@media (max-width: 1300px) {
-  #imgHeader{
-width: 100%;
-border-radius: 0%;
-box-shadow: 0px 30px 40px rgba(0, 0, 0, 0.884);
-
-}
-.logo{
-display: none;
-}
-#divCarrocel{
-margin:0 auto;
-width: 100%;
-max-width: 63%;
-background-color: rgba(172, 2, 115, 0);
-border-radius: 10px;
-}
-#divCarrocel h2{
-margin: auto;
-width: 100%;
-background-color: rgb(0, 0, 0);
-padding-top: 12px;
-padding-bottom: 12px;
-text-align: center;
-color: rgb(218, 203, 0);
-font-family: 'Poppins', sans-serif;
-font-size: 1.600rem;
-text-shadow: 1px 1px 2px rgba(94, 94, 94, 0.192);
-border-radius: 1px;
-margin-top: 20px;
-text-shadow: 1px 2px 3px rgb(0, 0, 0);
-margin-top: 40px;
-}
-}
-@media (max-width: 1200px) {
-#divCarrocel h2{
-margin: auto;
-width: 100%;
-background-color: rgb(0, 0, 0);
-padding-top: 12px;
-padding-bottom: 12px;
-text-align: center;
-color: rgb(218, 203, 0);
-font-family: 'Poppins', sans-serif;
-font-size: 1.400rem;
-text-shadow: 1px 1px 2px rgba(94, 94, 94, 0.192);
-border-radius: 1px;
-margin-top: 20px;
-text-shadow: 1px 2px 3px rgb(0, 0, 0);
-margin-top: 40px;
-}
-.logo{
-display: none;
-}
-#imgHeader{
-width: 100%;
-border-radius: 0%;
-}
-#bannerUm {
-width: 100%;
-}
-}
-
-@media (max-width: 1050px) {
-#imgHeader{
-width: 100%;
-}
-#bannerUm {
-width: 100%;
-}
-.logo{
-display: none;
-}
-#MaiflaxUm{
-margin: auto;
-display: flex;
-flex-direction: column;
-width: 100%;
-align-items: center;
-}
-#DivPesquisador{
-margin:auto;
-width: 96%;
-max-width: 740px;
-min-height: 40vh;
-margin-top: 20px;
-background-color: rgb(255, 255, 255);
-box-shadow: 0px 1px 1px rgba(145, 145, 145, 0.37);
-margin-top: 30px;
-}
-#divCarrocel{
-width: 98%;
-max-width: 740px;
-background-color: rgba(255, 228, 196, 0);
-}
-#divCarrocel h2{
-margin: auto;
-min-width: 98%;
-color: rgb(218, 203, 0);
-padding-top: 12px;
-padding-bottom: 12px;
-text-align: center;
-font-family: 'Poppins', sans-serif;
-font-size: 1.500rem;
-margin-top: 10px;
-text-shadow: 1px 2px 3px rgb(0, 0, 0);
-margin-top: 40px;
-}
-#divApresntação{
-margin:0 auto;
-width: 100%;
-min-height: 30vh;
-background-color: rgba(17, 0, 173, 0);
-}
-}
 #imgApresent{
 margin: auto;
 max-width: 100%;
@@ -389,7 +268,7 @@ outline: none;
 }
 #IMGAP{
 width: 100%;
-max-height: 70vh;
+height: 73vh;
 margin-top: 10px;
 border-radius: 3px;
 outline: none;
@@ -424,6 +303,7 @@ text-shadow: 0px 5px 5px rgb(0, 0, 0);
 font-family: 'Poppins', sans-serif;
 outline: none;
 }
+
 
 #DivPesquisador h2{
 color: rgb(99, 99, 99);
@@ -617,6 +497,139 @@ background-color: #ffffff;
 margin-bottom: 20px;
 box-shadow: 0px 2px 4px rgba(37, 37, 37, 0.596);
 }
+@media (max-width: 1600px) {
+  .h2Header{
+font-size:3.700rem;
+}}
+@media (max-width: 1500px) {
+  .h2Header{
+font-size:3.600rem;
+}}
+@media (max-width: 1400px) {
+  .h2Header{
+font-size:3.500rem;
+}
+    #IMGAP{
+width: 100%;
+height: 72vh;
+margin-top: 10px;
+border-radius: 3px;
+outline: none;
+}
+#divCarrocel{
+margin:0 auto;
+width: 100%;
+max-width: 68%;
+background-color: rgba(172, 2, 115, 0);
+border-radius: 10px;
+}
+
+
+}
+@media (max-width: 1300px) {
+    .h2Header{
+font-size:3.400rem;
+}
+  #IMGAP{
+width: 100%;
+height: 70vh;
+margin-top: 10px;
+border-radius: 3px;
+outline: none;
+}
+  #imgHeader{
+width: 100%;
+border-radius: 0%;
+box-shadow: 0px 30px 40px rgba(0, 0, 0, 0.884);
+
+}
+.logo{
+display: none;
+}
+#divCarrocel{
+margin:0 auto;
+width: 100%;
+max-width: 63%;
+background-color: rgba(172, 2, 115, 0);
+border-radius: 10px;
+}
+
+}
+@media (max-width: 1200px) {
+    .h2Header{
+font-size:3rem;
+}
+    #IMGAP{
+width: 100%;
+height: 62vh;
+margin-top: 10px;
+border-radius: 3px;
+outline: none;
+}
+#divCarrocel h2{
+font-size: 1.400rem;
+}
+.logo{
+display: none;
+}
+#imgHeader{
+width: 100%;
+border-radius: 0%;
+}
+#bannerUm {
+width: 100%;
+}
+}
+
+@media (max-width: 1050px) {
+    .h2Header{
+font-size:2.700rem;
+}
+#imgHeader{
+width: 100%;
+}
+#bannerUm {
+width: 100%;
+}
+.logo{
+display: none;
+}
+#MaiflaxUm{
+margin: auto;
+display: flex;
+flex-direction: column;
+width: 100%;
+align-items: center;
+}
+#DivPesquisador{
+margin:auto;
+width: 96%;
+max-width: 740px;
+min-height: 40vh;
+margin-top: 20px;
+background-color: rgb(255, 255, 255);
+box-shadow: 0px 1px 1px rgba(145, 145, 145, 0.37);
+margin-top: 30px;
+}
+#divCarrocel{
+width: 98%;
+max-width: 740px;
+background-color: rgba(255, 228, 196, 0);
+}
+#divCarrocel h2{
+margin: auto;
+min-width: 98%;
+font-family: 'Poppins', sans-serif;
+font-size: 1.500rem;
+
+}
+#divApresntação{
+margin:0 auto;
+width: 100%;
+min-height: 30vh;
+background-color: rgba(17, 0, 173, 0);
+}
+}
 @media (max-width: 1050px) {
 #divMainDois{
 margin: auto;
@@ -629,12 +642,7 @@ background-color: #fbff0000;
 margin: auto;
 max-width: 450px;
 text-align: center;
-margin-top: 10px;
-margin-bottom: 10px;
-background-color: #000000;
-color: #fbff00;
-font-family: 'Poppins', sans-serif;
-font-weight: normal;
+
 }
 #div_Corretor h2{
 text-align: center;
@@ -900,6 +908,9 @@ text-shadow: 0px 0px 0px rgba(15, 15, 15, 0.76);
 }
 
 @media (max-width: 700px) {
+    .h2Header{
+font-size:2.200rem;
+}
   #DivPesquisador .diValores, #DivPesquisador .classeCodigo{
 margin-bottom: 10px;
 display: none;
@@ -1089,6 +1100,9 @@ flex-wrap: wrap;
 
 }
 @media (max-width: 600px) {
+    .h2Header{
+font-size:2rem;
+}
     #divCarrocel h2{
 margin: auto;
 width: 100%;
@@ -1233,9 +1247,8 @@ margin: 15px 10px;
 outline: none;
 }
 
-
 #ImagemIMV {
-transition: transform 0.9s ease-in-out, opacity 0.9s ease-in-out;
+transition:opacity 0.4s ease-in-out;
 position: relative;
 }
 .slide-in {
@@ -1244,12 +1257,27 @@ position: relative;
 }
 
 .slide-out {
-  transform: translateX(-100%); /* sai para a esquerda */
+  transform: translateX(-1%); /* sai para a esquerda */
   opacity: 0;
 }
 
 #divIMG{
   background-color: rgb(53, 53, 53);
+}
+
+#p_IMG_I{
+  width: 35px;
+  height: 35px;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  font-size: clamp(1.400rem, 0.3vw  + 0.5rem, 1.500rem);
+  position: relative;
+  bottom: 95%;
+  margin-left: 10px;
+  background-color: rgba(2, 42, 128, 0.226);
+  border-radius: 50%;
+  text-shadow: 0px 2px 2px black;
+
 }
 
 footer{

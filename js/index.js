@@ -128,11 +128,13 @@ var img = document.getElementById("IMGAP")
 
 document.getElementById("IMGAP").src = item.Imagem1; // campo da imagem no Firestore
 document.getElementById("ALBAP2").innerHTML = ``;
+document.getElementById('LBLAP').innerHTML=''
 
 //document.getElementById("LBLAP").textContent = ` ${ item.Cidad} ${item.UF}`// campo do título
 setTimeout(function(){
-document.getElementById("ALBAP2").innerHTML = 
-`📌 Bairro: ${item.Bairro}<br> ${item.Cidade} - ${item.UF}`;
+
+document.getElementById('LBLAP').innerHTML=`${item.Cidade} - ${item.UF}`
+document.getElementById("ALBAP2").innerHTML = `${item.Titulo}<br>📌 Bairro: ${item.Bairro} `;
 // campo da descrição
 
 },1000)
@@ -202,9 +204,12 @@ parag5.id='paraG';
 parag6.id='paraG';
 // cria o elemento da imagem principal
 var IMG_Imovel = document.createElement('img');
+var p_Imovel = document.createElement('p');
 IMG_Imovel.id = 'ImagemIMV';
 IMG_Imovel.className = 'fade'; // classe para transição suave
 IMG_Imovel.title = 'imagem do Imóvel';
+p_Imovel.id='p_IMG_I';
+
 
 // monta array com todas as imagens disponíveis
 var imagens = [];
@@ -215,33 +220,24 @@ imagens.push(data[key]);
 }
 }
 
-// inicializa com a primeira imagem
-// inicializa com a primeira imagem
-
 let index = 0;
 IMG_Imovel.src = imagens[index];
-//IMG_Imovel.classList.add('slide-in');
-
-// troca automática a cada 5 segundos
+p_Imovel.textContent=1;
 setInterval(() => {
 index++;
 if (index >= imagens.length) {
 index = 0;
 }
-IMG_Imovel.src = imagens[index]; // troca imagem
-// aplica saída lateral
-
-setTimeout(() => {
-
 
 IMG_Imovel.src = imagens[index]; // troca imagem
-IMG_Imovel.classList.remove('slide-out');
-IMG_Imovel.classList.add('slide-in'); // entra de lado
-},900); // tempo da animação de saída
-IMG_Imovel.classList.remove('slide-in');
-IMG_Imovel.classList.add('slide-out');
-IMG_Imovel.src = imagens[index]; // troca imagem
-}, 9000);// 5 segundos
+
+setTimeout(function(){
+    
+p_Imovel.textContent=index+1;
+//alert(p_Imovel.textContent)
+},1000)
+
+}, 7000);// 5 segundos
 
 label_um.textContent = `🏡 ${data.Titulo}`;
 label_tres.textContent = `${data.Código}`;
@@ -298,6 +294,7 @@ img4.title=`${data.Vagas_G} Vagas de garagem `
 };
 conntainer.appendChild(parag);
 div_imagem.appendChild(IMG_Imovel);
+div_imagem.appendChild(p_Imovel)
 div_label.appendChild(label_um);
 div_label.appendChild(label_dois);
 div_label.appendChild(label_tres);
