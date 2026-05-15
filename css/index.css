@@ -202,7 +202,7 @@ max-width: 550px;
 min-height: 30vh;
 margin-left: 10px;
 background-color: rgb(255, 255, 255);
-box-shadow: 0px 2px 3px rgba(70, 70, 70, 0.404);
+box-shadow: 0px 3px 3px rgba(70, 70, 70, 0.404);
 margin-right: 20px;
 border-radius: 5px;
 padding-bottom: 15px;
@@ -217,6 +217,7 @@ margin:0 auto;
 width: 100%;
 max-width: 70%;
 background-color: rgba(150, 131, 131, 0);
+border: 0cap;
 outline: none;
 }
 #DivPesquisador .h2P{
@@ -310,16 +311,18 @@ outline: none;
 margin: auto;
 width: 91%;
 background-color: rgba(87, 87, 87, 0);
-box-shadow: 0px 0px 1px rgba(138, 138, 138, 0.616);
+box-shadow: 0px 0px 1px rgba(138, 138, 138, 0);
 outline: none;
+border: 0cap;
 }
 #divPesquisa p{
 margin: auto;
 width: 90%;
-color: #353535d2;
+color: #1f1e1ed2;
 font-size: clamp(1rem, 0.3vw  + 0.5rem, 1rem);
 font-family: 'Poppins', sans-serif;
 margin-bottom: 3px;
+text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.877);
 cursor: pointer;
 outline: none;
 }
@@ -332,10 +335,9 @@ width: 95%;
 display: flex;
 justify-content: space-around;
 align-items: center;
-border-radius: 4px;
 padding: 5px;
 border: 0cap;
-text-shadow: 0px 1px 1px rgba(54, 54, 54, 0.76);
+text-shadow: 0px 0px 0px #11111169
 }
 #divP1 input, #divP2 input{
 width: 70%;
@@ -353,7 +355,7 @@ background-color: rgb(18, 76, 109);
 color: rgb(255, 255, 255);
 cursor: pointer;
 border-radius: 2px;
-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.877);
+box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.877);
 outline: none;
 }
 #tranzação{
@@ -363,10 +365,10 @@ border: 0cap;
 outline: none;
 cursor: pointer;
 font-size: clamp(0.900rem, 0.3vw  + 0.5rem, 1rem);
-color: #ffffff;
+color: #303030;
 margin-bottom: 10px;
 padding: 5px;
-background-color: rgb(18, 76, 109);
+background-color: rgba(18, 76, 109, 0);
 box-shadow: 0px 1px 2px  rgb(18, 76, 109);
 border-radius: 2px;
 font-family: 'Poppins', sans-serif;
@@ -374,8 +376,8 @@ margin-top: 10px;
 outline: none;
 }
 #tranzação option{
-color: #ffffff;
-background-color: rgb(18, 76, 109);
+color: #252525;
+background-color: rgb(255, 255, 255);
 cursor: pointer;
 }
 #divPesquisa  #P_division{
@@ -393,7 +395,7 @@ border: 0cap;
 font-size: clamp(1rem, 0.3vw  + 0.5rem, 1.100rem);
 background-color: rgb(18, 76, 109);
 border-radius: 5px;
-padding: 5px;
+padding: 2px;
 color: #ffffff;
 margin-top: 20px;
 font-family: 'Poppins', sans-serif;
