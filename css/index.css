@@ -74,8 +74,8 @@ max-width: 1400px;
 #divMenuHeader {
 position: absolute;
 width: 96%;
-max-width: 1400px;
-top: 255px;
+max-width: 1600px;
+top:250px;
 left: 50%;
 transform: translateX(-50%);
 display: flex;
