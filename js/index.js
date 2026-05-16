@@ -135,8 +135,8 @@ document.getElementById("LBLAP").style.display='none';
 setTimeout(function(){
 document.getElementById("ALBAP2").style.display='block';
 document.getElementById("LBLAP").style.display='block';
-document.getElementById('LBLAP').innerHTML=`${item.Titulo} `
-document.getElementById("ALBAP2").innerHTML = `${item.SubTitulo}<br> 📌 Em ${item.Cidade} - ${item.UF}`;
+document.getElementById('LBLAP').innerHTML=`${item.Cidade} - ${item.UF}`
+document.getElementById("ALBAP2").innerHTML = `${item.Titulo}<br> ${item.SubTitulo} `;
 // campo da descrição
 
 },1000)
