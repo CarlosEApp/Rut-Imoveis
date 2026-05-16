@@ -28,7 +28,7 @@ cursor: pointer;
 }
 body{
 font-family: 'Poppins', sans-serif;
-background-color: rgb(255, 255, 255);
+background-color: rgb(246, 247, 255);
 position: relative;
 margin: auto;
 width: 100%;
@@ -36,8 +36,8 @@ width: 100%;
 body::before {
 content: "";
 position: absolute;
-inset: 0;
-background:#4949490e; /* sombra/overlay */
+inset: 0px;
+background:#0000001a; /* sombra/overlay */
 
 }
 #conteudoGeral {
@@ -63,7 +63,7 @@ height: 350px;
 #imgHeader, #imgDoisHeader{
 margin: auto;
 width: 100%;
-box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.884);
+box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.884);
 }
 
 #bannerUm img{
@@ -75,14 +75,7 @@ display: none;
 height: 100%;
 min-height: 300px;
 }
-@media (max-width: 770px) {
-#bannerUm  #imgHeader {
-display: none;
-}
-#bannerUm  #imgDoisHeader{
-display: block;
-}
-}
+
 #headerMenu{
 margin: auto;
 width: 100%;
@@ -173,7 +166,7 @@ margin-bottom: 30px;
 }
 @media (max-width: 800px) {
 main{
-position: relative;
+
 margin: auto;
 width: 100%;
 min-height: 200vh;
@@ -206,7 +199,7 @@ box-shadow: 0px 3px 3px rgba(70, 70, 70, 0.404);
 margin-right: 20px;
 border-radius: 5px;
 padding-bottom: 15px;
-z-index: 999;
+z-index: 9;
 outline: none;
 }
 .diValores label{
@@ -418,10 +411,12 @@ color:rgb(255, 255, 255);
 }
 #divMainDois{
 margin: auto;
+position: relative;
 width: 100%;
 max-width: 1600px;
 min-height: 10vh;
-background-color: #00e1ff00;
+background-color: #ffffff00;
+
 }
 #flexdiv2{
 margin: auto;
@@ -438,7 +433,7 @@ color: #cdced1;
 }
 #CorretoresDiv{
 margin: auto;
-width: 95%;
+width: 98%;
 max-width: 25%;
 height: auto;
 padding-bottom: 20px;
@@ -527,7 +522,7 @@ outline: none;
 margin:0 auto;
 width: 100%;
 max-width: 68%;
-background-color: rgba(172, 2, 115, 0);
+
 border-radius: 10px;
 }
 }
@@ -549,7 +544,6 @@ outline: none;
 #imgHeader{
 width: 100%;
 border-radius: 0%;
-box-shadow: 0px 30px 40px rgba(0, 0, 0, 0.884);
 }
 .logo{
 display: none;
@@ -576,9 +570,7 @@ outline: none;
 #divCarrocel h2{
 font-size: 1.400rem;
 }
-.logo{
-display: none;
-}
+
 #imgHeader{
 width: 100%;
 border-radius: 0%;
@@ -608,6 +600,7 @@ width: 100%;
 
 #MaiflaxUm{
 margin: auto;
+
 display: flex;
 flex-direction: column;
 width: 100%;
@@ -985,16 +978,13 @@ font-family: 'Poppins', sans-serif;
 }
 #MaiflaxUm{
 margin: auto;
+position: relative;
 display: block;
 width: 100%;
 height: auto;
 align-items: baseline;
 }
 #divApresntação{
-margin:0 auto;
-width: 100%;
-height: auto;
-background-color: rgba(17, 0, 173, 0);
 display: none;
 }
 #divCarrocel h2{
@@ -1138,8 +1128,18 @@ height: auto;
 align-items: baseline;
 flex-wrap: wrap;
 }
+}
+
+@media (max-width: 800px) {
+#bannerUm  #imgHeader {
+display: none;
+}
+#bannerUm  #imgDoisHeader{
+display: block;
+}
 
 }
+
 @media (max-width: 600px) {
     #divMenuHeader {
 padding-top: 8px;
