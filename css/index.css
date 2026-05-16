@@ -69,13 +69,13 @@ min-height: 300px;
 #headerMenu{
 margin: auto;
 width: 100%;
-max-width: 1400px;
+max-width: 1600px;
 }
 #divMenuHeader {
 position: absolute;
 width: 96%;
 max-width: 1600px;
-top:250px;
+top:230px;
 left: 50%;
 transform: translateX(-50%);
 display: flex;
@@ -156,7 +156,6 @@ main{
 margin: auto;
 width: 100%;
 min-height: 200vh;
-max-width: 1400px;
 padding-bottom: 100px;
 margin-bottom: 30px;
 background-color: rgba(121, 5, 5, 0);
@@ -175,8 +174,8 @@ align-items: baseline;
 flex-wrap: wrap;
 }
 #DivPesquisador{
-width: 25%;
-min-width: 350px;
+width: 20%;
+min-width: 340px;
 max-width: 550px;
 min-height: 30vh;
 margin-left: 10px;
@@ -429,7 +428,7 @@ color: #cdced1;
 #CorretoresDiv{
 margin: auto;
 width: 98%;
-max-width: 25%;
+max-width: 20%;
 height: auto;
 padding-bottom: 20px;
 background-color: transparent;
@@ -440,7 +439,7 @@ background-color: rgba(255, 255, 255, 0);
 }
 #lista_imoveis_destaque{
 width: 100%;
-max-width: 70%;
+max-width: 77%;
 min-height: 100vh;
 background: rgba(210, 105, 30, 0);
 margin-left: 10px;
@@ -499,6 +498,28 @@ font-size:3.600rem;
 }}
 
 @media (max-width: 1400px) {
+  #flexdiv2{
+margin: auto;
+flex-direction: column-reverse;
+width: 100%;
+min-height: 50vh;
+align-items: end;
+flex-wrap: wrap;
+}
+ #CorretoresDiv{
+  margin: auto;
+ width:90% ;
+ margin-top: 40px;
+ }
+ #lista_imoveis_destaque{
+  margin: auto;
+min-width: 98%;
+min-height: 40vh;
+background: rgba(210, 105, 30, 0);
+margin-left: 10px;
+padding-bottom: 40px;
+
+}
   .h2Header{
 font-size:3.500rem;
 }
@@ -1002,13 +1023,11 @@ text-shadow: 1px 2px 3px rgb(0, 0, 0);
 margin-top: 40px;
 font-size: clamp(1.100rem, 0.3vw  + 0.5rem, 1.200rem);
 display: none;
-
 }
     #ImagemIMV{
 width: 100%;
 height: 300px;
 }
-
 #ConntDiv {
 position: relative;
 overflow: hidden;
@@ -1139,17 +1158,15 @@ display: block;
 }
 
 }
-
 @media (max-width: 600px) {
-    #divMenuHeader {
+#divMenuHeader {
 padding-top: 7px;
 padding-bottom: 7px;
-top: 250px;
 }
-    .h2Header{
+.h2Header{
 font-size:2.300rem;
 }
-    #divCarrocel h2{
+ #divCarrocel h2{
 margin: auto;
 width: 100%;
 background-color: rgb(0, 0, 0);
@@ -1164,13 +1181,11 @@ text-shadow: 1px 2px 3px rgb(0, 0, 0);
 margin-top: 40px;
 font-size: clamp(1rem, 0.3vw  + 0.5rem, 1.100rem);
 height: auto;
-
 }
-    #ImagemIMV{
+ #ImagemIMV{
 width: 100%;
 height: 300px;
 }
-
 #divIMG{
 height: 300px;
 background-color: #898b0d00;

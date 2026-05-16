@@ -154,7 +154,7 @@ if(!data.Destaque|| data.Destaque==''){
 }else{
     
 Itens++
-if (Itens <= 7){
+if (Itens <= 9){
 var conntainer = document.createElement('div');
 var divFlex = document.createElement('div');
 var div_label = document.createElement('div');
@@ -211,7 +211,6 @@ IMG_Imovel.id = 'ImagemIMV';
 IMG_Imovel.className = 'fade'; // classe para transição suave
 IMG_Imovel.title = 'imagem do Imóvel';
 p_Imovel.id='p_IMG_I';
-
 
 // monta array com todas as imagens disponíveis
 var imagens = [];
