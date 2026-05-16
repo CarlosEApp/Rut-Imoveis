@@ -169,7 +169,7 @@ min-height: 100vh;
 background-color: rgba(255, 255, 255, 0);
 padding-bottom: 100px;
 margin-bottom: 30px;
-z-index: 99;
+
 }
 @media (max-width: 800px) {
 main{
@@ -206,7 +206,7 @@ box-shadow: 0px 3px 3px rgba(70, 70, 70, 0.404);
 margin-right: 20px;
 border-radius: 5px;
 padding-bottom: 15px;
-z-index: 99;
+z-index: 999;
 outline: none;
 }
 .diValores label{
@@ -622,6 +622,7 @@ margin-top: 20px;
 background-color: rgb(255, 255, 255);
 box-shadow: 0px 1px 1px rgba(145, 145, 145, 0.37);
 margin-top: 30px;
+z-index: 999;
 }
 #divCarrocel{
 width: 98%;
