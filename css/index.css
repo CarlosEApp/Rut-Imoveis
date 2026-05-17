@@ -1409,7 +1409,7 @@ outline: none;
 
 
 #myProgresos {
-width: 90%;
+width: 77%;
 background-color:rgba(0, 0, 0, 0);
 display: none;
 border-radius: 10px;
@@ -1418,22 +1418,26 @@ margin-left: 10%;
 margin-top: 10px;
 outline: none;
 border: 2px solid rgba(200, 204, 207, 0);
+font-family: 'Poppins', sans-serif;
 }
 #myBarr {
 width: 2%;
 /* Começa com 1% */
 height: 20px;
-background-color:rgba(0, 253, 42, 0.993);
+background-color:rgba(72, 255, 0, 0.993);
 text-align: center;
 /* Centraliza horizontalmente */
 line-height: 20px;
 /* Centraliza verticalmente */
-color: rgb(0, 0, 0);
+color: rgb(31, 0, 25);
 border-radius: 7px;
-border: 2px solid rgb(0, 179, 45);
+border: 2px solid rgb(94, 255, 0);
+box-shadow: 0px 3px 7px rgb(60, 255, 0);
 font-weight: bolder;
 outline: none;
 font-size: clamp(0.900rem, 0.3vw  + 0.5rem, 1rem);
+font-family: 'Poppins', sans-serif;
+
 }   
 .my-customTime{
 margin: auto;
@@ -1444,6 +1448,8 @@ padding-bottom: 20px;
 padding-right: 20px;
   position: relative;
   bottom: 180px;
+
+ 
 }
 
 .my-customTime #btnTime{
@@ -1453,13 +1459,16 @@ background-color: #007e1100;
 float: left;
 outline: none;
 font-size: clamp(1.400rem, 0.3vw  + 0.5rem, 1.500rem);
-animation: girar 10s linear infinite; /* já inicia girando  */
+ border-radius: 50%;
+    box-shadow: 0px 10px 20px rgb(255, 255, 255);
+
 }
 
 
 .my-customTime #divInit{
 width: 100%;
 min-height: 15vh;
+
 }
 
 
