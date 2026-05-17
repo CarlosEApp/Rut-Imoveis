@@ -402,16 +402,16 @@ document.getElementById("vendaVInput").value='';
 document.getElementById("LocaçãoVInput").value='';
 /////////////////////////////////////////////////////////////////
 
-document.getElementById("mymg1").src='https://carloseapp.github.io/Rut-Imoveis/src/MetategBanner.png';
-document.getElementById("mymg2").src='https://carloseapp.github.io/Rut-Imoveis/src/MetategBanner.png';
-document.getElementById("mymg3").src='https://carloseapp.github.io/Rut-Imoveis/src/MetategBanner.png';
-document.getElementById("mymg4").src='https://carloseapp.github.io/Rut-Imoveis/src/MetategBanner.png';
-document.getElementById("mymg5").src='https://carloseapp.github.io/Rut-Imoveis/src/MetategBanner.png';
-document.getElementById("mymg6").src='https://carloseapp.github.io/Rut-Imoveis/src/MetategBanner.png';
-document.getElementById("mymg7").src='https://carloseapp.github.io/Rut-Imoveis/src/MetategBanner.png';
-document.getElementById("mymg8").src='https://carloseapp.github.io/Rut-Imoveis/src/MetategBanner.png';
-document.getElementById("mymg9").src='https://carloseapp.github.io/Rut-Imoveis/src/MetategBanner.png';
-document.getElementById("mymg10").src='https://carloseapp.github.io/Rut-Imoveis/src/MetategBanner.png';
+document.getElementById("mymg1").src='../src/MetategBanner.png';
+document.getElementById("mymg2").src='../src/MetategBanner.png';
+document.getElementById("mymg3").src='../src/MetategBanner.png';
+document.getElementById("mymg4").src='../src/MetategBanner.png';
+document.getElementById("mymg5").src='../src/MetategBanner.png';
+document.getElementById("mymg6").src='../src/MetategBanner.png';
+document.getElementById("mymg7").src='../src/MetategBanner.png';
+document.getElementById("mymg8").src='../src/MetategBanner.png';
+document.getElementById("mymg9").src='../src/MetategBanner.png';
+document.getElementById("mymg10").src='../src/MetategBanner.png';
 
 
 localStorage.setItem('Rua', ``);
