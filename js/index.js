@@ -2,8 +2,8 @@
 function funçaocad(){
 window.open('html/Cadastro.html','_self')
 }
-document.getElementById("imgHeader").src ='https://firebasestorage.googleapis.com/v0/b/rutimoveis-bc114.firebasestorage.app/o/BANNERS%2Fbanner_Maior%2FbannerGif.gif?alt=media&token=ea091079-c9fb-4030-b146-ceb39cf89dbc';
-document.getElementById("imgDoisHeader").src ='https://firebasestorage.googleapis.com/v0/b/rutimoveis-bc114.firebasestorage.app/o/BANNERS%2Fbanner_menor%2FGifMenor.gif?alt=media&token=fa0b742b-e012-44a0-8a41-3e4eb15db0f9';
+//document.getElementById("imgHeader").src ='https://firebasestorage.googleapis.com/v0/b/rutimoveis-bc114.firebasestorage.app/o/BANNERS%2Fbanner_Maior%2FbannerGif.gif?alt=media&token=ea091079-c9fb-4030-b146-ceb39cf89dbc';
+//document.getElementById("imgDoisHeader").src ='https://firebasestorage.googleapis.com/v0/b/rutimoveis-bc114.firebasestorage.app/o/BANNERS%2Fbanner_menor%2FGifMenor.gif?alt=media&token=fa0b742b-e012-44a0-8a41-3e4eb15db0f9';
 
 
 // Iniciar Firebase
@@ -58,8 +58,8 @@ sessionStorage.setItem('hora', timeString)
 sessionStorage.setItem('data', data)
 }, 1000)
 
-document.getElementById("imgHeader").src ='https://firebasestorage.googleapis.com/v0/b/rutimoveis-bc114.firebasestorage.app/o/BANNERS%2Fbanner_Maior%2FbannerGif.gif?alt=media&token=ea091079-c9fb-4030-b146-ceb39cf89dbc';
-document.getElementById("imgDoisHeader").src ='https://firebasestorage.googleapis.com/v0/b/rutimoveis-bc114.firebasestorage.app/o/BANNERS%2Fbanner_menor%2FGifMenor.gif?alt=media&token=fa0b742b-e012-44a0-8a41-3e4eb15db0f9';
+//document.getElementById("imgHeader").src ='https://firebasestorage.googleapis.com/v0/b/rutimoveis-bc114.firebasestorage.app/o/BANNERS%2Fbanner_Maior%2FbannerGif.gif?alt=media&token=ea091079-c9fb-4030-b146-ceb39cf89dbc';
+//document.getElementById("imgDoisHeader").src ='https://firebasestorage.googleapis.com/v0/b/rutimoveis-bc114.firebasestorage.app/o/BANNERS%2Fbanner_menor%2FGifMenor.gif?alt=media&token=fa0b742b-e012-44a0-8a41-3e4eb15db0f9';
 // iniciar banners Gif
 var banner = [];
 var index3 = 0;

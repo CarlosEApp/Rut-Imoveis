@@ -401,16 +401,19 @@ document.getElementById("CondominíoInput").value='';
 document.getElementById("vendaVInput").value='';
 document.getElementById("LocaçãoVInput").value='';
 /////////////////////////////////////////////////////////////////
-document.getElementById("mymg1").src='https://firebasestorage.googleapis.com/v0/b/rutimoveis-bc114.firebasestorage.app/o/A01_Logos%2FMetategBanner.png?alt=media&token=a6ae2df0-e616-4f90-a790-039d4f5d8453';
-document.getElementById("mymg2").src='https://firebasestorage.googleapis.com/v0/b/rutimoveis-bc114.firebasestorage.app/o/A01_Logos%2FMetategBanner.png?alt=media&token=a6ae2df0-e616-4f90-a790-039d4f5d8453';
-document.getElementById("mymg3").src='https://firebasestorage.googleapis.com/v0/b/rutimoveis-bc114.firebasestorage.app/o/A01_Logos%2FMetategBanner.png?alt=media&token=a6ae2df0-e616-4f90-a790-039d4f5d8453';
-document.getElementById("mymg4").src='https://firebasestorage.googleapis.com/v0/b/rutimoveis-bc114.firebasestorage.app/o/A01_Logos%2FMetategBanner.png?alt=media&token=a6ae2df0-e616-4f90-a790-039d4f5d8453';
-document.getElementById("mymg5").src='https://firebasestorage.googleapis.com/v0/b/rutimoveis-bc114.firebasestorage.app/o/A01_Logos%2FMetategBanner.png?alt=media&token=a6ae2df0-e616-4f90-a790-039d4f5d8453';
-document.getElementById("mymg6").src='https://firebasestorage.googleapis.com/v0/b/rutimoveis-bc114.firebasestorage.app/o/A01_Logos%2FMetategBanner.png?alt=media&token=a6ae2df0-e616-4f90-a790-039d4f5d8453';
-document.getElementById("mymg7").src='https://firebasestorage.googleapis.com/v0/b/rutimoveis-bc114.firebasestorage.app/o/A01_Logos%2FMetategBanner.png?alt=media&token=a6ae2df0-e616-4f90-a790-039d4f5d8453';
-document.getElementById("mymg8").src='https://firebasestorage.googleapis.com/v0/b/rutimoveis-bc114.firebasestorage.app/o/A01_Logos%2FMetategBanner.png?alt=media&token=a6ae2df0-e616-4f90-a790-039d4f5d8453';
-document.getElementById("mymg9").src='https://firebasestorage.googleapis.com/v0/b/rutimoveis-bc114.firebasestorage.app/o/A01_Logos%2FMetategBanner.png?alt=media&token=a6ae2df0-e616-4f90-a790-039d4f5d8453';
-document.getElementById("mymg10").src='https://firebasestorage.googleapis.com/v0/b/rutimoveis-bc114.firebasestorage.app/o/A01_Logos%2FMetategBanner.png?alt=media&token=a6ae2df0-e616-4f90-a790-039d4f5d8453';
+
+document.getElementById("mymg1").src='https://carloseapp.github.io/Rut-Imoveis/src/MetategBanner.png';
+document.getElementById("mymg2").src='https://carloseapp.github.io/Rut-Imoveis/src/MetategBanner.png';
+document.getElementById("mymg3").src='https://carloseapp.github.io/Rut-Imoveis/src/MetategBanner.png';
+document.getElementById("mymg4").src='https://carloseapp.github.io/Rut-Imoveis/src/MetategBanner.png';
+document.getElementById("mymg5").src='https://carloseapp.github.io/Rut-Imoveis/src/MetategBanner.png';
+document.getElementById("mymg6").src='https://carloseapp.github.io/Rut-Imoveis/src/MetategBanner.png';
+document.getElementById("mymg7").src='https://carloseapp.github.io/Rut-Imoveis/src/MetategBanner.png';
+document.getElementById("mymg8").src='https://carloseapp.github.io/Rut-Imoveis/src/MetategBanner.png';
+document.getElementById("mymg9").src='https://carloseapp.github.io/Rut-Imoveis/src/MetategBanner.png';
+document.getElementById("mymg10").src='https://carloseapp.github.io/Rut-Imoveis/src/MetategBanner.png';
+
+
 localStorage.setItem('Rua', ``);
 localStorage.setItem('Bairro', ``);
 localStorage.setItem('Cidade', ``);

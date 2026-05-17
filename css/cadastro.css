@@ -147,7 +147,7 @@ font-weight: bold;
 margin-top: 10px;
 font-family: 'Poppins', sans-serif;
 }
-#Cadastrados, #Vendidos, #Cadastrar, #fichaDiv, #divImagens, #valorDiv {
+#Cadastrados, #Vendidos, #Cadastrar,  #fichaDiv,  #valorDiv {
 display: none;
 }
 #Cadastrar,#Cadastrados{
