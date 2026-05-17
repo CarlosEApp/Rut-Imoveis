@@ -28,7 +28,7 @@ cursor: pointer;
 }
 body{
 font-family: 'Poppins', sans-serif;
-background-color: rgb(240, 242, 255);
+background-color: rgb(235, 237, 255);
 position: relative;
 margin: auto;
 width: 100%;
@@ -253,7 +253,9 @@ outline: none;
 content: "";
 position: absolute;
 inset: 1px;
-background:#00000015; /* sombra/overlay */
+background:#00000017; /* sombra/overlay */
+fill-opacity: 0.5;
+filter: brightness(0.5); 
 }
 #imgApresent p{
 margin: auto;
@@ -415,9 +417,8 @@ background-color: #ffffff00;
 #flexdiv2{
 margin: auto;
 display: flex;
+align-items: flex-start;
 width: 100%;
-min-height: 50vh;
-align-items: end;
 flex-wrap: wrap;
 }
 #divPesquisa #pesq{
@@ -426,6 +427,7 @@ margin-top: 10px;
 color: #cdced1;
 }
 #CorretoresDiv{
+  position: relative;
 margin: auto;
 width: 98%;
 max-width: 20%;
@@ -435,6 +437,7 @@ background-color: transparent;
 margin-right: 20px;
 margin-left: 10px;
 background-color: rgba(255, 255, 255, 0);
+bottom: 220px;
 
 }
 #lista_imoveis_destaque{
@@ -498,6 +501,10 @@ font-size:3.600rem;
 }}
 
 @media (max-width: 1400px) {
+    #CorretoresDiv{
+  position: relative;
+bottom: 0px;
+}
   #flexdiv2{
 margin: auto;
 flex-direction: column-reverse;
@@ -508,7 +515,7 @@ flex-wrap: wrap;
 }
  #CorretoresDiv{
   margin: auto;
- width:90% ;
+ min-width:98% ;
  margin-top: 40px;
  }
  #lista_imoveis_destaque{
@@ -518,7 +525,38 @@ min-height: 40vh;
 background: rgba(210, 105, 30, 0);
 margin-left: 10px;
 padding-bottom: 40px;
+}
+#CorretoresDiv h2{
+margin: auto;
+width: 98%;
+text-align: center;
+margin-bottom: 20px;
+}
+#div_Corretor h2{
+text-align: center;
+margin-top: 10px;
+margin-bottom: 10px;
+background-color: #ffffff00;
+color: #272727;
+}
+#Corr_um{
+  margin: auto;
+width: 98%;
+min-height: 20vh;
+background-color: #ffffff;
+margin-bottom: 20px;
+box-shadow: 0px 2px 4px rgba(37, 37, 37, 0.596);
+max-width: 550px;
 
+}
+#Corr_dois{
+    margin: auto;
+width: 98%;
+max-width: 550px;
+min-height: 20vh;
+background-color: #ffffff;
+margin-bottom: 20px;
+box-shadow: 0px 2px 4px rgba(37, 37, 37, 0.596);
 }
   .h2Header{
 font-size:3.500rem;
@@ -719,11 +757,23 @@ height: auto;
 height: 200px;
 background-color: #898b0d00;
 overflow: hidden;
+position: relative;
 }
 #ImagemIMV{
 width: 100%;
 height: 200px;
 cursor: pointer;
+
+}
+#divIMG::before {
+content: "";
+position: absolute;
+inset: 1px;
+background:#00000015; /* sombra/overlay */
+fill-opacity: 0.5;
+filter: brightness(0.5); 
+
+
 }
 #ConntDiv {
 position: relative;
