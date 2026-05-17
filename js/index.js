@@ -223,7 +223,7 @@ imagens.push(data[key]);
 
 let index = 0;
 IMG_Imovel.src = imagens[index];
-p_Imovel.textContent=1;
+//p_Imovel.textContent=1;
 setInterval(() => {
 index++;
 if (index >= imagens.length) {
@@ -231,16 +231,16 @@ index = 0;
 }
 
 IMG_Imovel.src = imagens[index]; // troca imagem
-
+p_Imovel.style.display='none'
 setTimeout(function(){
     
-p_Imovel.textContent=`${index+1}`;
-p_Imovel.style.display='block'
+//p_Imovel.textContent=`${index+1}`;
+//p_Imovel.style.display='block'
 
 //alert(p_Imovel.textContent)
 },1000)
-p_Imovel.textContent=``;
-p_Imovel.style.display='none'
+//p_Imovel.textContent=``;
+//p_Imovel.style.display='none'
 }, 5000);// 5 segundos
 
 label_um.textContent = `🏡 ${data.Titulo}`;
