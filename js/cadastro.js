@@ -470,7 +470,7 @@ sessionStorage.setItem('ImagemRT', 'mymg6');
 });
 
 document.getElementById('I_IMG7').addEventListener('click',function(){
-sessionStorage.setItem('ImagemRT', 'mymg1');
+sessionStorage.setItem('ImagemRT', 'mymg7');
  document.getElementById('mymg7').src= document.getElementById('mymg7_').value;
 });
 
