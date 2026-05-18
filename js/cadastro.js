@@ -464,7 +464,7 @@ sessionStorage.setItem('ImagemRT', 'mymg5');
  document.getElementById('mymg5').src= document.getElementById('mymg5_').value;
 });
 
-document.getElementById('I_IM6').addEventListener('click',function(){
+document.getElementById('I_IMG6').addEventListener('click',function(){
 sessionStorage.setItem('ImagemRT', 'mymg6');
  document.getElementById('mymg6').src= document.getElementById('mymg6_').value;
 });
