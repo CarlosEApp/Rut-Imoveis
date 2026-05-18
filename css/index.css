@@ -84,7 +84,7 @@ align-items: center;
 border-radius: 40px;
 border: 3px solid rgb(255, 255, 255);
 background-color: rgba(0, 0, 0, 0.767);
-box-shadow: 0px 3px 1px rgba(255, 255, 255, 0.89);
+box-shadow: 0px 2px 1px rgba(255, 255, 255, 0.89);
 color: aliceblue;
 padding-top: 10px;
 padding-bottom: 10px;
@@ -99,7 +99,6 @@ font-weight: bolder;
 text-shadow: 0px 1px 1px rgb(1, 0, 22);
 font-size:3.700rem;
 font-family: 'Urbanist', sans-serif;
-
 }
 .h2Header b{
   color: rgb(255, 0, 0);
@@ -242,7 +241,7 @@ text-align: center;
 cursor: pointer;
 outline: none;
 }
-#IMGAP{
+#IMGAP {
 width: 100%;
 height: 73vh;
 margin-top: 10px;
@@ -267,7 +266,7 @@ margin-bottom: 10px;
 color: rgb(247, 247, 247);
 background-color: rgba(0, 0, 0, 0.733);
 text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.877);
- font-family: 'Raleway', sans-serif;
+font-family: 'Raleway', sans-serif;
 font-weight: bold;
 outline: none;
 padding-top: 5px;
@@ -280,10 +279,9 @@ text-align: center;
 color: #ffffff;
 bottom: 140px;
 font-size: clamp(2rem, 0.3vw  + 0.5rem, 2.100rem);
-  font-family: 'Raleway', sans-serif;
+font-family: 'Raleway', sans-serif;
 outline: none;
 text-shadow: 0px 3px 3px rgb(0, 0, 0);;
-
 }
 #DivPesquisador h2{
 color: rgb(99, 99, 99);
@@ -292,7 +290,6 @@ font-weight: normal;
 margin-top: 10px;
 margin-bottom: 7px;
 outline: none;
-
 }
 #divPesquisa div{
 margin: auto;
@@ -312,7 +309,6 @@ margin-bottom: 3px;
 text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.877);
 cursor: pointer;
 outline: none;
-
 }
 #divPesquisa p:hover{
 color: rgb(0, 0, 0);
@@ -330,7 +326,7 @@ text-shadow: 0px 0px 0px #11111169
 #divP1 input, #divP2 input{
 width: 70%;
 font-size: clamp(1rem, 0.3vw  + 0.5rem, 1rem);
- font-family: 'Raleway', sans-serif;
+font-family: 'Raleway', sans-serif;
 cursor: pointer;
 border: 0cap;
 outline: none;
@@ -412,7 +408,6 @@ width: 100%;
 max-width: 1600px;
 min-height: 10vh;
 background-color: #ffffff00;
-
 }
 #flexdiv2{
 margin: auto;
@@ -427,7 +422,7 @@ margin-top: 10px;
 color: #cdced1;
 }
 #CorretoresDiv{
-  position: relative;
+position: relative;
 margin: auto;
 width: 100%;
 max-width: 21%;
@@ -438,7 +433,6 @@ margin-right: 20px;
 margin-left: 10px;
 background-color: rgba(255, 255, 255, 0);
 bottom: 220px;
-
 }
 #lista_imoveis_destaque{
 width: 100%;
@@ -481,7 +475,6 @@ min-height: 20vh;
 background-color: #ffffff;
 margin-bottom: 20px;
 box-shadow: 0px 2px 4px rgba(37, 37, 37, 0.596);
-
 }
 #Corr_dois{
 width: 100%;
@@ -491,36 +484,26 @@ margin-bottom: 20px;
 box-shadow: 0px 2px 4px rgba(37, 37, 37, 0.596);
 }
 @media (max-width: 1800px) {
-    .h2Header{
-
+.h2Header{
 margin-left:6%;
-
 }}
 @media (max-width: 1700px) {
-    .h2Header{
-
+.h2Header{
 margin-left:3%;
-
 }}
 @media (max-width: 1600px) {
-    .h2Header{
-
+.h2Header{
 margin-left:30px;
-
 }
-  .h2Header{
+.h2Header{
 font-size:3.700rem;
 }}
 @media (max-width: 1500px) {
-
-
-  .h2Header{
+.h2Header{
 font-size:3.600rem;
 }}
-
 @media (max-width: 1400px) {
-
-  #CorretoresDiv h2{
+#CorretoresDiv h2{
 text-align: center;
 min-width: 100%;
 margin-top: 10px;
@@ -532,11 +515,11 @@ font-size: clamp(1.400rem, 0.3vw  + 0.5rem, 1.400rem);
 padding-top: 10px;
 padding-bottom: 10px;
 }
-    #CorretoresDiv{
-  position: relative;
+#CorretoresDiv{
+position: relative;
 bottom: 0px;
 }
-  #flexdiv2{
+#flexdiv2{
 margin: auto;
 flex-direction: column-reverse;
 width: 100%;
@@ -544,13 +527,13 @@ min-height: 50vh;
 align-items: end;
 flex-wrap: wrap;
 }
- #CorretoresDiv{
-  margin: auto;
- min-width:98% ;
- margin-top: 40px;
- }
- #lista_imoveis_destaque{
-  margin: auto;
+#CorretoresDiv{
+margin: auto;
+min-width:98% ;
+margin-top: 40px;
+}
+#lista_imoveis_destaque{
+margin: auto;
 min-width: 98%;
 min-height: 40vh;
 background: rgba(210, 105, 30, 0);
@@ -571,17 +554,16 @@ background-color: #ffffff00;
 color: #272727;
 }
 #Corr_um{
-  margin: auto;
+margin: auto;
 width: 98%;
 min-height: 20vh;
 background-color: #ffffff;
 margin-bottom: 20px;
 box-shadow: 0px 2px 4px rgba(37, 37, 37, 0.596);
 max-width: 550px;
-
 }
 #Corr_dois{
-    margin: auto;
+margin: auto;
 width: 98%;
 max-width: 550px;
 min-height: 20vh;
@@ -589,13 +571,12 @@ background-color: #ffffff;
 margin-bottom: 20px;
 box-shadow: 0px 2px 4px rgba(37, 37, 37, 0.596);
 }
-  .h2Header{
+.h2Header{
 font-size:3.500rem;
 }
 #imgApresent{
 position: relative;
 height: 73vh;
-
 }
 #IMGAP{
 width: 100%;
@@ -608,19 +589,16 @@ outline: none;
 margin:0 auto;
 width: 100%;
 max-width: 68%;
-
 border-radius: 10px;
 }
 }
 @media (max-width: 1300px) {
-
 .h2Header{
 font-size:3.400rem;
 }
 #imgApresent{
 position: relative;
 height: 71vh;
-
 }
 #IMGAP{
 width: 100%;
@@ -651,7 +629,6 @@ font-size:3rem;
 #imgApresent{
 position: relative;
 height: 64vh;
-
 }
 #IMGAP{
 width: 100%;
@@ -663,7 +640,6 @@ outline: none;
 #divCarrocel h2{
 font-size: 1.400rem;
 }
-
 #imgHeader{
 width: 100%;
 border-radius: 0%;
@@ -672,12 +648,10 @@ border-radius: 0%;
 width: 100%;
 }
 }
-
 @media (max-width: 1050px) {
 #mainUm{
-  margin-top: 10px;
+margin-top: 10px;
 }
-
 .h2Header{
 font-size:2.800rem;
 }
@@ -687,10 +661,8 @@ width: 100%;
 #bannerUm {
 width: 100%;
 }
-
 #MaiflaxUm{
 margin: auto;
-
 display: flex;
 flex-direction: column;
 width: 100%;
@@ -724,7 +696,6 @@ width: 100%;
 min-height: 30vh;
 }
 }
-
 @media (max-width: 1050px) {
 #divMainDois{
 margin: auto;
@@ -772,7 +743,7 @@ box-shadow: 0px 2px 4px rgba(37, 37, 37, 0.596);
 }
 #lista_imoveis_destaque{
 min-width: 100%;
-min-height: 100vh;
+min-height: 10vh;
 background: rgba(210, 105, 30, 0);
 margin: 0%;
 }
@@ -794,7 +765,6 @@ position: relative;
 width: 100%;
 height: 200px;
 cursor: pointer;
-
 }
 #divIMG::before {
 content: "";
@@ -803,8 +773,6 @@ inset: 1px;
 background:#00000015; /* sombra/overlay */
 fill-opacity: 0.5;
 filter: brightness(0.5); 
-
-
 }
 #ConntDiv {
 position: relative;
@@ -841,7 +809,6 @@ z-index: 999;
 transform: translateY(0); /* sobe suavemente */
 opacity: 1;              /* aparece gradualmente */
 }
-
 #flexdiv2 #Div_IMV_DestaqueH2{
 margin: auto;
 width: 95%;
@@ -987,7 +954,6 @@ box-shadow: 0px 1px 2px rgba(43, 43, 43, 0.726);
 cursor: pointer;
 background-color: rgba(240, 248, 255, 0);
 }
-
 #DivPesquisador #i_valor_imovel, #DivPesquisador #i_codigo_imovel, #DivPesquisador #i_pequisa_imovel{
 font-size: clamp(0.900rem, 0.3vw  + 0.5rem, 1rem);
 text-shadow: 0px 0px 0px rgba(15, 15, 15, 0.76);
@@ -997,7 +963,6 @@ outline: none;
 }
 #DivPesquisador #i_codigo_imovel{
 margin-bottom: 20px;
-
 }
 #DivPesquisador .diValores, #DivPesquisador .classeCodigo{
 margin-bottom: 10px;
@@ -1028,30 +993,24 @@ border-radius: 50%;
 text-shadow: 0px 1px 1px rgba(0, 1, 14, 0.836);
 font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
-
 @media (max-width: 800px) {
-        .h2Header{
-
+.h2Header{
 margin-left:15px;
-
 }
-  #mainUm{
-  margin-top: 20px;
+#mainUm{
+margin-top: 20px;
 }
-
 }
 @media (max-width: 700px) {
-      .h2Header{
-
+.h2Header{
 margin-left:10px;
-
 }
-  #mainUm{
-  margin-top: 20px;
+#mainUm{
+margin-top: 20px;
 }
 #p_IMG_I{
-  font-size: clamp(1.300rem, 0.3vw  + 0.5rem, 1.400rem);
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+font-size: clamp(1.300rem, 0.3vw  + 0.5rem, 1.400rem);
+font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 #divMenuHeader {
 padding-top: 7px;
@@ -1118,10 +1077,17 @@ margin-top: 40px;
 font-size: clamp(1.100rem, 0.3vw  + 0.5rem, 1.200rem);
 display: none;
 }
-    #ImagemIMV{
+#divIMG{
+height: 200px;
+background-color: #898b0d00;
+overflow: hidden;
+position: relative;
+}
+#ImagemIMV{
 width: 100%;
 height: 300px;
 }
+
 #ConntDiv {
 position: relative;
 overflow: hidden;
@@ -1134,14 +1100,12 @@ height: 480px;
 background-color: #ffffff;
 border-bottom: 7px solid rgb(83, 83, 83);
 box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.445);
-
 }
 #divIMG{
 height: 300px;
 background-color: #898b0d00;
 overflow: hidden;
 }
-
 #divBotao{
 margin: auto;
 width: 100%;
@@ -1170,7 +1134,7 @@ width: 100%;
 display: flex;
 justify-content: space-between;
 align-items: center;
-margin-top: 7px;
+margin-top: 10px;
 margin-left: 30px;
 }
 #paraG{
@@ -1224,8 +1188,8 @@ left: 0;
 width: 100%;
 background-color: rgb(255, 255, 255);
 padding: 5px;
-padding-top: 10px;
-padding-bottom: 10px;
+padding-top: 5px;
+padding-bottom: 15px;
 /* estado inicial escondido */
 transform: translateY(100%);
 opacity: 0;
@@ -1242,7 +1206,6 @@ align-items: baseline;
 flex-wrap: wrap;
 }
 }
-
 @media (max-width: 800px) {
 #bannerUm  #imgHeader {
 display: none;
@@ -1250,7 +1213,6 @@ display: none;
 #bannerUm  #imgDoisHeader{
 display: block;
 }
-
 }
 @media (max-width: 600px) {
 #divMenuHeader {
@@ -1260,7 +1222,7 @@ padding-bottom: 7px;
 .h2Header{
 font-size:2.300rem;
 }
- #divCarrocel h2{
+#divCarrocel h2{
 margin: auto;
 width: 100%;
 background-color: rgb(0, 0, 0);
@@ -1276,7 +1238,7 @@ margin-top: 40px;
 font-size: clamp(1rem, 0.3vw  + 0.5rem, 1.100rem);
 height: auto;
 }
- #ImagemIMV{
+#ImagemIMV{
 width: 100%;
 height: 300px;
 }
@@ -1285,7 +1247,6 @@ height: 300px;
 background-color: #898b0d00;
 overflow: hidden;
 }
-
 #divBotao{
 margin: auto;
 width: 100%;
@@ -1309,7 +1270,6 @@ height: 470px;
 background-color: #ffffff;
 border-bottom: 7px solid rgb(83, 83, 83);
 box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.445);
-
 }
 #ConntDiv #img_icom {
 width: 25px;
@@ -1388,7 +1348,6 @@ z-index: 999;
 outline: none;
 }
 }
-
 #label_dois_{
 margin: auto;
 width: 99%;
@@ -1402,11 +1361,6 @@ flex-wrap: wrap;
 margin: 15px 10px; 
 outline: none;
 }
-
-
-
-
-
 
 #myProgresos {
 width: 77%;
@@ -1437,7 +1391,6 @@ font-weight: bolder;
 outline: none;
 font-size: clamp(0.900rem, 0.3vw  + 0.5rem, 1rem);
 font-family: 'Poppins', sans-serif;
-
 }   
 .my-customTime{
 margin: auto;
@@ -1446,12 +1399,10 @@ max-width: 400px;
 padding-top: 20px;
 padding-bottom: 20px;
 padding-right: 20px;
-  position: relative;
-  bottom: 180px;
+position: relative;
+bottom: 180px;
 
- 
 }
-
 .my-customTime #btnTime{
 text-align: center;
 border: 0cap;
@@ -1459,20 +1410,13 @@ background-color: #007e1100;
 float: left;
 outline: none;
 font-size: clamp(1.400rem, 0.3vw  + 0.5rem, 1.500rem);
- border-radius: 50%;
-    box-shadow: 0px 10px 20px rgb(255, 255, 255);
-
+border-radius: 50%;
+box-shadow: 0px 10px 20px rgb(255, 255, 255);
 }
-
-
 .my-customTime #divInit{
 width: 100%;
 min-height: 15vh;
-
 }
-
-
-
 
 
 
