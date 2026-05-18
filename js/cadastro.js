@@ -440,46 +440,60 @@ function aplicarMascaraCPF(event) {
 let input = event.target;
 input.value = formatarCPF(input.value);
 }
-document.getElementById('mymg1_').addEventListener('click',function(){
+document.getElementById('I_IMG').addEventListener('click',function(){
 sessionStorage.setItem('ImagemRT', 'mymg1');
-document.getElementById('files').click();
+ document.getElementById('mymg1').src= document.getElementById('mymg1_').value;
 });
-document.getElementById('mymg2_').addEventListener('click',function(){
+document.getElementById('I_IMG2').addEventListener('click',function(){
 sessionStorage.setItem('ImagemRT', 'mymg2');
-document.getElementById('files').click();
+ document.getElementById('mymg2').src= document.getElementById('mymg2_').value;
 });
-document.getElementById('mymg3_').addEventListener('click',function(){
+
+document.getElementById('I_IMG3').addEventListener('click',function(){
 sessionStorage.setItem('ImagemRT', 'mymg3');
-document.getElementById('files').click();
+ document.getElementById('mymg3').src= document.getElementById('mymg3_').value;
 });
-document.getElementById('mymg4_').addEventListener('click',function(){
+
+document.getElementById('I_IMG4').addEventListener('click',function(){
 sessionStorage.setItem('ImagemRT', 'mymg4');
-document.getElementById('files').click();
+ document.getElementById('mymg4').src= document.getElementById('mymg4_').value;
 });
-document.getElementById('mymg5_').addEventListener('click',function(){
+
+document.getElementById('I_IMG5').addEventListener('click',function(){
 sessionStorage.setItem('ImagemRT', 'mymg5');
-document.getElementById('files').click();
+ document.getElementById('mymg5').src= document.getElementById('mymg5_').value;
 });
-document.getElementById('mymg6_').addEventListener('click',function(){
+
+document.getElementById('I_IM6').addEventListener('click',function(){
 sessionStorage.setItem('ImagemRT', 'mymg6');
-document.getElementById('files').click();
+ document.getElementById('mymg6').src= document.getElementById('mymg6_').value;
 });
-document.getElementById('mymg7_').addEventListener('click',function(){
-sessionStorage.setItem('ImagemRT', 'mymg7');
-document.getElementById('files').click();
+
+document.getElementById('I_IMG7').addEventListener('click',function(){
+sessionStorage.setItem('ImagemRT', 'mymg1');
+ document.getElementById('mymg7').src= document.getElementById('mymg7_').value;
 });
-document.getElementById('mymg8_').addEventListener('click',function(){
+
+document.getElementById('I_IMG8').addEventListener('click',function(){
 sessionStorage.setItem('ImagemRT', 'mymg8');
-document.getElementById('files').click();
+ document.getElementById('mymg8').src= document.getElementById('mymg8_').value;
 });
-document.getElementById('mymg9_').addEventListener('click',function(){
+
+document.getElementById('I_IMG9').addEventListener('click',function(){
 sessionStorage.setItem('ImagemRT', 'mymg9');
-document.getElementById('files').click();
+ document.getElementById('mymg9').src= document.getElementById('mymg9_').value;
 });
-document.getElementById('mymg10_').addEventListener('click',function(){
+
+document.getElementById('I_IMG10').addEventListener('click',function(){
 sessionStorage.setItem('ImagemRT', 'mymg10');
-document.getElementById('files').click();
+ document.getElementById('mymg10').src= document.getElementById('mymg10_').value;
 });
+
+
+
+
+//imagem para firebase
+/*
 document.getElementById('files').addEventListener('change', function(e) {
 Swal.fire({
 title: `Carregando!`,
@@ -584,6 +598,9 @@ storageRef.null
 function swalclose(){
 Swal.close()
 }
+*/
+
+
 // ver imagem
 document.getElementById('mymg1').addEventListener('click', function(){
 var img1=document.getElementById('mymg1').src;
