@@ -413,7 +413,6 @@ document.getElementById("mymg8").src='../src/MetategBanner.png';
 document.getElementById("mymg9").src='../src/MetategBanner.png';
 document.getElementById("mymg10").src='../src/MetategBanner.png';
 
-
 localStorage.setItem('Rua', ``);
 localStorage.setItem('Bairro', ``);
 localStorage.setItem('Cidade', ``);
@@ -488,8 +487,6 @@ document.getElementById('I_IMG10').addEventListener('click',function(){
 sessionStorage.setItem('ImagemRT', 'mymg10');
  document.getElementById('mymg10').src= document.getElementById('mymg10_').value;
 });
-
-
 
 
 //imagem para firebase
